@@ -288,6 +288,7 @@ def main() -> int:
     entries = [build_entry(p) for p in files]
 
     errors: list[str] = []
+    warnings: list[str] = []
     seen = set()
     for e in entries:
         if e["slug"] in seen:
@@ -299,10 +300,14 @@ def main() -> int:
             errors.append(f"{e['slug']}: title kosong")
         if e["status"] not in STATUSES:
             errors.append(f"{e['slug']}: status '{e['status']}' tidak dikenal (pakai: {', '.join(sorted(STATUSES))})")
+        # ini peringatan saja: draft setengah jadi tetap boleh ke-publish,
+        # CI jangan gagal cuma karena ceritanya belum ditulis
         if e["words"] < 20:
-            errors.append(f"{e['slug']}: prosa cuma {e['words']} kata — kayaknya belum diisi")
-        if e["chars"] and not e["logline"]:
-            errors.append(f"{e['slug']}: logline belum diisi")
+            warnings.append(f"{e['slug']}: prosa baru {e['words']} kata — belum diisi")
+        if not e["logline"]:
+            warnings.append(f"{e['slug']}: logline belum diisi")
+        if not e["toc"]:
+            warnings.append(f"{e['slug']}: belum ada heading — belum dipecah per scene")
 
     entries.sort(key=lambda e: (e["date"] or "", e["title"]), reverse=True)
 
@@ -360,6 +365,11 @@ def main() -> int:
         )
         for e in entries:
             print(f"  [{e['status']}] {e['title']} — {e['words']} kata, {len(e['toc'])} scene, siap {e['ready']}/{e['ready_total']}")
+
+    if warnings:
+        print("\nPERINGATAN (tidak menggagalkan build):")
+        for w in warnings:
+            print("  -", w)
 
     if errors:
         print("\nMASALAH SKEMA:")

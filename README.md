@@ -31,6 +31,10 @@ python3 -m unittest discover -s tests -p "test_*.py"
 
 Push ke `main` → GitHub Actions regenerate + deploy Pages otomatis.
 
+`--check` (dipakai CI) gagal hanya untuk masalah yang bikin web rusak: frontmatter nggak
+kebaca, `title` kosong, `status` di luar daftar, slug duplikat. Draft yang belum diisi
+cuma jadi peringatan — CI tetap jalan, jadi nggak nyangkut gara-gara draft setengah jadi.
+
 ## Struktur
 
 ```
