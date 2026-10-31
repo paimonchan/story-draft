@@ -1,0 +1,164 @@
+{
+ "generated": "2026-10-31T19:10:40Z",
+ "count": 1,
+ "words": 203,
+ "statuses": {
+  "adapted": 0,
+  "developing": 0,
+  "draft": 1,
+  "final": 0,
+  "parked": 0
+ },
+ "genres": [
+  "thriller"
+ ],
+ "tags": [
+  "contoh",
+  "hujan",
+  "malam",
+  "urban"
+ ],
+ "characters": [
+  "Nara",
+  "Pak Sukron"
+ ],
+ "baseline": {
+  "words": 203.0,
+  "sentences": 21.0,
+  "dialogue": 2.0,
+  "scenes": 3.0,
+  "longest_sentence": 21.0,
+  "visual_pct": 52.0
+ },
+ "entries": [
+  {
+   "slug": "contoh-format",
+   "title": "Contoh Format: Lampu Terakhir di Pasar Loak",
+   "status": "draft",
+   "date": "2026-11-01",
+   "genre": "thriller",
+   "lang": "id",
+   "logline": "Nara kembali ke pasar loak tempat ayahnya hilang, dan menemukan kotak kuning yang seharusnya sudah ikut terkubur lima belas tahun lalu.",
+   "characters": [
+    "Nara",
+    "Pak Sukron"
+   ],
+   "setting": "Pasar loak Bandung, malam setelah hujan",
+   "target": "MiniMax H3",
+   "format": "9:16",
+   "duration": 45,
+   "beats": 3,
+   "tags": [
+    "contoh",
+    "urban",
+    "malam",
+    "hujan"
+   ],
+   "meta": {},
+   "words": 203,
+   "chars": 1312,
+   "paragraphs": 10,
+   "sentences": 21,
+   "dialogue": 2,
+   "longest_sentence": 21,
+   "avg_sentence": 9.7,
+   "read_min": 1,
+   "visual_sentences": 11,
+   "visual_pct": 52,
+   "toc": [
+    {
+     "id": "h1",
+     "level": 2,
+     "text": "1. Pasar loak, dua puluh menit sebelum tutup",
+     "words": 80
+    },
+    {
+     "id": "h2",
+     "level": 2,
+     "text": "2. Di dalam kios",
+     "words": 60
+    },
+    {
+     "id": "h3",
+     "level": 2,
+     "text": "3. Gembok terbuka",
+     "words": 63
+    }
+   ],
+   "mentions": {
+    "Nara": 5,
+    "Pak Sukron": 4
+   },
+   "has_frontmatter": true,
+   "path": "stories/contoh-format/story.md",
+   "checks": [
+    {
+     "id": "logline",
+     "label": "Logline",
+     "value": "ada",
+     "ok": true,
+     "note": "satu kalimat inti — dipakai buat ringkas cerita jadi summary prompt"
+    },
+    {
+     "id": "characters",
+     "label": "Karakter terdaftar",
+     "value": 2,
+     "ok": true,
+     "note": "tiap karakter di sini nanti jadi <Subject N> di prompt"
+    },
+    {
+     "id": "setting",
+     "label": "Setting / lokasi",
+     "value": "Pasar loak Bandung, malam setelah hujan",
+     "ok": true,
+     "note": "lokasi + waktu — dipakai buat lock background biar gak drift"
+    },
+    {
+     "id": "genre",
+     "label": "Genre",
+     "value": "thriller",
+     "ok": true,
+     "note": "membantu pilih gaya visual & musik"
+    },
+    {
+     "id": "tags",
+     "label": "Tag",
+     "value": 4,
+     "ok": true,
+     "note": "biar bisa difilter di web"
+    },
+    {
+     "id": "scenes",
+     "label": "Scene / beat terpisah",
+     "value": "3 heading",
+     "ok": true,
+     "note": "pecah pakai heading (##) — satu scene kira-kira jadi satu shot"
+    },
+    {
+     "id": "sentence",
+     "label": "Kalimat terpanjang",
+     "value": "21 kata",
+     "ok": true,
+     "note": "di atas ~45 kata susah dipetakan jadi satu shot"
+    },
+    {
+     "id": "dialogue",
+     "label": "Baris dialog",
+     "value": 2,
+     "ok": true,
+     "note": "dialog nanti masuk sebagai <d>[Language] teks</d>"
+    },
+    {
+     "id": "visual",
+     "label": "Kalimat dengan isyarat visual",
+     "value": "11/21 (52%)",
+     "ok": true,
+     "note": "cahaya, gerak, warna, shot — bahan caption H3"
+    }
+   ],
+   "ready": 9,
+   "ready_total": 9,
+   "data": "data/contoh-format.json"
+  }
+ ]
+}
