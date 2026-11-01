@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-01T06:20:59Z",
+ "generated": "2026-11-01T06:31:05Z",
  "count": 2,
- "words": 924,
+ "words": 922,
  "statuses": {
   "adapted": 0,
   "developing": 0,
@@ -33,7 +33,7 @@
   "Pak Sukron"
  ],
  "baseline": {
-  "words": 462.0,
+  "words": 461.0,
   "sentences": 43.0,
   "dialogue": 7.0,
   "scenes": 5.5,
@@ -202,8 +202,8 @@
    "non_verbal": false,
    "speech": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata)",
    "meta": {},
-   "words": 724,
-   "chars": 4984,
+   "words": 722,
+   "chars": 4961,
    "paragraphs": 38,
    "sentences": 67,
    "dialogue": 12,
@@ -217,7 +217,7 @@
      "id": "h1",
      "level": 2,
      "text": "1. Bangku, siang hangat (0.0–5.0 dtk)",
-     "words": 133
+     "words": 130
     },
     {
      "id": "h2",
@@ -241,7 +241,7 @@
      "id": "h5",
      "level": 2,
      "text": "5. Semut (20.0–25.0 dtk)",
-     "words": 86
+     "words": 87
     },
     {
      "id": "h6",

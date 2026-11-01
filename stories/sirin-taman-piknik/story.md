@@ -20,7 +20,7 @@ tags: [anime, komedi, taman, deadpan, dialog, sirin, kanglim]
 
 Taman kota yang bersih dan terang. Matahari sore menembus daun, dan bercak cahayanya bergerak pelan di atas rumput. Cha Sirin sudah ada di bangku kayu, setengah duduk, setengah miring, hoodie hitamnya yang kebesaran menumpuk kusut di pangkuannya. Mata tealnya setengah tertutup, dan dua bulatan pink di pipinya ikut naik-turun pelan mengikuti napasnya. Dia menguap satu kali, panjang sekali, dan ahoge di kepalanya melengkung turun seperti kalah.
 
-Dari jalan setapak, Kanglim datang dengan langkah pelan: ransel krem di punggung, cardigan beige, tongkat kayu di pinggang. Dia berhenti di samping bangku, melihat Sirin yang setengah tidur, lalu berdiri diam di samping bangku tanpa suara.
+Dari jalan setapak, Kanglim datang dengan langkah pelan: ransel krem di punggung dan cardigan beige. Dia berhenti di samping bangku, melihat Sirin yang setengah tidur, lalu berdiri diam di samping bangku tanpa suara.
 
 "Aku bawa bekal."
 
@@ -62,7 +62,7 @@ Serbet itu terbang lebih jauh. Dia berdiri di sana sebentar, lalu kembali ke tik
 
 ## 5. Semut (20.0–25.0 dtk)
 
-Garis hitam kecil muncul dari celah rumput dan berjalan lurus menuju kotak bekal di perut Sirin. Kanglim berdiri, mengambil tongkatnya, dan menggaris tanah di depan garis semut itu.
+Garis hitam kecil muncul dari celah rumput dan berjalan lurus menuju kotak bekal di perut Sirin. Kanglim berdiri, lalu menggaris tanah dengan ujung jarinya di depan garis semut itu.
 
 "Lewat sini aja."
 

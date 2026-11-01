@@ -27,7 +27,7 @@ Eskalasi: tikar → bekal → serbet → semut → lengan hoodie → cardigan �
 | # | Aset | Status |
 |---|---|---|
 | 1 | Charsheet Cha Sirin (smol), `Pastel Pink-Haired Anime Character Sheet.png` | ✅ ada |
-| 2 | Charsheet Kanglim, `Chibi Blue-Haired School Character Sheet.png` | ✅ ada |
+| 2 | Charsheet Kanglim (versi baru, **tanpa tongkat**) | 🔄 digenerate ulang |
 | 3 | World plate taman + kursi, **`cha_sirin_pigeon_world_01.png`** | ⚠️ ada, tapi **9:16** → perlu plate **16:9** |
 
 World plate lane pigeon sudah persis lokasi cerita ini (bangku kayu, jalan setapak batu,
@@ -54,9 +54,7 @@ pose tidur cukup dari deskripsi.
 **Kanglim**:
 > a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a calm, unbothered
 > little face. He wears a beige cardigan over a navy sweater vest, a white shirt with a navy
-> necktie, navy trousers, black shoes, and a cream backpack on his back. A short wooden stick
-> hangs at his hip on a small strap, that stick is his whole personality, and it always returns
-> to his hip after he uses it.
+> necktie, navy trousers, black shoes, and a cream backpack on his back.
 
 **Two-shot rule:** Sirin di **KIRI** frame, Kanglim di **KANAN**, kepala Kanglim selalu lebih
 rendah (chibi). Sirin tetap di kiri di setiap segmen.
@@ -97,6 +95,6 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 ## Status
 
 - [x] story.md (8 segmen, satu lokasi; Kanglim 12 baris dialog, Sirin 7 vokal ekspresif)
-- [x] storyboard.md v7, anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker, **lapisan dialog & vokal**
+- [x] storyboard.md v8, anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker, **lapisan dialog & vokal**
 - [ ] perbarui kolom **Status** di `storyboard.md` tiap segmen selesai diuji (`belum diuji` → `diuji` → `final`)
 - [ ] serahkan ke lane prompt (`eikei-plan`) untuk plan + pack per segmen, bukan urusan repo ini

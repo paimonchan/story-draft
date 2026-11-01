@@ -5,9 +5,9 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 
 | Field | Nilai |
 |---|---|
-| Versi | **v7**: 2026-11-01 (changelog di bawah) |
+| Versi | **v8**: 2026-11-01 (changelog di bawah) |
 | Format | **16:9 horizontal** · 24 fps · total ~40 dtk (8 × 5 dtk) |
-| Safe area | 16:9: ±5% di **tiap tepi** (kiri/kanan/atas/bawah) → kepala, tongkat, dan tangan jangan masuk zona itu |
+| Safe area | 16:9: ±5% di **tiap tepi** (kiri/kanan/atas/bawah) → kepala, tangan, dan kotak bekal jangan masuk zona itu |
 | Lokasi | **satu taman, satu bangku, satu siang**: tidak ada perpindahan sepanjang 40 dtk |
 | Audio | ambience bed konstan + SFX aksi (peta audio di bawah); BGM di-mix di luar klip |
 | Suara | **Kanglim bicara** (12 baris, di dalam klip) · **Sirin tidak pernah bicara**, hanya vokal ekspresif (7 kali, SFX) |
@@ -33,7 +33,7 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
   ekspresif: SFX + mikro-ekspresi, **bukan** baris dialog. Mulutnya tidak pernah membentuk kata,
   jadi tidak ada risiko lip-sync di sisi Sirin.
 - **Jendela mulut Kanglim = panjang kalimatnya pada tempo wajar (2.5–4 kata/detik)**, dan
-  selalu menempel pada beat fisik (menegakkan badan, mengangkat tongkat, menoleh). Kalau kalimatnya
+  selalu menempel pada beat fisik (menegakkan badan, menoleh, mengulurkan tangan). Kalau kalimatnya
   tidak muat di dalam segmen, **potong kalimatnya**, jangan panjangkan jendelanya.
 - **Kiri/kanan = dari sudut kamera**, selalu disebut eksplisit.
 - **Micro-motion anti-freeze** (boleh dipakai bebas): `her slow breathing`, `her blinks`,
@@ -100,7 +100,7 @@ saat menoleh, mulut tetap kecil terbuka (tidak membentuk kata).
 - **B (1.5–3.0).** Sirin menguap panjang: rahang turun, kelopak makin sempit, ahoge melengkung
   turun lalu naik lagi, bahu naik sedikit. Selesai, mulut kembali kecil terbuka.
 - **C (3.0–5.0).** Kanglim masuk dari jalan setapak di kanan dengan langkah pelan, berhenti di kanan
-  bawah frame, lalu **berdiri diam di samping bangku** tanpa suara (tongkat tetap di pinggangnya). **Reaksi Sirin:**
+  bawah frame, lalu **berdiri diam di samping bangku** tanpa suara. **Reaksi Sirin:**
   kepala menoleh ~10° ke kanan ke arahnya, kelopak turun-naik satu kali, lalu berhenti menoleh.
 
 **Audio:** angin di dedaunan, burung jauh, langkah kecil di jalan batu, gemerisik kain.
@@ -108,12 +108,12 @@ Pizzicato ringan masuk di uap kedua.
 
 **Anchor buka (4+1):** (a) Sirin **kiri**, duduk miring di bangku, **sendiri**: kanan frame masih
 kosong (jalan setapak + rumput); (b) hoodie menumpuk di pangkuan, kotak bekal belum ada, tikar masih
-di ransel (di luar frame), tongkat belum terlihat; (c) patch cahaya bergerak pelan, ahoge bergoyang,
+di ransel (di luar frame); (c) patch cahaya bergerak pelan, ahoge bergoyang,
 napas pelan; (d) kamera MCU eye-level ~1–1.5 m di sisi muka Sirin, **diam**; (e) yang terlihat dari
 situ: bangku kayu, rumput, kolam jauh di belakang, Kanglim belum masuk.
 
 **Anchor tutup:** Sirin kepala sedikit ke kanan, kelopak half-lidded, Kanglim berdiri santai di
-samping bangku, tongkat di pinggang, tikar masih di ransel.
+samping bangku, tikar masih di ransel.
 
 ---
 
@@ -141,7 +141,7 @@ hanya kain di area mulut, tipis. Sirin: satu *hmm* pendek, mulut tidak berubah b
   yang lain; tikar mengembang di udara, tepinya naik.
 - **B.** Tikar turun dan **menutupi kepalanya sendiri**; tepi tikar menggantung di sisi pipinya.
   Kontak: kain jatuh, ujungnya masih bergerak sedikit setelah berhenti. Dia berdiri diam, tangan
-  turun perlahan ke samping, dan **tidak melepas tikar itu**; tongkat tetap di pinggangnya.
+  turun perlahan ke samping, dan **tidak melepas tikar itu**.
 - **C.** **Reaksi Sirin:** satu kedipan lambat, kelopak turun lalu naik; ekspresi tidak berubah,
   bahu tidak bergerak. Hanya napas, ahoge, dan patch cahaya yang bergerak di hoodie-nya.
 
@@ -149,7 +149,7 @@ hanya kain di area mulut, tipis. Sirin: satu *hmm* pendek, mulut tidak berubah b
 mendarat di kepala.
 
 **Anchor buka (4+1):** (a) Sirin **kiri** duduk, kepala sedikit ke kanan; Kanglim **kanan** berdiri;
-(b) tongkat di pinggang Kanglim, tikar masih di ransel, kotak bekal belum keluar;
+(b) tikar masih di ransel, kotak bekal belum keluar;
 (c) patch cahaya bergerak pelan, ahoge bergoyang, napas Sirin; (d) kamera MCU eye-level sama, **diam**;
 (e) yang terlihat dari situ: dua karakter dalam frame, bangku, rumput, tikar belum terlihat.
 
@@ -172,7 +172,7 @@ melorot: **ke atas** (langit, di luar frame). Kotak bergerak dari kanan-bawah ke
 **Cahaya:** sama; karena kamera mendekat, patch cahaya di hoodie jadi lebih terbaca, biarkan
 bergerak pelan, jangan tambah sumber cahaya baru.
 
-**Aset:** world plate · charsheet Sirin · charsheet Kanglim · kotak bekal (polos) · tongkat.
+**Aset:** world plate · charsheet Sirin · charsheet Kanglim · kotak bekal (polos).
 
 **Dialog & vokal:** Kanglim (sub-beat A, 10.8–11.8): "Ini buat kamu." Mulut membuka
 sekali, pelan, menutup saat kotak sudah di perut Sirin. Dia **tidak bicara lagi** di segmen ini;
@@ -190,13 +190,13 @@ kecil terbuka tanpa gerak bicara.
 **Audio:** kotak diletakkan, kain tersentuh, langkah kecil pelan, napas panjang saat dia melorot.
 
 **Anchor buka (4+1):** (a) Sirin **kiri** duduk (kepala sedikit ke kanan), Kanglim **kanan** berdiri;
-(b) tikar menutupi kepala Kanglim dengan dua tangan masih terentang, tongkat di pinggang, kotak bekal
+(b) tikar menutupi kepala Kanglim, tangan di samping badan, kotak bekal
 masih di ransel; (c) tepi tikar masih bergerak sedikit (settling), patch cahaya bergerak pelan;
 (d) kamera MCU eye-level, **diam** (push in belum mulai); (e) yang terlihat dari situ: tikar di
 kepala Kanglim dari sisi pipi, Sirin utuh dalam frame.
 
 **Anchor tutup:** Sirin telentang di bangku dengan kotak di perut, Kanglim berdiri diam di kanan,
-tongkat di pinggangnya, tikar masih di kepala Kanglim.
+tikar masih di kepala Kanglim.
 
 ---
 
@@ -224,7 +224,7 @@ Satu kata, mulut membuka sekali, **tanpa nada panik**. Sirin: dengkur kecil lewa
   teliti; sandwich digeser dua kali; dia memeriksanya dari dua sudut.
 - **B.** Angin naik: serbet lepas satu per satu dan terbang rendah **dari kanan ke kiri** menyeberang
   frame di atas rumput. Kanglim berdiri, melangkah **satu kali** ke arah serbet, lalu berhenti dan
-  berdiri diam. Dia tidak mengejar; tongkat tetap di pinggangnya.
+  berdiri diam. Dia tidak mengejar.
 - **C.** Satu helai daun jatuh dan mendarat di hidung Sirin. Hidung tidak bergerak, kelopak tidak
   berubah, mulut tetap kecil terbuka. Hanya napas.
 
@@ -232,7 +232,7 @@ Satu kata, mulut membuka sekali, **tanpa nada panik**. Sirin: dengkur kecil lewa
 Kanglim tidak** (itu leluconnya).
 
 **Anchor buka (4+1):** (a) Sirin **kiri** telentang di bangku (kepala di sandaran), Kanglim **kanan**
-berdiri lalu turun jongkok; (b) tongkat di tangan kanan Kanglim, kotak bekal di perut Sirin, tikar
+berdiri lalu turun jongkok; (b) kotak bekal di perut Sirin, tikar
 masih di kepala Kanglim; (c) patch cahaya bergerak pelan, napas Sirin mengangkat kotak pelan;
 (d) kamera melebar satu level ke `medium`, eye-level, **diam**; (e) yang terlihat dari situ: bangku
 penuh, Sirin telentang, Kanglim dengan tikar di kepala, rumput di bawah.
@@ -249,7 +249,7 @@ daun di hidung Sirin, kotak masih di perutnya.
 **Framing & kamera:** `medium close-up`, static, kamera tetap di sisi muka Sirin.
 
 **Sumbu & arah:** sumbu tetap. Eyeline Kanglim ke **bawah** (kaki sendiri) lalu ke **kiri-bawah**
-(pagar ranting). Sirin eyeline kosong, satu kedipan lambat. Garis semut mengalir **dari kiri bawah
+(garis tanah). Sirin eyeline kosong, satu kedipan lambat. Garis semut mengalir **dari kiri bawah
 naik** ke tepi bangku lalu ke **kanan** menuju kotak di perut Sirin; Kanglim tetap di kanan.
 
 **Cahaya:** sama; patch bergerak lebih cepat mengikuti angin, kondisi tidak berubah.
@@ -263,18 +263,18 @@ di tengah tidur, mulut tertutup, napas tetap rata.
 
 - **A.** Garis semut hitam muncul dari celah rumput di kiri bawah dan mengalir naik ke tepi bangku,
   lurus menuju kotak di perut Sirin.
-- **B.** Kanglim berdiri pelan, mengambil tongkatnya, dan **menggaris tanah** di depan garis semut
-  (kontak: ujung tongkat membelah tanah, garis tipis). Semut menembus celah lain, naik ke sepatunya,
+- **B.** Kanglim berdiri pelan dan **menggaris tanah dengan ujung jari telunjuknya** di depan garis
+  semut (kontak: jari membelah tanah, garis tipis). Semut menembus celah lain, naik ke sepatunya,
   lalu ke celananya. Dia berhenti menggaris, **mengangkat satu kaki pelan**, dan berdiri dengan satu
   kaki di tengah rumput; muka chibi-nya tetap datar.
 - **C.** Sirin tidak berubah: napas rata, satu kedipan sangat lambat di tengah kekacauan.
 
-**Audio:** gemerisik kecil, tongkat menggaris tanah, langkah kecil pelan; pizzicato naik tempo
+**Audio:** gemerisik kecil, jari menggaris tanah, langkah kecil pelan; pizzicato naik tempo
 **sementara Kanglim tidak**, lalu berhenti.
 
 **Anchor buka (4+1):** (a) Sirin **kiri** telentang di bangku, Kanglim **kanan** jongkok;
 (b) kotak bekal di perut Sirin, daun masih di hidungnya, serbet masih melayang jauh di kiri belakang
-(sebagian keluar frame), tongkat di pinggang Kanglim; (c) angin mulai turun, patch cahaya bergerak,
+(sebagian keluar frame); (c) angin mulai turun, patch cahaya bergerak,
 napas Sirin rata; (d) kamera MCU eye-level di sisi muka Sirin, **diam**; (e) yang terlihat dari situ:
 bangku, Sirin telentang, Kanglim jongkok di kanan bawah, semut belum muncul.
 
@@ -316,7 +316,7 @@ di akhir segmen; mulut tidak membentuk kata.
 
 **Anchor buka (4+1):** (a) Sirin **kiri** telentang (mata tertutup, kelopak setengah), Kanglim
 **kanan** membeku berdiri; (b) kotak bekal di perut Sirin **belum** tertutup, daun masih di hidungnya,
-tongkat di pinggang Kanglim, pagar ranting miring di tanah; (c) semut masih bergerak naik di celana
+garis tanah di depan semut; (c) semut masih bergerak naik di celana
 Kanglim, patch cahaya bergerak; (d) kamera MCU eye-level di sisi muka Sirin, mulai **mendekat pelan**
 (push in); (e) yang terlihat dari situ: muka Sirin + perut + kotak, Kanglim sebagian di kanan.
 
@@ -358,7 +358,7 @@ sekali** (hening).
 
 **Anchor buka (4+1):** (a) Sirin **kiri** telentang dengan lengan masih di atas kotak, Kanglim
 **kanan** membeku dengan mulut terbuka dan satu kaki terangkat; (b) kotak bekal tertutup lengan, daun masih di
-hidung Sirin, tongkat di pinggang Kanglim, tikar di lantai; (c) sisa gerak kain lengan sudah
+hidung Sirin, tikar di lantai; (c) sisa gerak kain lengan sudah
 berhenti, semut sudah keluar frame kiri bawah, patch cahaya bergerak pelan; (d) kamera MCU
 eye-level, **static locked-off** (frame benar-benar diam); (e) yang terlihat dari situ: lengan Sirin
 di atas kotak, Kanglim di kanan dengan tikar di bawahnya.
@@ -403,7 +403,7 @@ setelah menggigit, mulut tertutup, tanpa kata.
 **Audio:** kepakan sayap, langkah kecil, kunyahan pelan; pizzicato masuk kembali pelan.
 
 **Anchor buka (4+1):** (a) Sirin **kiri** telentang (lengan masih di atas kotak), Kanglim **kanan**
-berdiri dengan cardigan di kepala; (b) cardigan menutupi mata Kanglim, tongkat di pinggangnya,
+berdiri dengan cardigan di kepala; (b) cardigan menutupi mata Kanglim,
 tikar + kotak makan di lantai kanan, daun masih di hidung Sirin; (c) patch cahaya bergerak pelan,
 napas Sirin; (d) kamera mulai **arc pelan** dari MCU ke two-shot (radius konstan, menghadap Sirin);
 (e) yang terlihat dari situ: Sirin utuh, Kanglim di kanan dengan cardigan di kepala, tikar di bawah.
@@ -481,9 +481,9 @@ Bed ini tidak berhenti di segmen mana pun; tiap segmen hanya **menambah** SFX di
 |---|---|---|---|
 | S1 | langkah kecil di jalan batu, gemerisik kain | Kanglim 1 baris (3.0–4.2) · Sirin: desahan | pizzicato masuk di uap kedua |
 | S2 | kain tikar dibentangkan, kepak kecil | Kanglim 2 baris (satu tertahan kain) · Sirin: *hmm* | **berhenti** tepat saat tikar mendarat di kepala |
-| S3 | kotak diletakkan, tongkat mengetuk udara, napas panjang | Kanglim 2 baris · Sirin: *hmmm* | - (tetap hening) |
+| S3 | kotak diletakkan, kain tersentuh, napas panjang | Kanglim 2 baris · Sirin: *hmmm* | - (tetap hening) |
 | S4 | kain, kepakan serbet, langkah cepat | Kanglim 2 baris (satu di tengah napas cepat) · Sirin: dengkur | pizzicato naik tempo |
-| S5 | gemerisik kecil, ranting patah, langkah cepat | Kanglim 2 baris · Sirin: *nng* | naik tempo lalu berhenti |
+| S5 | gemerisik kecil, jari menggaris tanah, langkah pelan | Kanglim 2 baris · Sirin: *nng* | naik tempo lalu berhenti |
 | S6 | kain jatuh (bukan logam), gemerisik | tanpa kata · Sirin: *haaah* | **berhenti total** saat kain menutup |
 | S7 | kain, angin | Kanglim 2 baris (kedua tertutup kain) · Sirin: hening | **tanpa musik**; hening setelah cardigan mendarat |
 | S8 | kepakan sayap, langkah kecil, kunyahan pelan | Kanglim 2 baris · Sirin: *mmm* | pizzicato masuk kembali pelan |
@@ -518,7 +518,8 @@ sebuah segmen lolos uji, dan catat perubahan board di changelog di bawah.
 | Versi | Tanggal | Perubahan |
 |---|---|---|
 | v1 | 2026-11-01 | Board awal: 8 segmen, sub-beat A/B/C, framing & kamera, audio, anchor tutup, tabel mikro-ekspresi, tabel audit |
-| **v7** | 2026-11-01 | **Format jadi 16:9 horizontal** (sebelumnya 9:16 vertikal): safe area jadi ± 5% tiap tepi, catatan konsekuensi frame horizontal ditambah (tikar/bekal/serbet bisa satu frame, two-shot lebih lega), world plate 9:16 lama ditandai **perlu versi 16:9** |
+| **v8** | 2026-11-01 | **Tongkat dicabut dari kanon Kanglim** (charsheet akan digenerate ulang tanpa tongkat): prop tongkat dihapus dari storyboard, story, notes, docs/01 · aksi S5 diganti jadi menggaris tanah dengan ujung jari · pagar ranting ikut hilang |
+| v7 | 2026-11-01 | **Format jadi 16:9 horizontal** (sebelumnya 9:16 vertikal): safe area jadi ± 5% tiap tepi, catatan konsekuensi frame horizontal ditambah (tikar/bekal/serbet bisa satu frame, two-shot lebih lega), world plate 9:16 lama ditandai **perlu versi 16:9** |
 | v6 | 2026-11-01 | **Karakter Kanglim dirombak jadi kalem**: tidak membual, tidak mengklaim, tidak panik. Gaya gerak diganti (tongkat disandarkan, menggaris tanah untuk semut, berdiri satu kaki, tidak mengejar serbet, tidak menari) · dialog 13 → 12 baris, register datar (33 kata, 11.4 dtk) · judul jadi "Bekal Buat Sirin" · button tanpa klaim (cuma merpati + suapan terakhir) |
 | v5 | 2026-11-01 | **Register dialog dirombak**: Kanglim tidak lagi bicara ala komandan operasi (kalimat pengumuman formal: "operasi dimulai", "strategi dua lapis", "ini standar") yang terbaca kaku dan ngeeselin; sekarang register anak kecil · kalimat pendek, santai (`kan`, `aja`, `nih`, `kok`), dan selalu membela diri saat gagal ("sengaja kok"). 13 baris diganti, jendela mulut dihitung ulang (52 kata, 17.3 dtk bicara) |
 | v4 | 2026-11-01 | Koreksi tempo dialog: jendela mulut dihitung ulang pada **2.5–4 kata/detik** (v3 memakai 4.6–8.0 kata/detik, mustahil diucapkan) · 2 baris dipendekkan agar muat di segmennya (S7, S8) · aturan jendela mulut diganti dari "maks 1.2 dtk" jadi tempo wajar · baris audit negasi diperjelas (berlaku untuk teks prompt, bukan board) |

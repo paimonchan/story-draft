@@ -51,9 +51,7 @@ MC: **Cha Sirin**: karakter *smol*, malas, muka bodoh/dopey, tapi imut. Supporti
 
 > a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a calm, unbothered little
 > face. He wears a beige cardigan over a navy sweater vest, a white shirt with a navy
-> necktie, navy trousers, black shoes, and a cream backpack on his back. A short wooden stick
-> hangs at his hip on a small strap, that stick is his whole personality, and it always returns
-> to his hip after he uses it.
+> necktie, navy trousers, black shoes, and a cream backpack on his back.
 
 Ciri yang **wajib** muncul di setiap render Sirin (kalau salah satu hilang, identitasnya luntur):
 bulatan pink 2D di pipi · mata teal half-lidded drowsy · rambut pastel pink panjang + ahoge ·
@@ -73,7 +71,7 @@ hoodie hitam zip kebesaran + dasi kecil · rok plisket + slouch socks krem + sep
 | Aset | Isi | Catatan |
 |---|---|---|
 | Charsheet Cha Sirin (smol) | potret netral | satu geometri kamera dengan take |
-| Charsheet Kanglim | potret netral | idem |
+| Charsheet Kanglim | potret netral, **tanpa tongkat** | akan digenerate ulang; tongkat dicabut dari kanon (2026-11-01) |
 | World plate taman + bangku taman | taman kosong, **16:9**, eye-level | plate lama (`cha_sirin_pigeon_world_01.png`) masih 9:16 → perlu versi 16:9 |
 | Prop merpati (2–3 burung) | prop | opsional; burung = prop hidup, bukan karakter ketiga |
 
