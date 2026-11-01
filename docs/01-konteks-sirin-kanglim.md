@@ -20,9 +20,12 @@ MC: **Cha Sirin**: karakter *smol*, malas, muka bodoh/dopey, tapi imut. Supporti
 
 ## Suara & dialog (kanon)
 
-- **Kanglim bicara.** Register-nya: komandan operasi yang terlalu serius untuk anak sekecil itu,
-  kalimat pendek, dan tiap kegagalan diklaim sebagai "bagian dari rencananya". Barisnya ditulis di
-  `story.md` sebagai kalimat berkutip di baris sendiri.
+- **Kanglim bicara.** Register-nya: **anak kecil yang sok bisa mengurus semuanya**, bukan komandan
+  atau narator. Kalimatnya pendek dan santai (`kan`, `aja`, `nih`, `kok`, `ya`), dan tiap kali
+  gagal dia membela diri dengan santai ("sengaja kok"), bukan mengumumkan sesuatu. Hindari kalimat
+  bergaya pengumuman/briefing ("operasi dimulai", "strategi dua lapis", "ini standar") · itu
+  terbaca kaku dan bikin penonton kesal. Barisnya ditulis di `story.md` sebagai kalimat berkutip di
+  baris sendiri.
 - **Sirin tidak pernah bicara.** Dia hanya mengeluarkan suara ekspresif: desahan panjang, *hmm*
   pendek, dengkur, *nng*, *mmm*. Semuanya ditulis sebagai **prosa** (bukan dialog) dan di storyboard
   dicatat sebagai SFX + mikro-ekspresi.

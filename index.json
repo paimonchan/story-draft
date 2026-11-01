@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-01T06:07:22Z",
+ "generated": "2026-11-01T06:10:41Z",
  "count": 2,
- "words": 928,
+ "words": 914,
  "statuses": {
   "adapted": 0,
   "developing": 0,
@@ -33,12 +33,12 @@
   "Pak Sukron"
  ],
  "baseline": {
-  "words": 464.0,
-  "sentences": 45.0,
+  "words": 457.0,
+  "sentences": 44.5,
   "dialogue": 7.5,
   "scenes": 5.5,
-  "longest_sentence": 25.5,
-  "visual_pct": 57.0
+  "longest_sentence": 24.5,
+  "visual_pct": 56.0
  },
  "entries": [
   {
@@ -70,16 +70,16 @@
    "non_verbal": false,
    "speech": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata)",
    "meta": {},
-   "words": 728,
-   "chars": 5166,
+   "words": 714,
+   "chars": 5016,
    "paragraphs": 40,
-   "sentences": 71,
+   "sentences": 70,
    "dialogue": 13,
-   "longest_sentence": 30,
-   "avg_sentence": 10.3,
+   "longest_sentence": 28,
+   "avg_sentence": 10.2,
    "read_min": 4,
-   "visual_sentences": 40,
-   "visual_pct": 56,
+   "visual_sentences": 38,
+   "visual_pct": 54,
    "toc": [
     {
      "id": "h1",
@@ -91,25 +91,25 @@
      "id": "h2",
      "level": 2,
      "text": "2. Operasi dimulai (5.0–10.0 dtk)",
-     "words": 65
+     "words": 66
     },
     {
      "id": "h3",
      "level": 2,
      "text": "3. Tugas Sirin (10.0–15.0 dtk)",
-     "words": 111
+     "words": 107
     },
     {
      "id": "h4",
      "level": 2,
      "text": "4. Formasi makan siang (15.0–20.0 dtk)",
-     "words": 97
+     "words": 95
     },
     {
      "id": "h5",
      "level": 2,
      "text": "5. Semut (20.0–25.0 dtk)",
-     "words": 90
+     "words": 91
     },
     {
      "id": "h6",
@@ -121,13 +121,13 @@
      "id": "h7",
      "level": 2,
      "text": "7. Kanglim mencoba meniru (30.0–35.0 dtk)",
-     "words": 69
+     "words": 62
     },
     {
      "id": "h8",
      "level": 2,
      "text": "8. Button (35.0–40.0 dtk)",
-     "words": 105
+     "words": 102
     }
    ],
    "mentions": {
@@ -183,7 +183,7 @@
     {
      "id": "sentence",
      "label": "Kalimat terpanjang",
-     "value": "30 kata",
+     "value": "28 kata",
      "ok": true,
      "note": "di atas ~45 kata susah dipetakan jadi satu shot"
     },
@@ -197,7 +197,7 @@
     {
      "id": "visual",
      "label": "Kalimat dengan isyarat visual",
-     "value": "40/71 (56%)",
+     "value": "38/70 (54%)",
      "ok": true,
      "note": "cahaya, gerak, warna, shot, bahan caption H3"
     }

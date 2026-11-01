@@ -10,7 +10,7 @@ Semua aturan di bawah bukan karangan, diambil dari lane yang sudah jalan
 |---|---|
 | Pipeline **OBVPM extend** = satu take kontinu, satu lokasi, tanpa cut | satu taman, satu bangku, 8 segmen ~5 dtk, tidak ada pindah tempat |
 | Kamera face-first: **muka Sirin = subjek** di setiap segmen | aksi Kanglim selalu terjadi **di frame yang sama** dengan muka Sirin; tidak ada segmen "milik Kanglim" |
-| **Dialog Kanglim + vokal Sirin** (pola seri: NO-BGM) | komedi dibawa gestur + SFX; Kanglim 13 baris pendek (tempo 2.5–4 kata/detik, total 23.3 dtk), Sirin 0 baris kata, jadi nol risiko lip-sync di sisi Sirin |
+| **Dialog Kanglim + vokal Sirin** (pola seri: NO-BGM) | komedi dibawa gestur + SFX; Kanglim 13 baris pendek (tempo 2.5–4 kata/detik, total 17.3 dtk), Sirin 0 baris kata, jadi nol risiko lip-sync di sisi Sirin |
 | Maks **3–4 aksi** per segmen | tiap scene cuma satu beat + satu reaksi |
 | Maks **1 gerak kamera kecil** per segmen | tidak ada zoom/panjau/overhead, lihat §"Kamera" |
 | Anti-cut: satu framing per segmen | tidak ada "cut to", "we see", "meanwhile" |
@@ -75,7 +75,7 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 - Ambience taman siang: angin di daun, burung jauh, dengung kota tipis, gemerisik rumput.
 - SFX: kain tikar, angin meniup serbet, kotak bekal diangkat, **langkah kaki kecil banyak
   (semut = tidak terdengar, jadi bunyi dari Kanglim menari)**, kepakan merpati, kunyahan pelan.
-- **Dialog:** Kanglim 13 baris (register komandan operasi, kalimat pendek); dua di antaranya
+- **Dialog:** Kanglim 13 baris (52 kata, register anak kecil yang sok bisa, kalimat pendek); dua di antaranya
   diucapkan dengan **mulut tertutup kain** (S2 tikar, S7 cardigan) sehingga tidak butuh animasi mulut.
 - **Vokal Sirin (bukan kata):** desahan, *hmm*, *hmmm*, dengkur, *nng*, *haaah*, *mmm* (7 kali).
   Semuanya SFX + mikro-ekspresi, tidak pernah jadi baris dialog.

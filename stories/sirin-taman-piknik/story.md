@@ -20,11 +20,11 @@ tags: [anime, komedi, taman, deadpan, dialog, sirin, kanglim]
 
 Taman kota yang bersih dan terang. Matahari sore menembus daun, dan bercak cahayanya bergerak pelan di atas rumput. Cha Sirin sudah ada di bangku kayu, setengah duduk, setengah miring, hoodie hitamnya yang kebesaran menumpuk kusut di pangkuannya. Mata tealnya setengah tertutup, dan dua bulatan pink di pipinya ikut naik-turun pelan mengikuti napasnya. Dia menguap satu kali, panjang sekali, dan ahoge di kepalanya melengkung turun seperti kalah.
 
-Dari jalan setapak, Kanglim datang cepat: ransel krem di punggung, cardigan beige, tongkat kayu tergantung di pinggang. Dia berhenti di depan bangku, menegakkan badan sekecil mungkin, dan mengangkat tongkatnya seperti komandan memeriksa pasukan.
+Dari jalan setapak, Kanglim datang cepat: ransel krem di punggung, cardigan beige, tongkat kayu tergantung di pinggang. Dia berhenti di depan bangku, menegakkan badan sekecil mungkin, dan mengangkat tongkatnya tinggi-tinggi.
 
-"Operasi Piknik Sempurna dimulai sekarang."
+"Duduk aja. Semua aku yang urus."
 
-Suaranya terlalu serius untuk anak sekecil itu.
+Nadanya seperti orang yang sudah menyiapkan semuanya dari rumah.
 
 Sirin menoleh sepersekian derajat ke arahnya. Lalu berhenti menoleh. Satu desahan panjang keluar dari hidungnya, bukan kata.
 
@@ -32,23 +32,23 @@ Sirin menoleh sepersekian derajat ke arahnya. Lalu berhenti menoleh. Satu desaha
 
 Kanglim membentangkan tikar kotak-kotak dengan satu gerakan bangga, dagu terangkat, tongkat diangkat tinggi.
 
-"Tikar terbentang. Sempurna."
+"Nih, rapi kan?"
 
 Angin meniup ujung tikar, tikar terbalik di udara, dan mendarat rapi di atas kepalanya. Dia berdiri diam dengan tikar menutupi wajahnya.
 
-"...ini bagian dari rencananya."
+"...nggak apa-apa, masih bisa lihat."
 
 Suaranya tertahan kain. Sirin mengedip satu kali, sangat lambat. Ekspresinya tidak berubah sedikit pun. Suara kecil keluar dari tenggorokannya satu kali, *hmm*, lalu hilang.
 
 ## 3. Tugas Sirin (10.0–15.0 dtk)
 
-Kanglim mengangkat kotak bekal tinggi-tinggi dengan dua tangan, lalu menaruhnya dengan hati-hati di perut Sirin. Dia menunjuk-nunjuk kotak itu dengan tongkatnya, tiga kali, jelas sebuah perintah yang sangat penting.
+Kanglim mengangkat kotak bekal tinggi-tinggi dengan dua tangan, lalu menaruhnya dengan hati-hati di perut Sirin. Dia menunjuk-nunjuk kotak itu dengan tongkatnya, tiga kali, jelas sesuatu yang menurut dia penting sekali.
 
-"Kotak ini penting. Jangan biarkan apa pun menyentuhnya."
+"Ini jangan diutak-atik ya."
 
 Dia melangkah mundur satu langkah, lalu menambahkan dengan dagu terangkat:
 
-"Aku percayakan ini padamu."
+"Aku titip ya."
 
 Sirin mengangguk, sangat pelan, dan matanya sudah menutup sebelum anggukannya selesai. Sebuah suara pelan keluar dari mulutnya, bukan kata, lebih seperti *hmmm* yang tidak pernah selesai. Dia melorot lurus ke belakang di bangku, tengkuknya di sandaran, wajahnya mendongak ke langit: mata teal setengah terbuka, mulut kecil terbuka, dua bulatan pink hangat di pipi. Kotak bekal di perutnya naik-turun mengikuti napas.
 
@@ -56,11 +56,11 @@ Sirin mengangguk, sangat pelan, dan matanya sudah menutup sebelum anggukannya se
 
 Kanglim menyusun makanan di tikar dalam formasi yang rapi: sandwich sejajar, gelas berbaris, serbet terlipat tiga. Dia mengukur jarak dengan tongkatnya, menggeser satu sandwich dua senti.
 
-"Jarak antar-sandwich harus sama. Ini standar."
+"Belum pas. Geser dikit."
 
 Dia mengangguk puas. Angin datang lagi, dan serbetnya lepas satu per satu seperti layar kecil, terbang rendah di atas rumput.
 
-"Serbet! Serbet, kembali!"
+"Eh! Balik sini!"
 
 Kanglim mengejar sambil menunjuk-nunjuk, tongkatnya terlepas dari tangannya, dan tongkat itu kembali ke pinggangnya sendiri tanpa dia sadari. Di bangku, Sirin tidur. Dengkur kecil keluar dari hidungnya, pelan dan rata. Satu helai daun mendarat tepat di hidungnya. Dia tidak bergerak sama sekali.
 
@@ -68,11 +68,11 @@ Kanglim mengejar sambil menunjuk-nunjuk, tongkatnya terlepas dari tangannya, dan
 
 Garis hitam kecil muncul dari celah rumput dan berjalan lurus menuju kotak bekal di perut Sirin. Kanglim melompat berdiri, mengangkat tongkat.
 
-"Pagar dulu. Ini strategi dua lapis."
+"Nggak boleh lewat situ."
 
 Dia menyusun pagar dari ranting-ranting di sekeliling tikar. Semut menembus pagar tanpa melambat, naik ke sepatunya, lalu ke celananya.
 
-"Kaki. Kenapa kakiku?"
+"Nggak usah naik. Nggak usah naik!"
 
 Kanglim menari kecil di tempat, kaki kiri, kaki kanan, tongkat diangkat tinggi di atas kepala, wajah chibi-nya makin serius dan makin konyol. Sirin masih tidur. Napasnya tetap pelan dan rata, dan satu suara pendek *nng* keluar di tengah tidurnya, bukan kata.
 
@@ -88,11 +88,11 @@ Sirin menarik napas panjang, *haaah*, lalu diam lagi. Mata tealnya tetap setenga
 
 Kanglim menatap lengan hoodie itu lama sekali.
 
-"Kalau dia bisa, aku juga bisa."
+"Gampang. Tinggal gitu doang."
 
 Dia melepas cardigan-nya, melipatnya dengan sangat hati-hati, dan meletakkannya di atas kotak makannya sendiri. Angin menyambut cardigan itu dan membawanya ke arah kolam. Cardigan mendarat di kepala Kanglim. Dia membeku dengan cardigan menutupi matanya.
 
-"Aku tidak melihat apa pun. Ini rencanaku."
+"Sengaja kok."
 
 Sirin tidak melihat. Sirin tidak pernah melihat apa pun. Dia juga tidak bersuara sama sekali.
 
@@ -100,13 +100,13 @@ Sirin tidak melihat. Sirin tidak pernah melihat apa pun. Dia juga tidak bersuara
 
 Kanglim mengangkat dagunya, menoleh ke kamera, dan mengangkat tongkatnya.
 
-"Semua ini rencanaku sejak awal."
+"Nah kan. Aku bilang apa."
 
 Dia duduk di tikar, di samping bangku, dan mengangkat sandwichnya. Seekor merpati gemuk mendarat di sandaran bangku. Tanpa membuka mata, Sirin mengangkat satu tangan dengan malas; merpati itu naik ke telapak tangannya, duduk, dan ikut diam.
 
 Kanglim menurunkan sandwichnya ke mulut Sirin.
 
-"Suapan terakhir. Piknik ini resmi sempurna."
+"Terakhir ya. Habisin."
 
 Sirin menggigit kecil, mata tetap setengah tertutup, dan mengunyah sangat pelan. Satu suara pendek keluar dari tenggorokannya, *mmm*, dan itu satu-satunya suara sepanjang hari yang terdengar seperti setuju.
 
