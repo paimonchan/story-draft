@@ -74,7 +74,7 @@ hoodie hitam zip kebesaran + dasi kecil · rok plisket + slouch socks krem + sep
 |---|---|---|
 | Charsheet Cha Sirin (smol) | potret netral | satu geometri kamera dengan take |
 | Charsheet Kanglim | potret netral | idem |
-| World plate taman + bangku taman | taman kosong, 9:16, eye-level | sudah ada dari lane taman sebelumnya |
+| World plate taman + bangku taman | taman kosong, **16:9**, eye-level | plate lama (`cha_sirin_pigeon_world_01.png`) masih 9:16 → perlu versi 16:9 |
 | Prop merpati (2–3 burung) | prop | opsional; burung = prop hidup, bukan karakter ketiga |
 
 Aturan aset: **semua ref wajib satu geometri kamera dengan take**: ref dengan sudut berlawanan

@@ -81,7 +81,7 @@ logline: "Satu kalimat: siapa, mau apa, apa yang menghalangi."
 characters: [Nara, Pak Sukron]   # tiap nama harus punya identitas visual yang konsisten
 setting: "Pasar loak Bandung, malam setelah hujan"
 target: "MiniMax H3"
-format: "9:16"
+format: "16:9"
 duration: 45           # target durasi klip (detik), opsional
 beats:                 # opsional, default = jumlah heading
 tags: [urban, malam, hujan]

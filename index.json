@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T06:17:54Z",
+ "generated": "2026-11-01T06:20:59Z",
  "count": 2,
  "words": 924,
  "statuses": {
@@ -55,7 +55,7 @@
    ],
    "setting": "Pasar loak Bandung, malam setelah hujan",
    "target": "MiniMax H3",
-   "format": "9:16",
+   "format": "16:9",
    "duration": 45,
    "beats": 3,
    "tags": [
@@ -187,7 +187,7 @@
    ],
    "setting": "Taman kota, siang hangat, bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan",
    "target": "MiniMax H3, seri smol Cha Sirin",
-   "format": "9:16",
+   "format": "16:9",
    "duration": 40,
    "beats": 8,
    "tags": [

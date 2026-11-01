@@ -28,10 +28,11 @@ Eskalasi: tikar → bekal → serbet → semut → lengan hoodie → cardigan �
 |---|---|---|
 | 1 | Charsheet Cha Sirin (smol), `Pastel Pink-Haired Anime Character Sheet.png` | ✅ ada |
 | 2 | Charsheet Kanglim, `Chibi Blue-Haired School Character Sheet.png` | ✅ ada |
-| 3 | World plate taman + kursi, **`cha_sirin_pigeon_world_01.png`** | ✅ **sudah ada** (lane pigeon) |
+| 3 | World plate taman + kursi, **`cha_sirin_pigeon_world_01.png`** | ⚠️ ada, tapi **9:16** → perlu plate **16:9** |
 
 World plate lane pigeon sudah persis lokasi cerita ini (bangku kayu, jalan setapak batu,
-rerumputan, kolam di kejauhan, 9:16, taman kosong). **Tidak perlu generate world baru.**
+rerumputan, kolam di kejauhan, taman kosong) · **tapi plate-nya 9:16, sementara lane ini 16:9**, jadi
+world plate perlu **dibuat ulang / di-crop ke 16:9** dengan geometri kamera yang sama seperti take.
 Aturan §12.5/§13.5: semua ref wajib satu geometri kamera dengan take, tiga ref di atas
 aman (sheet = potret netral, world = eye-level sejajar take).
 
@@ -96,6 +97,6 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 ## Status
 
 - [x] story.md (8 segmen, satu lokasi; Kanglim 12 baris dialog, Sirin 7 vokal ekspresif)
-- [x] storyboard.md v6, anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker, **lapisan dialog & vokal**
+- [x] storyboard.md v7, anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker, **lapisan dialog & vokal**
 - [ ] perbarui kolom **Status** di `storyboard.md` tiap segmen selesai diuji (`belum diuji` → `diuji` → `final`)
 - [ ] serahkan ke lane prompt (`eikei-plan`) untuk plan + pack per segmen, bukan urusan repo ini

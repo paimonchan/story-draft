@@ -8,7 +8,7 @@ logline: "Satu kalimat: siapa, mau apa, apa yang menghalangi."
 characters: []         # [Nara, Pak Sukron], tiap nama harus punya identitas visual yang konsisten
 setting: ""            # "Pasar loak Bandung, malam setelah hujan"
 target: "MiniMax H3"   # model video tujuan
-format: "9:16"         # rasio/format klip target
+format: "16:9"         # rasio/format klip target
 duration: 45           # target durasi klip (detik), opsional
 non_verbal: false      # true = tidak ada dialog sama sekali
 speech: ""             # siapa bicara & siapa cuma bersuara, mis. "Kanglim bicara; Sirin hanya vokal ekspresif"

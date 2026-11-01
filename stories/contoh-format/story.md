@@ -8,7 +8,7 @@ logline: "Nara kembali ke pasar loak tempat ayahnya hilang, dan menemukan kotak 
 characters: [Nara, Pak Sukron]
 setting: "Pasar loak Bandung, malam setelah hujan"
 target: "MiniMax H3"
-format: "9:16"
+format: "16:9"
 duration: 45
 tags: [contoh, urban, malam, hujan]
 ---

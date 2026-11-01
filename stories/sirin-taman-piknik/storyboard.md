@@ -5,12 +5,12 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 
 | Field | Nilai |
 |---|---|
-| Versi | **v6**: 2026-11-01 (changelog di bawah) |
-| Format | 9:16 vertikal · 24 fps · total ~40 dtk (8 × 5 dtk) |
-| Safe area | 9:16: ±5% teratas & terbawah kepotong di feed → kepala, tongkat, dan tangan jangan masuk zona itu |
+| Versi | **v7**: 2026-11-01 (changelog di bawah) |
+| Format | **16:9 horizontal** · 24 fps · total ~40 dtk (8 × 5 dtk) |
+| Safe area | 16:9: ±5% di **tiap tepi** (kiri/kanan/atas/bawah) → kepala, tongkat, dan tangan jangan masuk zona itu |
 | Lokasi | **satu taman, satu bangku, satu siang**: tidak ada perpindahan sepanjang 40 dtk |
 | Audio | ambience bed konstan + SFX aksi (peta audio di bawah); BGM di-mix di luar klip |
-| Suara | **Kanglim bicara** (13 baris, di dalam klip) · **Sirin tidak pernah bicara**, hanya vokal ekspresif (7 kali, SFX) |
+| Suara | **Kanglim bicara** (12 baris, di dalam klip) · **Sirin tidak pernah bicara**, hanya vokal ekspresif (7 kali, SFX) |
 
 ## Cara baca
 
@@ -59,6 +59,11 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 | S6 | **reveal / payoff** | MCU → lebih dekat | push in + slow-motion accent | **harus** | **tinggi** | K 0 · S 1 | lengan hoodie jadi tutup |
 | S7 | react (anticlimax) | MCU | static locked-off (frame benar-benar diam) | penting | sedang | K 2 · S 0 | cardigan menutupi mata Kanglim |
 | S8 | resolve / button | two-shot | arc pelan | **harus** | tinggi | K 2 · S 1 | merpati di telapak tangan, suapan terakhir |
+
+**Konsekuensi frame horizontal:** ruang kiri-kanan lebih lega, jadi tikar, kotak bekal, dan serbet
+bisa masuk frame yang sama dengan muka Sirin tanpa pindah framing · dua-shot Sirin (kiri) dan
+Kanglim (kanan) tidak berdesakan · **world plate wajib 16:9** (plate `cha_sirin_pigeon_world_01.png`
+masih 9:16, jadi perlu plate 16:9 baru atau crop yang geometrinya sama dengan take).
 
 **Rantai eskalasi (yang bikin 8 segmen ini bukan 8 lelucon terpisah):** tikar → bekal → serbet →
 semut → lengan hoodie → cardigan → merpati. Tiap segmen menambah satu rintangan baru untuk Kanglim,
@@ -513,7 +518,8 @@ sebuah segmen lolos uji, dan catat perubahan board di changelog di bawah.
 | Versi | Tanggal | Perubahan |
 |---|---|---|
 | v1 | 2026-11-01 | Board awal: 8 segmen, sub-beat A/B/C, framing & kamera, audio, anchor tutup, tabel mikro-ekspresi, tabel audit |
-| **v6** | 2026-11-01 | **Karakter Kanglim dirombak jadi kalem**: tidak membual, tidak mengklaim, tidak panik. Gaya gerak diganti (tongkat disandarkan, menggaris tanah untuk semut, berdiri satu kaki, tidak mengejar serbet, tidak menari) · dialog 13 → 12 baris, register datar (33 kata, 11.4 dtk) · judul jadi "Bekal Buat Sirin" · button tanpa klaim (cuma merpati + suapan terakhir) |
+| **v7** | 2026-11-01 | **Format jadi 16:9 horizontal** (sebelumnya 9:16 vertikal): safe area jadi ± 5% tiap tepi, catatan konsekuensi frame horizontal ditambah (tikar/bekal/serbet bisa satu frame, two-shot lebih lega), world plate 9:16 lama ditandai **perlu versi 16:9** |
+| v6 | 2026-11-01 | **Karakter Kanglim dirombak jadi kalem**: tidak membual, tidak mengklaim, tidak panik. Gaya gerak diganti (tongkat disandarkan, menggaris tanah untuk semut, berdiri satu kaki, tidak mengejar serbet, tidak menari) · dialog 13 → 12 baris, register datar (33 kata, 11.4 dtk) · judul jadi "Bekal Buat Sirin" · button tanpa klaim (cuma merpati + suapan terakhir) |
 | v5 | 2026-11-01 | **Register dialog dirombak**: Kanglim tidak lagi bicara ala komandan operasi (kalimat pengumuman formal: "operasi dimulai", "strategi dua lapis", "ini standar") yang terbaca kaku dan ngeeselin; sekarang register anak kecil · kalimat pendek, santai (`kan`, `aja`, `nih`, `kok`), dan selalu membela diri saat gagal ("sengaja kok"). 13 baris diganti, jendela mulut dihitung ulang (52 kata, 17.3 dtk bicara) |
 | v4 | 2026-11-01 | Koreksi tempo dialog: jendela mulut dihitung ulang pada **2.5–4 kata/detik** (v3 memakai 4.6–8.0 kata/detik, mustahil diucapkan) · 2 baris dipendekkan agar muat di segmennya (S7, S8) · aturan jendela mulut diganti dari "maks 1.2 dtk" jadi tempo wajar · baris audit negasi diperjelas (berlaku untuk teks prompt, bukan board) |
 | v3 | 2026-11-01 | **Lapisan dialog**: Kanglim bicara (13 baris), Sirin hanya vokal ekspresif (7 kali, bukan kata) · field `Dialog & vokal` di 8 segmen · kolom Dialog di peta cepat · tabel peta dialog & vokal · kolom dialog di peta audio · 4 baris audit baru · ganti tanda pisah panjang dengan koma / titik dua / `·` di seluruh repo |

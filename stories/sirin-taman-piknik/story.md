@@ -8,7 +8,7 @@ logline: "Kanglim bawa bekal ke taman dan mengerjakan semuanya sendiri dengan te
 characters: [Cha Sirin, Kanglim]
 setting: "Taman kota, siang hangat, bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan"
 target: "MiniMax H3, seri smol Cha Sirin"
-format: "9:16"
+format: "16:9"
 duration: 40
 beats: 8
 non_verbal: false
