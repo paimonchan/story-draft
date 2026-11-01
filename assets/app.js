@@ -229,6 +229,7 @@ function renderHome() {
           <span class="pill ${esc(e.status)}"><i class="dot"></i>${esc(e.status)}</span>
           ${e.genre ? `<span class="pill">${esc(e.genre)}</span>` : ''}
           ${e.format ? `<span class="pill">${esc(e.format)}</span>` : ''}
+          ${e.has_storyboard ? `<span class="pill" title="Ada storyboard per sub-beat">storyboard</span>` : ''}
           <div class="spacer"></div>
           <span class="muted mono" style="font-size:11.5px">${esc(e.date || '')}</span>
         </div>
@@ -297,6 +298,7 @@ function renderHome() {
 
 const TABS = [
   ['cerita', 'Cerita'],
+  ['storyboard', 'Storyboard'],
   ['notes', 'Catatan'],
   ['ready', 'Siap → prompt'],
 ];
@@ -325,6 +327,23 @@ function tabCerita(d, e) {
     <div id="rawwrap" hidden style="margin-top:16px">
       <pre class="raw">${esc(d.content)}</pre>
     </div>
+  </div>`;
+}
+
+function tabStoryboard(d, e) {
+  if (!d.storyboard?.trim())
+    return `<div class="panel"><div class="muted">Belum ada <code class="mono">storyboard.md</code> di folder draft ini.
+      Isinya: pecahan tiap segmen jadi sub-beat — gerak, ekspresi, kamera fisik, kontak, audio, anchor
+      buka/tutup — ditulis ke grammar encoder Qwen3-VL (lihat <a href="https://github.com/paimonchan/story-draft/blob/main/docs/02-aturan-produksi-h3.md" target="_blank" rel="noopener">docs/02</a>).</div></div>`;
+  return `
+  <div class="panel">
+    <div class="raw-tools">
+      <button class="btn primary" data-copy="storyboard" type="button">Salin storyboard (${fmt(d.storyboard.length)} char)</button>
+      <button class="btn" data-dl="storyboard" type="button">Unduh .md</button>
+      <a class="btn" href="https://github.com/paimonchan/story-draft/blob/main/stories/${esc(e.slug)}/storyboard.md" target="_blank" rel="noopener">Lihat di GitHub</a>
+      <span class="muted mono" style="font-size:12px">${d.storyboard.split('\\n').length} baris</span>
+    </div>
+    <div class="notes">${md(d.storyboard)}</div>
   </div>`;
 }
 
@@ -434,13 +453,15 @@ async function renderDetail(slug, tab) {
     ['diperbarui', e.date],
   ].filter(([, v]) => v !== undefined && v !== null && v !== '');
 
-  const tabs = TABS.map(([id, label]) => {
-    const n = id === 'cerita' ? (e.toc || []).length : id === 'ready' ? `${e.ready ?? 0}/${e.ready_total || 9}` : 0;
-    return `<button type="button" data-tab="${id}" aria-selected="${tab === id}">${label}${n ? `<span class="count">${n}</span>` : ''}</button>`;
-  }).join('');
+  const tabs = TABS.filter(([id]) => id !== 'storyboard' || e.has_storyboard)
+    .map(([id, label]) => {
+      const n = id === 'cerita' ? (e.toc || []).length : id === 'ready' ? `${e.ready ?? 0}/${e.ready_total || 9}` : 0;
+      return `<button type="button" data-tab="${id}" aria-selected="${tab === id}">${label}${n ? `<span class="count">${n}</span>` : ''}</button>`;
+    }).join('');
 
   let body = '';
   if (tab === 'notes') body = tabNotes(d, e);
+  else if (tab === 'storyboard') body = tabStoryboard(d, e);
   else if (tab === 'ready') body = tabReady(d, e);
   else body = tabCerita(d, e);
 
@@ -481,6 +502,10 @@ async function renderDetail(slug, tab) {
   app.querySelectorAll('[data-copy="story"]').forEach((b) => b.addEventListener('click', () => copy(d.content, b)));
   app.querySelectorAll('[data-dl="story"]').forEach((b) =>
     b.addEventListener('click', () => download(e.slug.replace('/', '--') + '.md', d.content))
+  );
+  app.querySelectorAll('[data-copy="storyboard"]').forEach((b) => b.addEventListener('click', () => copy(d.storyboard, b)));
+  app.querySelectorAll('[data-dl="storyboard"]').forEach((b) =>
+    b.addEventListener('click', () => download(e.slug.replace('/', '--') + '-storyboard.md', d.storyboard))
   );
   app.querySelectorAll('[data-tab-btn="raw"]').forEach((b) =>
     b.addEventListener('click', () => {

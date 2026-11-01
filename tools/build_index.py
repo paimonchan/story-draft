@@ -335,6 +335,11 @@ def main() -> int:
                     "slug": e["slug"],
                     "content": e["content"],
                     "notes": e["notes"],
+                    "storyboard": (
+                        path.with_name("storyboard.md").read_text(encoding="utf-8")
+                        if path.with_name("storyboard.md").exists()
+                        else ""
+                    ),
                 },
                 ensure_ascii=False,
                 indent=1,
