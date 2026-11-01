@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-01T06:38:46Z",
+ "generated": "2026-11-01T06:48:58Z",
  "count": 2,
- "words": 953,
+ "words": 972,
  "statuses": {
   "adapted": 0,
   "developing": 0,
@@ -33,12 +33,12 @@
   "Pak Sukron"
  ],
  "baseline": {
-  "words": 476.5,
-  "sentences": 46.0,
-  "dialogue": 7.5,
+  "words": 486.0,
+  "sentences": 45.5,
+  "dialogue": 7.0,
   "scenes": 5.5,
   "longest_sentence": 24.0,
-  "visual_pct": 54.5
+  "visual_pct": 57.5
  },
  "entries": [
   {
@@ -202,28 +202,28 @@
    "non_verbal": false,
    "speech": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata)",
    "meta": {},
-   "words": 753,
-   "chars": 5213,
-   "paragraphs": 41,
-   "sentences": 73,
-   "dialogue": 13,
+   "words": 772,
+   "chars": 5284,
+   "paragraphs": 40,
+   "sentences": 72,
+   "dialogue": 12,
    "longest_sentence": 27,
-   "avg_sentence": 10.3,
+   "avg_sentence": 10.7,
    "read_min": 4,
-   "visual_sentences": 37,
-   "visual_pct": 51,
+   "visual_sentences": 41,
+   "visual_pct": 57,
    "toc": [
     {
      "id": "h1",
      "level": 2,
      "text": "1. Bangku, siang hangat (0.0–5.0 dtk)",
-     "words": 152
+     "words": 162
     },
     {
      "id": "h2",
      "level": 2,
      "text": "2. Bentang tikar (5.0–10.0 dtk)",
-     "words": 69
+     "words": 78
     },
     {
      "id": "h3",
@@ -263,8 +263,8 @@
     }
    ],
    "mentions": {
-    "Cha Sirin": 19,
-    "Kanglim": 12
+    "Cha Sirin": 18,
+    "Kanglim": 11
    },
    "has_frontmatter": true,
    "has_storyboard": true,
@@ -322,14 +322,14 @@
     {
      "id": "dialogue",
      "label": "Baris dialog",
-     "value": 13,
+     "value": 12,
      "ok": true,
      "note": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata) · suara non-verbal (desahan, gumam) tidak dihitung sebagai dialog"
     },
     {
      "id": "visual",
      "label": "Kalimat dengan isyarat visual",
-     "value": "37/73 (51%)",
+     "value": "41/72 (57%)",
      "ok": true,
      "note": "cahaya, gerak, warna, shot, bahan caption H3"
     }

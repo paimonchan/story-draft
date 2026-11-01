@@ -5,12 +5,12 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 
 | Field | Nilai |
 |---|---|
-| Versi | **v9**: 2026-11-01 (changelog di bawah) |
+| Versi | **v10**: 2026-11-01 (changelog di bawah) |
 | Format | **16:9 horizontal** · 24 fps · total ~40 dtk (8 × 5 dtk) |
 | Safe area | 16:9: ±5% di **tiap tepi** (kiri/kanan/atas/bawah) → kepala, tangan, dan kotak bekal jangan masuk zona itu |
 | Lokasi | **satu taman, satu bangku, satu siang**: tidak ada perpindahan sepanjang 40 dtk |
 | Audio | ambience bed konstan + SFX aksi (peta audio di bawah); BGM di-mix di luar klip |
-| Suara | **Kanglim bicara** (13 baris, di dalam klip) · **Sirin tidak pernah bicara**, hanya vokal ekspresif (7 kali, SFX) |
+| Suara | **Kanglim bicara** (12 baris, di dalam klip) · **Sirin tidak pernah bicara**, hanya vokal ekspresif (7 kali, SFX) |
 
 ## Cara baca
 
@@ -51,8 +51,8 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 
 | Seg | Fungsi | Framing | Kamera (teknik → gerak fisik) | Prioritas | Risiko | Dialog | Beat inti |
 |---|---|---|---|---|---|---|---|
-| S1 | orient | MCU | static locked-off | harus | rendah | K 2 · S 1 | cold open: uap + Kanglim masuk |
-| S2 | escalate | MCU | static, drift mikro | penting | sedang | K 2 · S 1 | tikar menutup kepala Kanglim |
+| S1 | orient | MCU | static locked-off | harus | rendah | K 2 · S 1 | **HOOK**: klaim dari luar frame vs muka datar → tikar nutup muka |
+| S2 | escalate | MCU | static, drift mikro | penting | sedang | K 1 · S 1 | tikar dibentangkan, sudutnya ditahan lutut |
 | S3 | escalate | MCU | push in sangat pelan | harus | sedang | K 1 · S 1 | bekal ditaruh di perut Sirin, dia tidur |
 | S4 | escalate | medium | static | opsional | sedang | K 2 · S 1 | serbet terbang, daun di hidung |
 | S5 | escalate | MCU | static | penting | tinggi | K 2 · S 1 | semut, Kanglim berdiri satu kaki |
@@ -70,18 +70,73 @@ semut → lengan hoodie → cardigan → merpati. Tiap segmen menambah satu rint
 sementara usaha Sirin tetap nol. Uji "satu job per shot": S2–S5 semuanya `escalate` **tapi** masing-masing
 rintangannya beda; kalau dua segmen menambah rintangan yang sama, salah satunya harus dilebur.
 
+## Hook & retensi (short-form: TikTok / Reels / Shorts)
+
+**Hook = 0.0–2.2 dtk.** Dua lapis, keduanya di dalam 2 detik:
+- **Verbal:** suara Kanglim datang **sebelum** dia terlihat · "Sirin, piknik ini bakal paling rapi."
+  (klaim yakin dan datar, dari luar frame kanan).
+- **Visual:** muka datar Sirin + uap panjang, lalu matanya bergeser pelan ke arah suara.
+- **Premis yang dijual di 2 detik pertama:** dia yakin bisa mengurus semuanya, dia tidak peduli
+  sama sekali.
+
+**Open loop:** "apa yang bakal rusak duluan?" → dijawab berantai: tikar (3,6) → serbet (17,5) →
+semut (20,8) → cardigan (33,0), ditutup payoff lengan Sirin di S6 (25,0).
+
+**Peta lelucon (di mana lucunya, apa adanya):**
+
+| Waktu | Lelucon | Jenis | Kekuatan |
+|---|---|---|---|
+| 0,2–2,2 | klaim "paling rapi" vs muka datar Sirin | hook: kontras | kuat |
+| 3,6–5,0 | tikar nutup kepalanya sendiri + "...masih aman." (tertahan kain) | **gag #1** deadpan denial | **paling kuat** |
+| 5,4–6,7 | "Kamu diem aja ya." sambil nahan tikar pakai lutut | kontras (perintah ke orang tidur) | sedang |
+| 10,6–12,3 | "Ini buat kamu. Jaga ya." ke orang yang tidur | ironi | sedang |
+| 15,6–16,3 | "Kurang rapi." (ngurusin 2 senti) | kontras | sedang |
+| 17,5–18,2 | "Sebentar." + serbet terbang | setup gag | sedang |
+| 20,8–21,8 | "Lewat sini aja." (ngomong ke semut) | **gag #2** absurd-praktis | kuat |
+| 23,6–24,3 | "Masih aman." sementara semut naik di celananya | **gag #3** eskalasi running gag | kuat |
+| 25,0–30,0 | lengan hoodie Sirin nutup kotak, semut bubar | **PAYOFF / punchline utama (visual)** | **paling kuat** |
+| 30,6–31,3 | "Gimana caranya..." | setup | sedang |
+| 33,0–33,7 | "Oh, iya." (cardigan di kepalanya) | gag #4 deadpan | kuat |
+| 36,5–38,0 | merpati naik ke telapak tangan Sirin | gag visual | kuat |
+| 38,5–39,2 | "Masih aman." | **callback / button** | kuat |
+| 39,3–40,0 | *mmm* | punchline emosional | kuat |
+
+**Kenapa angkanya begitu (benchmark short-form, bukan selera):** ~**40% penonton swipe dalam 3 detik
+pertama**; kurva retensi rata-rata 100% (0 dtk) → 82% (1) → 71% (2) → 60% (3) → 54% (5) →
+48% (10) → 41% (30). Hook kuat menahan 80–90% sampai detik ke-3, ambang lolos ~65–70%.
+Completion per durasi: <15 dtk ~92%, 16–30 dtk ~84%, **31–60 dtk ~68%**. Klip ini 40 dtk → masuk
+band 68%, dan >60% tayangan mobile tanpa suara. Sumber + aturan lengkap: `docs/05-hook-retensi.md`.
+
+**Angka yang harus dijaga:**
+- **Tidak ada celah >5 dtk tanpa lelucon visual.** Zona paling berbahaya di short-form: 3–8 dtk,
+  karena di situ penonton memutuskan lanjut atau scroll. Karena itu lelucon pertama (tikar nutup muka)
+  ditaruh di **3,6 dtk**, bukan di 8 dtk.
+- **Punchline utama ada di 25,0 dtk (62% durasi).** Kalau retensi turun, opsi potong: **buang S3 + S4**
+  (paling lemah, cuma setup) → payoff lengan maju ke ~18 dtk, total ~25 dtk. Ini juga naikkan band
+  completion dari ~68% (31–60 dtk) ke ~84% (16–30 dtk). **Jangan** potong S5 atau S6.
+- **Loop:** frame terakhir = frame pertama, jadi klip bisa ditonton berulang tanpa terasa putus.
+- **Caption hook di post-produksi** (teks di dalam frame dilarang, lihat `docs/02`). Pilih satu:
+  "dia ngurus semuanya. dia tidur." · "semua rencananya gagal. satu gerakan dia beres." ·
+  "dia ngomong 12 kali. dia nggak ngomong sekali pun."
+- **Format:** lane ini **16:9** (lihat header). TikTok native-nya **9:16**, jadi 16:9 akan tampil
+  letterbox (bar hitam) atau dipotong di beberapa permukaan. Kalau target utamanya feed vertikal,
+  ganti `format: 9:16` di frontmatter + header storyboard, dan world plate-nya harus 9:16.
+
+Aturan umumnya (berlaku untuk semua draft) ada di `docs/05-hook-retensi.md`.
+
 ---
 
 ## S1 · Bangku, siang hangat (0.0–5.0)
 
 **Fungsi:** orient · **Prioritas:** harus · **Status:** belum diuji · **Risiko:** rendah
 
-**Framing & kamera:** `medium close-up`, eye-level, Sirin di **kiri** frame duduk di bangku,
-Kanglim di **kanan** (belum masuk frame di awal). Frame tidak bergerak sama sekali.
+**Framing & kamera:** `medium close-up`, eye-level, Sirin di **kiri** frame duduk di bangku.
+Kanglim **belum terlihat di 0,0–2,5**: yang ada cuma **suaranya dari kanan** (voice-first hook).
+Frame tidak bergerak sama sekali.
 
 **Sumbu & arah:** sumbu tetap, kamera di sisi muka Sirin. Eyeline Sirin: mula-mula kosong
-ke depan-bawah (kelopak setengah), lalu menoleh ~10° ke **kanan** ke arah Kanglim. Kanglim masuk
-dari jalan setapak di **kanan**, berhenti di kanan-bawah frame, eyeline ke **kiri** (Sirin).
+ke depan-bawah (kelopak setengah), lalu bergeser ~10° ke **kanan** ke arah suara (2,2–3,0).
+Kanglim masuk dari jalan setapak di **kanan** membawa tikar terlipat, eyeline ke **kiri** (Sirin).
 Patch cahaya didorong angin pelan dari **kanan ke kiri** di rumput.
 
 **Cahaya:** siang hangat, matahari menembus dedaunan; patch daun bergerak pelan di rumput dan di
@@ -89,23 +144,25 @@ lengan hoodie-nya. *(Ini kondisi dasar untuk seluruh 40 dtk.)*
 
 **Aset:** world plate taman (`cha_sirin_pigeon_world_01.png`) · charsheet Sirin · charsheet Kanglim.
 
-**Dialog & vokal:** Kanglim (sub-beat C, 3.0–4.2): "Sirin. Aku bawa bekal." Mulut membuka
-pelan, menutup di akhir kalimat; dagu tidak naik. Kanglim (sub-beat C, 4.3–5.0): "Oke." Satu
-kata, datar, diucapkan **setelah tidak ada jawaban** dari Sirin; mulut membuka sekali. Sirin: satu
-desahan panjang lewat **hidung** saat menoleh, mulut tetap kecil terbuka (tidak membentuk kata).
+**Dialog & vokal:** Kanglim (**off-screen kanan**, sub-beat A, 0.2–2.2) · **HOOK**: "Sirin,
+piknik ini bakal paling rapi." Mulut belum terlihat; nadanya **yakin dan datar**, bukan sombong.
+Kanglim (sub-beat C, 4.3–5.0, suara **tertahan kain** karena tikar sudah menutupi kepalanya):
+"...masih aman." **Mulut tidak terlihat** · yang bergerak hanya kain di area mulut, tipis. Sirin:
+satu desahan panjang lewat **hidung** di akhir uap, mulut tetap kecil terbuka (tidak membentuk kata).
 
-- **A (0–1.5), scene state.** Taman kota siang; matahari menembus daun; patch daun bergerak pelan
-  di rumput dan di lengan hoodie-nya. Sirin setengah duduk miring, hoodie hitam kebesaran menumpuk
-  di pangkuan. Kelopak setengah tertutup, mulut kecil terbuka, dua bulatan pink di pipi. Napas
-  pelan, ahoge bergoyang.
-- **B (1.5–3.0).** Sirin menguap panjang: rahang turun, kelopak makin sempit, ahoge melengkung
-  turun lalu naik lagi, bahu naik sedikit. Selesai, mulut kembali kecil terbuka.
-- **C (3.0–5.0).** Kanglim masuk dari jalan setapak di kanan dengan langkah pelan, berhenti di kanan
-  bawah frame, lalu **berdiri diam di samping bangku** tanpa suara. **Reaksi Sirin:**
-  kepala menoleh ~10° ke kanan ke arahnya, kelopak turun-naik satu kali, lalu berhenti menoleh.
+- **A (0.0–2.2) · HOOK.** Sirin menguap panjang: rahang turun, kelopak makin sempit,
+  ahoge melengkung turun lalu naik lagi, bahu naik sedikit. Di atas uap itu, **suara Kanglim dari
+  luar frame kanan** mengucapkan klaimnya (0.2–2.2). Muka Sirin **tidak berubah sama sekali**
+  · kontras klaim vs muka datar itu premisnya, dan itu terjadi di dalam 2 detik pertama.
+- **B (2.2–3.0).** Mata Sirin bergeser pelan ~10° ke kanan, ke arah suara; kelopak turun-naik
+  satu kali, lalu berhenti di tengah jalan. Uap selesai, mulut kembali kecil terbuka.
+- **C (3.0–5.0).** Kanglim masuk dari jalan setapak di kanan membawa **tikar terlipat** di bawah
+  lengan. Angin mengangkat lipatan tikar, tikar mengembang di udara, dan **mendarat menutupi
+  kepalanya sendiri** (3,6–4,3). Dia berhenti, tangan turun pelan ke samping, dan **tidak
+  melepasnya**. **Reaksi Sirin:** kelopak turun-naik satu kali, ekspresi tidak berubah.
 
-**Audio:** angin di dedaunan, burung jauh, langkah kecil di jalan batu, gemerisik kain.
-Pizzicato ringan masuk di uap kedua.
+**Audio:** angin di dedaunan, burung jauh, langkah kecil di jalan batu. Di 3,6 dtk: kain mengembang
+lalu **tamparan kain** ke kepala (SFX tunggal, tidak keras). Pizzicato ringan masuk di uap pertama.
 
 **Anchor buka (4+1):** (a) Sirin **kiri**, duduk miring di bangku, **sendiri**: kanan frame masih
 kosong (jalan setapak + rumput); (b) hoodie menumpuk di pangkuan, kotak bekal belum ada, tikar masih
@@ -113,8 +170,8 @@ di ransel (di luar frame); (c) patch cahaya bergerak pelan, ahoge bergoyang,
 napas pelan; (d) kamera MCU eye-level ~1–1.5 m di sisi muka Sirin, **diam**; (e) yang terlihat dari
 situ: bangku kayu, rumput, kolam jauh di belakang, Kanglim belum masuk.
 
-**Anchor tutup:** Sirin kepala sedikit ke kanan, kelopak half-lidded, Kanglim berdiri santai di
-samping bangku, tikar masih di ransel.
+**Anchor tutup:** Sirin kepala sedikit ke kanan, kelopak half-lidded; Kanglim berdiri diam dengan
+**tikar menutupi kepalanya**, tangan di samping badan.
 
 ---
 
@@ -124,9 +181,9 @@ samping bangku, tikar masih di ransel.
 
 **Framing & kamera:** `medium close-up` yang sama, static; drift mikro ≤ satu langkah.
 
-**Sumbu & arah:** sumbu tetap. Eyeline Kanglim turun ke **bawah** (tangannya sendiri), Sirin tetap
-menoleh ke kanan tapi pandangan kosong. Tikar mengembang ke **atas** lalu jatuh menutupi kepala
-Kanglim; tepinya menggantung di sisi pipinya.
+**Sumbu & arah:** sumbu tetap. Eyeline Kanglim turun ke **bawah** (tikar di rumput), Sirin tetap
+menoleh ke kanan tapi pandangan kosong. Tikar dibuka **dari kepala ke rumput**, sudutnya tertarik
+angin **ke kanan lalu ke kiri**, dan ditahan Kanglim dengan lutut lalu tangan.
 
 **Cahaya:** sama dengan S1, patch bergerak pelan; saat tikar mengembang, sisi dalam kain menangkap
 cahaya sedikit lebih terang (tidak mengubah kondisi).
@@ -134,27 +191,28 @@ cahaya sedikit lebih terang (tidak mengubah kondisi).
 **Aset:** world plate · charsheet Sirin · charsheet Kanglim · tikar (polos, dari deskripsi).
 
 **Dialog & vokal:** Kanglim (sub-beat A, 5.4–6.7): "Kamu diem aja ya." Mulut bergerak pelan
-dan rata, menutup sebelum tikar terbalik. Kanglim (sub-beat C, 8.4–9.1, suara tertahan di balik
-kain): "Masih aman." **Mulut tidak terlihat** (tertutup tikar) · yang bergerak hanya kain di area
-mulut, tipis. Sirin: satu *hmm* pendek, mulut tidak berubah bentuk.
+dan rata, menutup saat tikar mulai dibentangkan. Dia **tidak bicara lagi** di segmen ini (sub-beat B
+dan C cuma kain, angin, dan napas). Sirin: satu *hmm* pendek, mulut tidak berubah bentuk.
 
-- **A.** Kanglim mencabut tikar dari ransel dan membentangkannya pelan: satu sisi dulu, lalu sisi
-  yang lain; tikar mengembang di udara, tepinya naik.
-- **B.** Tikar turun dan **menutupi kepalanya sendiri**; tepi tikar menggantung di sisi pipinya.
-  Kontak: kain jatuh, ujungnya masih bergerak sedikit setelah berhenti. Dia berdiri diam, tangan
-  turun perlahan ke samping, dan **tidak melepas tikar itu**.
-- **C.** **Reaksi Sirin:** satu kedipan lambat, kelopak turun lalu naik; ekspresi tidak berubah,
-  bahu tidak bergerak. Hanya napas, ahoge, dan patch cahaya yang bergerak di hoodie-nya.
+- **A (5.0–6.5).** Kanglim mengangkat tikar dari kepalanya dengan **satu tangan**, pelan,
+  seperti melepas topi; lalu membentangkannya di rumput: satu sisi dulu, sisi yang lain. Kontak:
+  kain menyentuh rumput, tepi tikar naik sekali lagi karena angin.
+- **B (6.5–8.0).** Angin menarik sudut tikar. Dia **menahan sudutnya dengan lutut**, tanpa
+  bicara; angin menarik sudut lain, dia pindah menahan dengan tangan. Gerakannya tetap pelan, tidak
+  ada gerakan cepat. Kontak: kain tertekan lutut, sudut tikar tetap di rumput.
+- **C (8.0–10.0).** **Reaksi Sirin:** satu kedipan lambat, kelopak turun lalu naik; ekspresi
+  tidak berubah, bahu tidak bergerak. Hanya napas, ahoge, dan patch cahaya yang bergerak di
+  hoodie-nya.
 
-**Audio:** kain tikar dibentangkan, angin, kepak kecil; pizzicato berhenti tepat saat tikar
-mendarat di kepala.
+**Audio:** kain tikar dibentangkan di rumput, angin, lutut menyentuh rumput; pizzicato masuk pelan
+lagi setelah hening singkat di akhir S1.
 
 **Anchor buka (4+1):** (a) Sirin **kiri** duduk, kepala sedikit ke kanan; Kanglim **kanan** berdiri;
-(b) tikar masih di ransel, kotak bekal belum keluar;
+(b) **tikar menutupi kepala Kanglim** (dari akhir S1), ransel masih di punggungnya, kotak bekal belum keluar;
 (c) patch cahaya bergerak pelan, ahoge bergoyang, napas Sirin; (d) kamera MCU eye-level sama, **diam**;
-(e) yang terlihat dari situ: dua karakter dalam frame, bangku, rumput, tikar belum terlihat.
+(e) yang terlihat dari situ: dua karakter dalam frame, bangku, rumput, tikar masih di kepala Kanglim.
 
-**Anchor tutup:** tikar menutupi kepala Kanglim, tangannya di samping badan, Sirin persis
+**Anchor tutup:** tikar terbentang di rumput, satu sudutnya ditahan lutut Kanglim, Sirin persis
 seperti akhir S1 (posisi, kelopak, napas).
 
 ---
@@ -458,8 +516,8 @@ S8 wajib kembali ke kondisi pembuka supaya loop-nya nyambung.
 
 | Seg | Kanglim (baris) | Jendela mulut | Sirin (vokal, bukan kata) | Mulut Sirin |
 |---|---|---|---|---|
-| S1 | "Sirin. Aku bawa bekal." · "Oke." | 3.0–4.2 · 4.3–5.0 | desahan panjang lewat hidung | tetap kecil terbuka |
-| S2 | "Kamu diem aja ya." · "Masih aman." | 5.4–6.7 · 8.4–9.1 (tertahan kain) | satu *hmm* pendek | tidak berubah |
+| S1 | "Sirin, piknik ini bakal paling rapi." (**off-screen**) · "...masih aman." | 0.2–2.2 · 4.3–5.0 (tertahan kain) | desahan panjang lewat hidung | tetap kecil terbuka |
+| S2 | "Kamu diem aja ya." | 5.4–6.7 | satu *hmm* pendek | tidak berubah |
 | S3 | "Ini buat kamu. Jaga ya." | 10.6–12.3 | *hmmm* yang tidak selesai | kecil terbuka, tanpa gerak bicara |
 | S4 | "Kurang rapi." · "Sebentar." | 15.6–16.3 · 17.5–18.2 | dengkur kecil lewat hidung | tertutup |
 | S5 | "Lewat sini aja." · "Masih aman." | 20.8–21.8 · 23.6–24.3 | satu *nng* pendek | tertutup |
@@ -479,8 +537,8 @@ Bed ini tidak berhenti di segmen mana pun; tiap segmen hanya **menambah** SFX di
 
 | Seg | Tambahan SFX | Dialog & vokal | Musik |
 |---|---|---|---|
-| S1 | langkah kecil di jalan batu, gemerisik kain | Kanglim 1 baris (3.0–4.2) · Sirin: desahan | pizzicato masuk di uap kedua |
-| S2 | kain tikar dibentangkan, kepak kecil | Kanglim 2 baris (satu tertahan kain) · Sirin: *hmm* | **berhenti** tepat saat tikar mendarat di kepala |
+| S1 | langkah kecil di jalan batu, **tamparan kain** di 3,6 | Kanglim 2 baris (satu off-screen, satu tertahan kain) · Sirin: desahan | pizzicato masuk di uap pertama |
+| S2 | kain tikar dibentangkan, lutut menyentuh rumput | Kanglim 1 baris · Sirin: *hmm* | pizzicato masuk pelan lagi |
 | S3 | kotak diletakkan, kain tersentuh, napas panjang | Kanglim 2 baris · Sirin: *hmmm* | - (tetap hening) |
 | S4 | kain, kepakan serbet, langkah cepat | Kanglim 2 baris (satu di tengah napas cepat) · Sirin: dengkur | pizzicato naik tempo |
 | S5 | gemerisik kecil, jari menggaris tanah, langkah pelan | Kanglim 2 baris · Sirin: *nng* | naik tempo lalu berhenti |
@@ -518,7 +576,8 @@ sebuah segmen lolos uji, dan catat perubahan board di changelog di bawah.
 | Versi | Tanggal | Perubahan |
 |---|---|---|
 | v1 | 2026-11-01 | Board awal: 8 segmen, sub-beat A/B/C, framing & kamera, audio, anchor tutup, tabel mikro-ekspresi, tabel audit |
-| **v9** | 2026-11-01 | **Lelucon verbal dikembalikan tanpa mengubah register kalem**: running gag **"Masih aman."** 3x (setup S2 → eskalasi S5 → callback S8) · S1 dapat beat "tidak ada jawaban → Oke." · S3 jadi "Ini buat kamu. Jaga ya." · S4 "Kurang rapi." · total 13 baris / 33 kata / 11.9 dtk |
+| **v10** | 2026-11-01 | **Hook 2 detik + peta lelucon**: suara Kanglim didahulukan (off-screen) dengan klaim "piknik ini bakal paling rapi" vs muka datar Sirin di 0,2–2,2 dtk; lelucon pertama (tikar nutup muka) dimajukan ke **3,6 dtk** (dari 8 dtk) supaya tidak ada celah >5 dtk tanpa lelucon di zona 3–8 dtk; "Oke." dihapus, S2 jadi segmen pemberesan (tikar ditahan lutut); ditambah section **Hook & retensi** + opsi potong 25 dtk + 3 opsi caption post-produksi |
+| v9 | 2026-11-01 | **Lelucon verbal dikembalikan tanpa mengubah register kalem**: running gag **"Masih aman."** 3x (setup S2 → eskalasi S5 → callback S8) · S1 dapat beat "tidak ada jawaban → Oke." · S3 jadi "Ini buat kamu. Jaga ya." · S4 "Kurang rapi." · total 13 baris / 33 kata / 11.9 dtk |
 | v8 | 2026-11-01 | **Tongkat dicabut dari kanon Kanglim** (charsheet akan digenerate ulang tanpa tongkat): prop tongkat dihapus dari storyboard, story, notes, docs/01 · aksi S5 diganti jadi menggaris tanah dengan ujung jari · pagar ranting ikut hilang |
 | v7 | 2026-11-01 | **Format jadi 16:9 horizontal** (sebelumnya 9:16 vertikal): safe area jadi ± 5% tiap tepi, catatan konsekuensi frame horizontal ditambah (tikar/bekal/serbet bisa satu frame, two-shot lebih lega), world plate 9:16 lama ditandai **perlu versi 16:9** |
 | v6 | 2026-11-01 | **Karakter Kanglim dirombak jadi kalem**: tidak membual, tidak mengklaim, tidak panik. Gaya gerak diganti (tongkat disandarkan, menggaris tanah untuk semut, berdiri satu kaki, tidak mengejar serbet, tidak menari) · dialog 13 → 12 baris, register datar (33 kata, 11.4 dtk) · judul jadi "Bekal Buat Sirin" · button tanpa klaim (cuma merpati + suapan terakhir) |
@@ -545,7 +604,7 @@ sebuah segmen lolos uji, dan catat perubahan board di changelog di bawah.
 | Kata strobe | 0 (`flicker`, `flash`) | hitung manual |
 | Framing ladder | maks 1 level antar segmen | bandingkan akhir S(n) → awal S(n+1) |
 | Anchor isi | 4+1 elemen sama dengan frame terakhir | posisi · apa di tangan/sekeliling · arah gerak (angin/semut) · posisi+tinggi kamera · apa yang terlihat dari situ |
-| Dialog | hanya Kanglim yang punya baris kata | hitung baris berkutip di `story.md` → 13 |
+| Dialog | hanya Kanglim yang punya baris kata | hitung baris berkutip di `story.md` → 12 |
 | Vokal Sirin | 0 baris kata; vokal dicatat sebagai SFX | bandingkan dengan peta dialog & vokal → 7 |
 | Jendela mulut | tempo 2.5–4 kata/detik dan jendelanya muat di dalam segmen | hitung kata · durasi jendela tiap baris (baris 1–2 kata diucapkan datar, tidak dihitung) |
 | Mulut tertutup kain | S2 dan S7 tidak menuntut animasi mulut | cek dua segmen itu: hanya kain yang bergerak |

@@ -61,3 +61,19 @@ menyimpulkan state lane dari repo publik (yang publik cuma mirror prompt yang su
 3. Sinyal komunitas (HN/CivitAI/Reddit) dipakai untuk **validitas & traksi**, bukan pengganti
    aturan terukur di repo.
 4. Setiap temuan baru → tulis aturan (imperatif + alasan) ke `docs/02`, bukan narasi kejadian.
+
+## Sumber eksternal: hook & retensi short-form (TikTok/Reels/Shorts)
+
+Dipakai untuk `docs/05-hook-retensi.md`. **Semua ini laporan industri/tool, bukan riset peer-review
+dan bukan hasil uji kami** · dipakai sebagai arah, bukan kebenaran mutlak.
+
+| Sumber | Dipakai untuk |
+|---|---|
+| ClipSpeed AI, "AI Hook Detection: How AI Finds the Perfect 3-Second Opener" (2026) | kurva drop-off per detik (100/82/71/60/54/48/41%), ~40% swipe di 3 dtk |
+| Animoto (mengutip Asia Research), StoryTweak (2026) | 71% penonton memutuskan di 3 dtk; 60% vs 85% retensi 3 dtk ≈ 2,8× views |
+| Percee Digital (data internal Meta + benchmark Socialinsider 2024) | funnel 3/10/30 dtk; completion per durasi (92% <15 dtk, 84% 16–30 dtk, 68% 31–60 dtk) |
+| HighStyle AI (2026) | >60% viewing mobile tanpa suara; standar caption on-screen |
+| rgba.ai (2026) | "3-Second Triad": curiosity, self-relevance, promise |
+
+**Research debt:** angka-angka ini silang-sumber dari blog tool/agensi, bukan dari dokumentasi resmi
+platform. Belum ada verifikasi independen, dan belum ada A/B test di akun kita sendiri.

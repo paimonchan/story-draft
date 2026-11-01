@@ -19,6 +19,7 @@ menyesuaikan. Kalau ceritanya sudah dipecah jadi script per-part, masuk ke
 | [`docs/02-aturan-produksi-h3.md`](docs/02-aturan-produksi-h3.md) | batasan H3 yang mengikat bentuk storyboard: pipeline OBVPM extend, aturan kamera terukur, 7 kelas anti-cut, audio, checklist storyboard |
 | [`docs/03-rujukan-riset.md`](docs/03-rujukan-riset.md) | dari mana aturan itu datang, sinyal komunitas, dan yang belum diteliti |
 | [`docs/04-teknik-sinematik.md`](docs/04-teknik-sinematik.md) | teknik sinematik (kamera, cahaya, look) + palet yang aman buat H3, tabel "tetangga yang ketukar" untuk audit storyboard |
+| [`docs/05-hook-retensi.md`](docs/05-hook-retensi.md) | aturan hook 2 detik + kepadatan lelucon + checklist retensi short-form (TikTok/Reels/Shorts), dengan angka benchmark + sumber |
 
 ## Nambah draft
 

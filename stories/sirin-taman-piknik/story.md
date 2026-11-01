@@ -18,31 +18,29 @@ tags: [anime, komedi, taman, deadpan, dialog, sirin, kanglim]
 
 ## 1. Bangku, siang hangat (0.0–5.0 dtk)
 
-Taman kota yang bersih dan terang. Matahari sore menembus daun, dan bercak cahayanya bergerak pelan di atas rumput. Cha Sirin sudah ada di bangku kayu, setengah duduk, setengah miring, hoodie hitamnya yang kebesaran menumpuk kusut di pangkuannya. Mata tealnya setengah tertutup, dan dua bulatan pink di pipinya ikut naik-turun pelan mengikuti napasnya. Dia menguap satu kali, panjang sekali, dan ahoge di kepalanya melengkung turun seperti kalah.
+Taman kota yang bersih dan terang. Matahari sore menembus daun, dan bercak cahayanya bergerak pelan di atas rumput. Cha Sirin sudah ada di bangku kayu, setengah duduk, setengah miring, hoodie hitamnya yang kebesaran menumpuk kusut di pangkuannya. Mata tealnya setengah tertutup, dan dua bulatan pink di pipinya ikut naik-turun pelan mengikuti napasnya.
 
-Dari jalan setapak, Kanglim datang dengan langkah pelan: ransel krem di punggung dan cardigan beige. Dia berhenti di samping bangku, melihat Sirin yang setengah tidur, lalu berdiri diam di samping bangku tanpa suara.
+Dia menguap satu kali, panjang sekali, dan ahoge di kepalanya melengkung turun seperti kalah. Di atas uap itu, dari luar frame, sebuah suara datang lebih dulu daripada orangnya.
 
-"Sirin. Aku bawa bekal."
+"Sirin, piknik ini bakal paling rapi."
 
-Dia mengatakannya pelan, seperti orang yang tidak mau membangunkan siapa pun. Sirin menoleh sepersekian derajat ke arahnya. Lalu berhenti menoleh. Satu desahan panjang keluar dari hidungnya, bukan kata.
+Muka Sirin tidak berubah sama sekali. Dia belum melihat siapa pun. Matanya bergeser pelan ke kanan, ke arah suara itu, dan berhenti di tengah jalan. Satu desahan panjang keluar dari hidungnya, bukan kata.
 
-Kanglim menunggu satu detik penuh. Tidak ada jawaban.
-
-"Oke."
-
-Dia mengangguk, seperti sudah menduga jawabannya, lalu mulai mengeluarkan barang dari ranselnya.
-
-## 2. Bentang tikar (5.0–10.0 dtk)
-
-Kanglim mengeluarkan tikar dari ransel dan membentangkannya pelan-pelan: satu sisi dulu, lalu sisi yang lain.
-
-"Kamu diem aja ya."
-
-Angin meniup ujung tikar, tikar terbalik di udara, dan mendarat rapi di atas kepalanya. Dia berdiri diam dengan tikar menutupi wajahnya. Dia tidak melepasnya.
+Kanglim masuk dari jalan setapak dengan langkah pelan, tikar terlipat di bawah lengannya. Angin mengangkat lipatan tikar itu, tikar mengembang di udara, dan mendarat rapi di atas kepalanya sendiri. Dia berhenti, tangan turun ke samping, dan tidak melepasnya.
 
 "Masih aman."
 
-Suaranya tertahan kain. Sirin mengedip satu kali, sangat lambat. Ekspresinya tidak berubah sedikit pun. Suara kecil keluar dari tenggorokannya satu kali, *hmm*, lalu hilang.
+Suaranya tertahan kain.
+
+## 2. Bentang tikar (5.0–10.0 dtk)
+
+Kanglim mengangkat tikar dari kepalanya dengan satu tangan, pelan, seperti melepas topi. Lalu dia membentangkannya di rumput: satu sisi dulu, sisi yang lain.
+
+"Kamu diem aja ya."
+
+Angin menarik sudut tikar. Dia menahannya dengan lutut, tanpa bicara. Angin menarik sudut yang lain, dan dia pindah menahan dengan tangan, tetap pelan, seperti orang yang sedang memasang meja makan.
+
+Sirin mengedip satu kali, sangat lambat. Ekspresinya tidak berubah sedikit pun. Suara kecil keluar dari tenggorokannya satu kali, *hmm*, lalu hilang.
 
 ## 3. Bekal (10.0–15.0 dtk)
 

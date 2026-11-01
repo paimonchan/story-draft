@@ -94,7 +94,7 @@ bangku") sebaiknya **tidak** dipakai: pose digenerate dari deskripsi, ref pose m
 | `cha_sirin_daily_01..04` | rumah | aturan kamera terukur, anchor state, face-side guard |
 
 Draft story yang lahir dari konteks ini: `stories/sirin-taman-piknik/` ("Bekal Buat Sirin", taman,
-8 segmen; Kanglim bicara 13 baris, Sirin hanya bersuara 7 kali).
+8 segmen; Kanglim bicara 12 baris, Sirin hanya bersuara 7 kali).
 
 **Catatan deviasi:** blok identitas Kanglim di atas diubah dari charsheet lane `eikei-plan`
 ("smug, self-important") jadi **calm, unbothered** untuk draft ini. Kalau charsheet barunya dibuat,
