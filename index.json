@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-01T06:10:41Z",
+ "generated": "2026-11-01T06:14:45Z",
  "count": 2,
- "words": 914,
+ "words": 912,
  "statuses": {
   "adapted": 0,
   "developing": 0,
@@ -33,7 +33,7 @@
   "Pak Sukron"
  ],
  "baseline": {
-  "words": 457.0,
+  "words": 456.0,
   "sentences": 44.5,
   "dialogue": 7.5,
   "scenes": 5.5,
@@ -43,12 +43,12 @@
  "entries": [
   {
    "slug": "sirin-taman-piknik",
-   "title": "Operasi Piknik Sempurna",
+   "title": "Semua Aku yang Urus",
    "status": "draft",
    "date": "2026-11-01",
    "genre": "komedi",
    "lang": "id",
-   "logline": "Kanglim datang ke taman dengan rencana piknik paling sempurna; Sirin tidur di bangku, dan satu gerakan malasnya menyelesaikan semua masalah yang Kanglim gagal selesaikan.",
+   "logline": "Kanglim bawa bekal ke taman dan mau ngurus semuanya sendiri; Sirin tidur di bangku, dan satu gerakan malasnya beresin semua yang gagal Kanglim beresin.",
    "characters": [
     "Cha Sirin",
     "Kanglim"
@@ -70,8 +70,8 @@
    "non_verbal": false,
    "speech": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata)",
    "meta": {},
-   "words": 714,
-   "chars": 5016,
+   "words": 712,
+   "chars": 5004,
    "paragraphs": 40,
    "sentences": 70,
    "dialogue": 13,
@@ -90,7 +90,7 @@
     {
      "id": "h2",
      "level": 2,
-     "text": "2. Operasi dimulai (5.0–10.0 dtk)",
+     "text": "2. Bentang tikar (5.0–10.0 dtk)",
      "words": 66
     },
     {
@@ -102,8 +102,8 @@
     {
      "id": "h4",
      "level": 2,
-     "text": "4. Formasi makan siang (15.0–20.0 dtk)",
-     "words": 95
+     "text": "4. Susun makan siang (15.0–20.0 dtk)",
+     "words": 93
     },
     {
      "id": "h5",

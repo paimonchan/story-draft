@@ -1,4 +1,4 @@
-# Storyboard · Operasi Piknik Sempurna (8 segmen × ~5 dtk)
+# Storyboard · Semua Aku yang Urus (8 segmen × ~5 dtk)
 
 Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat `docs/02`,
 `docs/04`). Versi prosa ada di `story.md`; ini versi yang dipakai buat nulis blok prompt.
@@ -112,7 +112,7 @@ tongkat terangkat, tikar masih di ransel.
 
 ---
 
-## S2 · Operasi dimulai (5.0–10.0)
+## S2 · Bentang tikar (5.0–10.0)
 
 **Fungsi:** escalate (rintangan 1: tikar) · **Prioritas:** penting · **Status:** belum diuji · **Risiko:** sedang
 
@@ -196,7 +196,7 @@ di tangan, tikar masih di kepala Kanglim (belum dibuka).
 
 ---
 
-## S4 · Formasi makan siang (15.0–20.0)
+## S4 · Susun makan siang (15.0–20.0)
 
 **Fungsi:** escalate (rintangan 3: angin) · **Prioritas:** **opsional** · **Status:** belum diuji · **Risiko:** sedang
 
@@ -370,7 +370,7 @@ masih di atas kotak bekal.
 menghadap Sirin, jarak tidak berubah.
 
 **Sumbu & arah:** sumbu tetap; arc tidak melewati garis Sirin–Kanglim. Eyeline Kanglim pertama ke
-**kamera** (mengklaim rencananya), lalu **kiri** ke Sirin. Eyeline Sirin: **bawah** ke sandwich.
+**kamera** (sok mengaku itu hasil kerjanya), lalu **kiri** ke Sirin. Eyeline Sirin: **bawah** ke sandwich.
 Merpati turun **dari atas** ke sandaran di atas bahu Sirin (kiri), lalu naik ke telapak **tangan
 kiri** Sirin; sandwich masuk dari **kanan** ke mulut Sirin.
 
@@ -384,8 +384,8 @@ terangkat, mulut terbuka lebar, kepala menoleh ke kamera. Kanglim (sub-beat C, 3
 "Terakhir ya. Habisin." Mulut menutup saat sandwich diturunkan ke mulut Sirin. Sirin: satu *mmm*
 pelan setelah menggigit, mulut tertutup, tanpa kata.
 
-- **A.** Kanglim mengangkat dagu, menoleh ke arah kamera, dan mengangkat tongkatnya (mengklaim ini
-  rencananya sejak awal). Lalu dia duduk di tikar di kanan bawah frame.
+- **A.** Kanglim mengangkat dagu, menoleh ke arah kamera, dan mengangkat tongkatnya (sok
+  mengaku dia yang ngatur semuanya). Lalu dia duduk di tikar di kanan bawah frame.
 - **B.** Seekor merpati gemuk mendarat di sandaran bangku di atas bahu Sirin. Kontak: cakar
   mencengkeram kayu, bulu bergetar. Tanpa membuka mata, Sirin mengangkat tangan kirinya dengan
   malas; merpati naik ke telapak tangannya dan duduk.

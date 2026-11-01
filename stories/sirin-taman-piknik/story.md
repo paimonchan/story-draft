@@ -1,10 +1,10 @@
 ---
-title: "Operasi Piknik Sempurna"
+title: "Semua Aku yang Urus"
 status: draft
 date: 2026-11-01
 genre: komedi
 lang: id
-logline: "Kanglim datang ke taman dengan rencana piknik paling sempurna; Sirin tidur di bangku, dan satu gerakan malasnya menyelesaikan semua masalah yang Kanglim gagal selesaikan."
+logline: "Kanglim bawa bekal ke taman dan mau ngurus semuanya sendiri; Sirin tidur di bangku, dan satu gerakan malasnya beresin semua yang gagal Kanglim beresin."
 characters: [Cha Sirin, Kanglim]
 setting: "Taman kota, siang hangat, bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan"
 target: "MiniMax H3, seri smol Cha Sirin"
@@ -28,7 +28,7 @@ Nadanya seperti orang yang sudah menyiapkan semuanya dari rumah.
 
 Sirin menoleh sepersekian derajat ke arahnya. Lalu berhenti menoleh. Satu desahan panjang keluar dari hidungnya, bukan kata.
 
-## 2. Operasi dimulai (5.0–10.0 dtk)
+## 2. Bentang tikar (5.0–10.0 dtk)
 
 Kanglim membentangkan tikar kotak-kotak dengan satu gerakan bangga, dagu terangkat, tongkat diangkat tinggi.
 
@@ -52,9 +52,9 @@ Dia melangkah mundur satu langkah, lalu menambahkan dengan dagu terangkat:
 
 Sirin mengangguk, sangat pelan, dan matanya sudah menutup sebelum anggukannya selesai. Sebuah suara pelan keluar dari mulutnya, bukan kata, lebih seperti *hmmm* yang tidak pernah selesai. Dia melorot lurus ke belakang di bangku, tengkuknya di sandaran, wajahnya mendongak ke langit: mata teal setengah terbuka, mulut kecil terbuka, dua bulatan pink hangat di pipi. Kotak bekal di perutnya naik-turun mengikuti napas.
 
-## 4. Formasi makan siang (15.0–20.0 dtk)
+## 4. Susun makan siang (15.0–20.0 dtk)
 
-Kanglim menyusun makanan di tikar dalam formasi yang rapi: sandwich sejajar, gelas berbaris, serbet terlipat tiga. Dia mengukur jarak dengan tongkatnya, menggeser satu sandwich dua senti.
+Kanglim menyusun makanan di tikar dengan rapi: sandwich sejajar, gelas berbaris, serbet terlipat tiga. Dia mengukur jarak dengan tongkatnya, menggeser satu sandwich dua senti.
 
 "Belum pas. Geser dikit."
 

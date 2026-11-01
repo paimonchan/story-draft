@@ -1,4 +1,4 @@
-# Catatan · Operasi Piknik Sempurna
+# Catatan · Semua Aku yang Urus
 
 Lane usulan di eikei-plan: **`cha_sirin_taman_piknik_01`** (seri smol Cha Sirin).
 Semua aturan di bawah bukan karangan, diambil dari lane yang sudah jalan
