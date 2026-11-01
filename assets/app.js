@@ -159,7 +159,7 @@ function parseStoryboard(text) {
     const body = b.body.join('\n').trim();
     if (m) {
       const rest = m[2].replace(/^[—–-]\s*/, '');
-      const win = (rest.match(/\(([^)]*)\)\s*$/) || [, ''])[1];
+      const win = (rest.match(/\(\s*([\d.]+\s*[–—-]\s*[\d.]+)\s*\)/) || [, ''])[1];
       const framing = (body.match(/^\s*-?\s*\*\*Framing & kamera:\*\*\s*(.+)$/m) || [, ''])[1];
       const hint = framing.replace(/[`*]/g, '').replace(/\s+/g, ' ').slice(0, 96);
       const meta = body.match(
@@ -249,11 +249,17 @@ function rowHTML(e) {
   const r = e.ready ?? 0;
   const t = e.ready_total || 9;
   const missing = (e.checks || []).filter((c) => !c.ok).map((c) => c.label.toLowerCase());
+  const hl = (v) => {
+    const s = esc(v);
+    if (!FILTER) return s;
+    const q = FILTER.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    try { return s.replace(new RegExp('(' + q + ')', 'gi'), '<mark>$1</mark>'); } catch (_) { return s; }
+  };
   return `
   <a class="row ${e.has_storyboard ? 'hot' : ''}" href="#/s/${e.slug}">
     <div class="t">
-      <h3>${esc(e.title)}${e.has_storyboard ? '<span class="tag">storyboard</span>' : ''}</h3>
-      ${e.logline ? `<p class="logline">${esc(e.logline)}</p>` : '<p class="logline muted">logline belum diisi</p>'}
+      <h3>${hl(e.title)}${e.has_storyboard ? '<span class="tag">storyboard</span>' : ''}</h3>
+      ${e.logline ? `<p class="logline">${hl(e.logline)}</p>` : '<p class="logline muted">logline belum diisi</p>'}
       <div class="sub">
         <span>${esc(e.genre || 'tanpa genre')}</span>
         ${e.format ? `<span>${esc(e.format)}</span>` : ''}
@@ -391,6 +397,14 @@ function railHTML(e, sb) {
         ${SECTIONS.map(([id, label]) => `<a href="#/s/${e.slug}/${id}" data-sect="${id}"><span>${label}</span></a>`).join('')}
       </nav>
     </div>
+    ${sb.extra.length ? `<div class="card rail-card">
+      <h4>Tabel rujukan</h4>
+      <nav class="rail-list" id="railref">
+        ${sb.extra.map((x) => `<a href="#${x.id}" data-extra="${x.id}" title="${esc(x.title)}">
+          <span>${esc(x.title.length > 30 ? x.title.slice(0, 28) + '…' : x.title)}</span>
+        </a>`).join('')}
+      </nav>
+    </div>` : ''}
     <div class="card rail-card">
       <h4>Meta</h4>
       <div class="rail-meta">
@@ -432,7 +446,7 @@ function storyboardSect(e, sb, openSeg) {
     </details>`).join('');
 
   const extra = sb.extra.map((x) => `
-    <details class="seg seg-extra">
+    <details class="seg seg-extra" id="${x.id}">
       <summary>
         <span class="st"><b>${esc(x.title)}</b></span>
         <span class="sc">referensi</span>
@@ -441,8 +455,47 @@ function storyboardSect(e, sb, openSeg) {
       <div class="sbody notes">${md(x.body, { anchors: false })}</div>
     </details>`).join('');
 
+  // ringkasan + timeline 40 dtk
+  const cnt = (fn) => sb.segs.filter(fn).length;
+  const tested = cnt((s) => s.status && !/belum/.test(s.status));
+  const secs = (s) => {
+    const [a, b] = (s.window || '').split(/[–—-]/).map((v) => parseFloat(v) || 0);
+    const d = (isFinite(b) ? b : 0) - a;
+    return d > 0 ? d : 5;
+  };
+  const totalSec = Math.round(sb.segs.reduce((a, s) => a + secs(s), 0));
+  const tl = sb.segs.map((s) => `
+    <a class="tlseg ${s.prioritas === 'harus' ? 'p-harus' : s.prioritas === 'penting' ? 'p-penting' : 'p-opsional'}${s.risiko === 'tinggi' ? ' r-tinggi' : ''}${s.status && !/belum/.test(s.status) ? ' done' : ''}"
+       href="#${s.id}" data-seg="${s.id}" style="flex:${secs(s)} 1 0"
+       title="${esc(s.title)} — ${esc(s.fungsi || '')} · ${esc(s.prioritas || '')} · risiko ${esc(s.risiko || '')} · ${esc(s.status || '')}">
+      <b>${s.n}</b><span>${esc(segLabel(s.window))}</span>
+    </a>`).join('');
+
+  const overview = sb.segs.length ? `
+    <div class="sboverview">
+      <div class="sbstat">
+        <span><b>${sb.segs.length}</b> segmen</span>
+        <span><b>${totalSec}</b> dtk</span>
+        <span><b>${cnt((s) => s.prioritas === 'harus')}</b> wajib</span>
+        <span><b>${cnt((s) => s.risiko === 'tinggi')}</b> risiko tinggi</span>
+        <span><b>${tested}/${sb.segs.length}</b> diuji</span>
+      </div>
+      <div class="tl" aria-label="Timeline 0 sampai ${totalSec} detik">${tl}</div>
+      <div class="tl-scale"><span>0 dtk</span><span>${Math.round(totalSec / 2)} dtk</span><span>${totalSec} dtk</span></div>
+      <div class="sbfilter" id="sbfilter">
+        <span class="flabel">filter</span>
+        <button class="fbtn" type="button" data-sbf="all" aria-pressed="true">semua ${sb.segs.length}</button>
+        <button class="fbtn" type="button" data-sbf="harus" aria-pressed="false">wajib ${cnt((s) => s.prioritas === 'harus')}</button>
+        <button class="fbtn" type="button" data-sbf="tinggi" aria-pressed="false">risiko tinggi ${cnt((s) => s.risiko === 'tinggi')}</button>
+        <button class="fbtn" type="button" data-sbf="belum" aria-pressed="false">belum diuji ${sb.segs.length - tested}</button>
+        <span class="spacer"></span>
+        <span class="muted sbcount" id="sbcount"></span>
+      </div>
+    </div>` : '';
+
   return `<section class="card sect" id="sect-storyboard">
-    ${sectHead('storyboard', 'Storyboard', `${sb.segs.length} segmen · klik untuk buka`)}
+    ${sectHead('storyboard', 'Storyboard', `${sb.segs.length} segmen · ${tested}/${sb.segs.length} diuji · ${sb.extra.length} tabel rujukan`)}
+    ${overview}
     <div class="raw-tools">
       <button class="btn primary" data-copy="storyboard" type="button">Salin storyboard</button>
       <button class="btn" data-dl="storyboard" type="button">Unduh .md</button>
@@ -521,7 +574,11 @@ async function renderDesk(slug, section, seg) {
     ['status', e.status], ['genre', e.genre], ['bahasa', e.lang], ['setting', e.setting],
     ['target', e.target], ['format', e.format], ['durasi', e.duration ? e.duration + 's' : ''],
     ['beat', e.beats], ['kata', fmt(e.words)], ['scene', (e.toc || []).length],
-    ['segmen', sb.segs.length || ''], ['audio', e.non_verbal ? 'non-verbal' : ''],
+    ['segmen', sb.segs.length || ''],
+    ['storyboard', sb.segs.length
+      ? `${(d.storyboard.match(/\*\*(v\d+)\*\*/) || [, 'v?'])[1]} · ${sb.segs.filter((s) => s.status && !/belum/.test(s.status)).length}/${sb.segs.length} diuji`
+      : ''],
+    ['audio', e.non_verbal ? 'non-verbal' : ''],
   ].filter(([, v]) => v !== undefined && v !== null && v !== '');
 
   app.innerHTML = `
@@ -608,6 +665,43 @@ async function renderDesk(slug, section, seg) {
       document.getElementById(a.dataset.jump)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     })
   );
+  app.querySelectorAll('[data-extra]').forEach((a) =>
+    a.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const el = document.getElementById(a.dataset.extra);
+      if (el) { el.open = true; el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    })
+  );
+  app.querySelectorAll('.tl a[data-seg]').forEach((a) =>
+    a.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const el = document.getElementById(a.dataset.seg);
+      if (el) { el.open = true; el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    })
+  );
+  const sbf = document.getElementById('sbfilter');
+  if (sbf) {
+    sbf.querySelectorAll('[data-sbf]').forEach((b) =>
+      b.addEventListener('click', () => {
+        sbf.querySelectorAll('[data-sbf]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+        const mode = b.dataset.sbf;
+        let shown = 0;
+        app.querySelectorAll('details.seg[id^="s"]').forEach((d) => {
+          const s = sb.segs.find((x) => x.id === d.id);
+          if (!s) return;
+          const ok =
+            mode === 'all' ||
+            (mode === 'harus' && s.prioritas === 'harus') ||
+            (mode === 'tinggi' && s.risiko === 'tinggi') ||
+            (mode === 'belum' && /belum/.test(s.status || ''));
+          d.style.display = ok ? '' : 'none';
+          if (ok) shown += 1;
+        });
+        const c = document.getElementById('sbcount');
+        if (c) c.textContent = mode === 'all' ? '' : `${shown} dari ${sb.segs.length} segmen ditampilkan`;
+      })
+    );
+  }
 
   // deep-link: buka segmen yang diminta, atau lompat ke bagian
   if (seg) {
