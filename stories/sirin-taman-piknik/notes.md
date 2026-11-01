@@ -91,6 +91,6 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 ## Status
 
 - [x] story.md (8 segmen, non-verbal, satu lokasi)
-- [ ] plan.md lane di eikei-plan
-- [ ] pack 8 segmen + timeline builder
-- [ ] render draft turbo (uji identitas dulu, kamera static — resep 1)
+- [x] storyboard.md v2 — anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker
+- [ ] perbarui kolom **Status** di `storyboard.md` tiap segmen selesai diuji (`belum diuji` → `diuji` → `final`)
+- [ ] serahkan ke lane prompt (`eikei-plan`) untuk plan + pack per segmen — bukan urusan repo ini
