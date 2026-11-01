@@ -60,6 +60,11 @@ index.json, data/*.json   ← GENERATED, jangan diedit tangan
    satu lane = satu take kontinu satu lokasi, segmen ~5 dtk, kamera steady eye-level, satu framing
    per segmen, maks 1 gerak kamera kecil, non-verbal = nol risiko lip-sync, tidak ada karakter
    ketiga & tidak ada teks terbaca di frame.
+8. **Setiap `.md` di folder draft wajib punya jalan tampil di web** — `story.md` (tab Cerita),
+   `notes.md` (tab Catatan), `storyboard.md` (tab Storyboard). Kalau menambah jenis file baru,
+   tambahkan render/tab-nya di `assets/app.js` **di commit yang sama**. File yang tidak disurface
+   tidak akan pernah kelihatan di halaman, dan `build_index.py` hanya memberi peringatan.
+   Web adalah permukaan baca utama repo ini — bukan pelengkap.
 
 ## Aturan keras
 

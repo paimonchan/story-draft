@@ -40,6 +40,13 @@ python3 -m unittest discover -s tests -p "test_*.py"
 
 Push ke `main` → GitHub Actions regenerate + deploy Pages otomatis.
 
+**Aturan tampil di web (penting):** setiap `.md` di folder draft harus punya jalan tampil di
+halaman — `story.md` → tab **Cerita**, `notes.md` → tab **Catatan**, `storyboard.md` → tab
+**Storyboard**. File lain (nama bebas) **tidak akan muncul di web**; `build_index.py` cuma
+memberi peringatan. Jadi kalau menambah jenis file baru, **tambahkan dulu render/tab-nya di
+`assets/app.js`** — jangan cuma taruh file lalu kasih link ke GitHub, karena web ini adalah
+permukaan baca utama repo ini.
+
 `--check` (dipakai CI) gagal hanya untuk masalah yang bikin web rusak: frontmatter nggak
 kebaca, `title` kosong, `status` di luar daftar, slug duplikat. Draft yang belum diisi
 cuma jadi peringatan — CI tetap jalan, jadi nggak nyangkut gara-gara draft setengah jadi.

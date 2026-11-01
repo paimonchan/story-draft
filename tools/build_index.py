@@ -326,6 +326,17 @@ def main() -> int:
         if not e["toc"]:
             warnings.append(f"{e['slug']}: belum ada heading — belum dipecah per scene")
 
+    # Setiap .md di folder draft harus punya jalan tampil di web. File di luar daftar ini
+    # tidak akan pernah muncul di halaman (ini penyebab "kok web-nya nggak berubah").
+    SURFACED = {"story.md", "notes.md", "storyboard.md"}
+    for p in files:
+        for extra in sorted(p.parent.glob("*.md")):
+            if extra.name not in SURFACED:
+                warnings.append(
+                    f"{p.parent.relative_to(STORIES_DIR).as_posix()}/{extra.name}: belum disurface di web "
+                    "— bukan story.md/notes.md/storyboard.md, jadi tidak akan kelihatan di halaman"
+                )
+
     entries.sort(key=lambda e: (e["date"] or "", e["title"]), reverse=True)
 
     DATA_DIR.mkdir(exist_ok=True)
