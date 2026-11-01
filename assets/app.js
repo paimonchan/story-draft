@@ -392,6 +392,11 @@ function tabReady(d, e) {
           <li>Kalau cerita ini jadi rangkaian berurutan, script per-part-nya masuk repo
               <a href="https://paimonchan.github.io/prompt-script/" target="_blank" rel="noopener">Prompt Script</a>.</li>
         </ol>
+        <p class="muted" style="font-size:12.5px;margin:12px 0 0">
+          Sebelum menulis prompt: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/02-aturan-produksi-h3.md" target="_blank" rel="noopener">docs/02 — aturan produksi H3</a>
+          (kamera terukur, 7 kelas anti-cut, kontinuitas) ·
+          <a href="https://github.com/paimonchan/story-draft/blob/main/docs/01-konteks-sirin-kanglim.md" target="_blank" rel="noopener">docs/01 — konteks seri</a>.
+        </p>
       </div>
     </div>
   </div>`;
