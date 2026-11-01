@@ -1,36 +1,211 @@
 {
- "generated": "2026-10-31T19:13:43Z",
- "count": 1,
- "words": 203,
+ "generated": "2026-11-01T03:28:51Z",
+ "count": 2,
+ "words": 769,
  "statuses": {
   "adapted": 0,
   "developing": 0,
-  "draft": 1,
+  "draft": 2,
   "final": 0,
   "parked": 0
  },
  "genres": [
+  "komedi",
   "thriller"
  ],
  "tags": [
+  "anime",
   "contoh",
+  "deadpan",
   "hujan",
+  "kanglim",
+  "komedi",
   "malam",
+  "non-verbal",
+  "obvpm",
+  "sirin",
+  "taman",
   "urban"
  ],
  "characters": [
+  "Cha Sirin",
+  "Kanglim",
   "Nara",
   "Pak Sukron"
  ],
  "baseline": {
-  "words": 203.0,
-  "sentences": 21.0,
-  "dialogue": 2.0,
-  "scenes": 3.0,
-  "longest_sentence": 21.0,
-  "visual_pct": 52.0
+  "words": 384.5,
+  "sentences": 37.0,
+  "dialogue": 1.0,
+  "scenes": 5.5,
+  "longest_sentence": 24.0,
+  "visual_pct": 54.5
  },
  "entries": [
+  {
+   "slug": "sirin-taman-piknik",
+   "title": "Operasi Piknik Sempurna",
+   "status": "draft",
+   "date": "2026-11-01",
+   "genre": "komedi",
+   "lang": "id",
+   "logline": "Kanglim datang ke taman dengan rencana piknik paling sempurna; Sirin tidur di bangku, dan satu gerakan malasnya menyelesaikan semua masalah yang Kanglim gagal selesaikan.",
+   "characters": [
+    "Cha Sirin",
+    "Kanglim"
+   ],
+   "setting": "Taman kota, siang hangat — bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan",
+   "target": "MiniMax H3 — seri smol Cha Sirin",
+   "format": "9:16",
+   "duration": 40,
+   "beats": 8,
+   "tags": [
+    "anime",
+    "komedi",
+    "taman",
+    "deadpan",
+    "non-verbal",
+    "obvpm",
+    "sirin",
+    "kanglim"
+   ],
+   "non_verbal": true,
+   "meta": {},
+   "words": 566,
+   "chars": 3973,
+   "paragraphs": 20,
+   "sentences": 53,
+   "dialogue": 0,
+   "longest_sentence": 27,
+   "avg_sentence": 10.7,
+   "read_min": 3,
+   "visual_sentences": 30,
+   "visual_pct": 57,
+   "toc": [
+    {
+     "id": "h1",
+     "level": 2,
+     "text": "1. Bangku, siang hangat (0.0–5.0 dtk)",
+     "words": 109
+    },
+    {
+     "id": "h2",
+     "level": 2,
+     "text": "2. Operasi dimulai (5.0–10.0 dtk)",
+     "words": 45
+    },
+    {
+     "id": "h3",
+     "level": 2,
+     "text": "3. Tugas Sirin (10.0–15.0 dtk)",
+     "words": 75
+    },
+    {
+     "id": "h4",
+     "level": 2,
+     "text": "4. Formasi makan siang (15.0–20.0 dtk)",
+     "words": 79
+    },
+    {
+     "id": "h5",
+     "level": 2,
+     "text": "5. Semut (20.0–25.0 dtk)",
+     "words": 71
+    },
+    {
+     "id": "h6",
+     "level": 2,
+     "text": "6. Satu gerakan malas (25.0–30.0 dtk)",
+     "words": 51
+    },
+    {
+     "id": "h7",
+     "level": 2,
+     "text": "7. Kanglim mencoba meniru (30.0–35.0 dtk)",
+     "words": 51
+    },
+    {
+     "id": "h8",
+     "level": 2,
+     "text": "8. Button (35.0–40.0 dtk)",
+     "words": 85
+    }
+   ],
+   "mentions": {
+    "Cha Sirin": 15,
+    "Kanglim": 11
+   },
+   "has_frontmatter": true,
+   "path": "stories/sirin-taman-piknik/story.md",
+   "checks": [
+    {
+     "id": "logline",
+     "label": "Logline",
+     "value": "ada",
+     "ok": true,
+     "note": "satu kalimat inti — dipakai buat ringkas cerita jadi summary prompt"
+    },
+    {
+     "id": "characters",
+     "label": "Karakter terdaftar",
+     "value": 2,
+     "ok": true,
+     "note": "tiap karakter di sini nanti jadi <Subject N> di prompt"
+    },
+    {
+     "id": "setting",
+     "label": "Setting / lokasi",
+     "value": "Taman kota, siang hangat — bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan",
+     "ok": true,
+     "note": "lokasi + waktu — dipakai buat lock background biar gak drift"
+    },
+    {
+     "id": "genre",
+     "label": "Genre",
+     "value": "komedi",
+     "ok": true,
+     "note": "membantu pilih gaya visual & musik"
+    },
+    {
+     "id": "tags",
+     "label": "Tag",
+     "value": 8,
+     "ok": true,
+     "note": "biar bisa difilter di web"
+    },
+    {
+     "id": "scenes",
+     "label": "Scene / beat terpisah",
+     "value": "8 heading",
+     "ok": true,
+     "note": "pecah pakai heading (##) — satu scene kira-kira jadi satu shot"
+    },
+    {
+     "id": "sentence",
+     "label": "Kalimat terpanjang",
+     "value": "27 kata",
+     "ok": true,
+     "note": "di atas ~45 kata susah dipetakan jadi satu shot"
+    },
+    {
+     "id": "dialogue",
+     "label": "Baris dialog",
+     "value": "non-verbal",
+     "ok": true,
+     "note": "lane non-verbal (non_verbal: true) — tanpa lip-sync, tanpa risiko mouth drift"
+    },
+    {
+     "id": "visual",
+     "label": "Kalimat dengan isyarat visual",
+     "value": "30/53 (57%)",
+     "ok": true,
+     "note": "cahaya, gerak, warna, shot — bahan caption H3"
+    }
+   ],
+   "ready": 9,
+   "ready_total": 9,
+   "data": "data/sirin-taman-piknik.json"
+  },
   {
    "slug": "contoh-format",
    "title": "Contoh Format: Lampu Terakhir di Pasar Loak",
@@ -54,6 +229,7 @@
     "malam",
     "hujan"
    ],
+   "non_verbal": false,
    "meta": {},
    "words": 203,
    "chars": 1312,

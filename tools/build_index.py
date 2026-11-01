@@ -155,19 +155,27 @@ def build_entry(path: Path) -> dict:
     )
 
     characters = as_list(fm.get("characters"))
+    non_verbal = bool(fm.get("non_verbal"))
     mentions = {}
     low = prose_only(body).lower()
     for c in characters:
-        key = c.split("(")[0].strip()
-        if key:
-            mentions[c] = len(re.findall(re.escape(key.lower()), low))
+        base = c.split("(")[0].strip()
+        if not base:
+            continue
+        # "Cha Sirin" di prosa biasanya cuma ditulis "Sirin" -> hitung nama penuh DAN
+        # kata terakhirnya, ambil yang paling sering
+        cands = {base.lower()}
+        parts = base.split()
+        if len(parts) > 1:
+            cands.add(parts[-1].lower())
+        mentions[c] = max(len(re.findall(re.escape(x), low)) for x in cands)
 
     declared_beats = fm.get("beats")
     beats = int(declared_beats) if isinstance(declared_beats, (int, float)) else len(toc)
 
     known = {
         "title", "status", "date", "genre", "lang", "logline", "characters",
-        "setting", "target", "format", "duration", "beats", "tags",
+        "setting", "target", "format", "duration", "beats", "tags", "non_verbal",
     }
 
     entry = {
@@ -185,6 +193,7 @@ def build_entry(path: Path) -> dict:
         "duration": fm.get("duration"),
         "beats": beats,
         "tags": as_list(fm.get("tags")),
+        "non_verbal": non_verbal,
         "meta": {k: v for k, v in fm.items() if k not in known},
         "words": words,
         "chars": chars,
@@ -257,9 +266,13 @@ def build_entry(path: Path) -> dict:
         {
             "id": "dialogue",
             "label": "Baris dialog",
-            "value": dialogue,
-            "ok": dialogue >= 1,
-            "note": "dialog nanti masuk sebagai <d>[Language] teks</d>",
+            "value": "non-verbal" if non_verbal else dialogue,
+            "ok": True if non_verbal else dialogue >= 1,
+            "note": (
+                "lane non-verbal (non_verbal: true) — tanpa lip-sync, tanpa risiko mouth drift"
+                if non_verbal
+                else "dialog nanti masuk sebagai <d>[Language] teks</d>"
+            ),
         },
         {
             "id": "visual",
