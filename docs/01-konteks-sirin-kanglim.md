@@ -30,6 +30,11 @@ MC: **Cha Sirin**: karakter *smol*, malas, muka bodoh/dopey, tapi imut. Supporti
   Hindari: kalimat membual/mengklaim ("aku bilang apa", "gampang", "sengaja kok"), seruan panik
   ("eh! balik sini!"), dan gaya pengumuman/briefing ("operasi dimulai", "strategi dua lapis", "ini
   standar"). Barisnya ditulis di `story.md` sebagai kalimat berkutip di baris sendiri.
+- **Kalem bukan berarti tanpa lelucon.** Lelucon verbalnya datang dari **deadpan denial** dan
+  kalimat praktis yang absurd: "Masih aman." diucapkan sambil tikar menutupi mukanya atau semut
+  naik di celananya, "Lewat sini aja." ke semut, "Ini buat kamu. Jaga ya." ke orang yang tidur.
+  Pakai **running gag** (frasa yang sama diulang di titik yang makin buruk, lalu jadi callback di
+  button) · itu yang bikin teksnya lucu tanpa dia harus jadi songong atau panik.
 - **Sirin tidak pernah bicara.** Dia hanya mengeluarkan suara ekspresif: desahan panjang, *hmm*
   pendek, dengkur, *nng*, *mmm*. Semuanya ditulis sebagai **prosa** (bukan dialog) dan di storyboard
   dicatat sebagai SFX + mikro-ekspresi.
@@ -89,7 +94,7 @@ bangku") sebaiknya **tidak** dipakai: pose digenerate dari deskripsi, ref pose m
 | `cha_sirin_daily_01..04` | rumah | aturan kamera terukur, anchor state, face-side guard |
 
 Draft story yang lahir dari konteks ini: `stories/sirin-taman-piknik/` ("Bekal Buat Sirin", taman,
-8 segmen; Kanglim bicara 12 baris, Sirin hanya bersuara 7 kali).
+8 segmen; Kanglim bicara 13 baris, Sirin hanya bersuara 7 kali).
 
 **Catatan deviasi:** blok identitas Kanglim di atas diubah dari charsheet lane `eikei-plan`
 ("smug, self-important") jadi **calm, unbothered** untuk draft ini. Kalau charsheet barunya dibuat,

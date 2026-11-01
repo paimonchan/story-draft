@@ -22,9 +22,15 @@ Taman kota yang bersih dan terang. Matahari sore menembus daun, dan bercak cahay
 
 Dari jalan setapak, Kanglim datang dengan langkah pelan: ransel krem di punggung dan cardigan beige. Dia berhenti di samping bangku, melihat Sirin yang setengah tidur, lalu berdiri diam di samping bangku tanpa suara.
 
-"Aku bawa bekal."
+"Sirin. Aku bawa bekal."
 
 Dia mengatakannya pelan, seperti orang yang tidak mau membangunkan siapa pun. Sirin menoleh sepersekian derajat ke arahnya. Lalu berhenti menoleh. Satu desahan panjang keluar dari hidungnya, bukan kata.
+
+Kanglim menunggu satu detik penuh. Tidak ada jawaban.
+
+"Oke."
+
+Dia mengangguk, seperti sudah menduga jawabannya, lalu mulai mengeluarkan barang dari ranselnya.
 
 ## 2. Bentang tikar (5.0–10.0 dtk)
 
@@ -34,15 +40,15 @@ Kanglim mengeluarkan tikar dari ransel dan membentangkannya pelan-pelan: satu si
 
 Angin meniup ujung tikar, tikar terbalik di udara, dan mendarat rapi di atas kepalanya. Dia berdiri diam dengan tikar menutupi wajahnya. Dia tidak melepasnya.
 
-"Nanti kebuka sendiri."
+"Masih aman."
 
 Suaranya tertahan kain. Sirin mengedip satu kali, sangat lambat. Ekspresinya tidak berubah sedikit pun. Suara kecil keluar dari tenggorokannya satu kali, *hmm*, lalu hilang.
 
 ## 3. Bekal (10.0–15.0 dtk)
 
-Kanglim mengangkat kotak bekal dengan dua tangan, lalu menaruhnya pelan-pelan di perut Sirin. Dia menggesernya sedikit supaya pas, dan menepuknya satu kali.
+Kanglim mengangkat kotak bekal dengan dua tangan, lalu menaruhnya pelan-pelan di perut Sirin. Dia menggesernya sedikit supaya pas, dan menepuknya satu kali, seperti menyerahkan tugas penting.
 
-"Ini buat kamu."
+"Ini buat kamu. Jaga ya."
 
 Dia melangkah mundur setengah langkah dan berdiri diam, kepalanya sedikit miring, memperhatikan kotak itu naik-turun mengikuti napas Sirin.
 
@@ -52,7 +58,7 @@ Sirin mengangguk, sangat pelan, dan matanya sudah menutup sebelum anggukannya se
 
 Kanglim menyusun makanan di tikar dengan rapi: sandwich sejajar, gelas berbaris, serbet terlipat tiga. Dia mengukur jaraknya dengan ujung jari, lalu menggeser satu sandwich sedikit.
 
-"Yang ini belum pas."
+"Kurang rapi."
 
 Angin datang lagi, dan serbetnya lepas satu per satu seperti layar kecil, terbang rendah di atas rumput. Kanglim berdiri, melangkah satu kali ke arah serbet itu, lalu berhenti.
 
@@ -68,7 +74,7 @@ Garis hitam kecil muncul dari celah rumput dan berjalan lurus menuju kotak bekal
 
 Semut tidak belok. Dia menggaris lagi, lebih dalam. Semut naik lewat celah lain, ke sepatunya, lalu ke celananya. Kanglim berhenti menggaris. Dia mengangkat satu kaki, pelan, dan berdiri dengan satu kaki di tengah rumput.
 
-"Bukan aku."
+"Masih aman."
 
 Sirin masih tidur. Napasnya tetap pelan dan rata, dan satu suara pendek *nng* keluar di tengah tidurnya, bukan kata.
 
@@ -98,11 +104,11 @@ Kanglim melihat Sirin sebentar, lalu menoleh ke kamera satu kali, datar, tanpa e
 
 Seekor merpati gemuk mendarat di sandaran bangku di atas bahu Sirin. Tanpa membuka mata, Sirin mengangkat satu tangan dengan malas; merpati itu naik ke telapak tangannya, duduk, dan ikut diam.
 
-"Kamu tenang ya."
-
-Kanglim duduk di tikar, di samping bangku, dan mengangkat sandwichnya.
+Kanglim menatapnya sebentar, lalu memutuskan tidak membahasnya. Dia duduk di tikar, di samping bangku, dan mengangkat sandwichnya.
 
 "Nih, habisin ya."
+
+"Masih aman."
 
 Sirin menggigit kecil, mata tetap setengah tertutup, dan mengunyah sangat pelan. Satu suara pendek keluar dari tenggorokannya, *mmm*, dan itu satu-satunya suara sepanjang hari yang terdengar seperti setuju.
 
