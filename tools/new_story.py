@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-new_story.py — bikin folder draft baru dari template.
+new_story.py: bikin folder draft baru dari template.
 
   python3 tools/new_story.py "Lampu Terakhir di Pasar Loak" \
       --genre thriller --characters "Nara,Pak Sukron" \
@@ -70,7 +70,7 @@ def main() -> int:
     slug = args.slug or slugify(args.title)
     folder = STORIES_DIR / slug
     if folder.exists():
-        print(f"folder sudah ada: {folder.relative_to(ROOT)} — tidak ditimpa")
+        print(f"folder sudah ada: {folder.relative_to(ROOT)}, tidak ditimpa")
         return 1
 
     chars = ", ".join(c.strip() for c in args.characters.split(",") if c.strip())
@@ -97,7 +97,7 @@ def main() -> int:
     )
     (folder / "story.md").write_text(body, encoding="utf-8")
     (folder / "notes.md").write_text(
-        f"# Catatan — {args.title}\n\n"
+        f"# Catatan, {args.title}\n\n"
         "- **Ide prompt**:\n- **Referensi visual**:\n- **Karakter** (deskripsi tetap):\n"
         "- **Peta shot**:\n- **Keputusan**:\n",
         encoding="utf-8",

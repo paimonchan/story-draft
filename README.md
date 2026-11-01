@@ -1,13 +1,13 @@
 # Story Draft
 
 Kumpulan **draft story mentah** untuk prompt generate video AI (target: **MiniMax H3**).
-Cerita dulu — prompt video belakangan.
+Cerita dulu, prompt video belakangan.
 
 Web: **https://paimonchan.github.io/story-draft/**
 
 Repo ini jalur **cerita & storyboard**. Batasnya jelas: yang dijaga di sini cerita dan
 storyboard-nya bisa dibaca model. Adaptasi jadi prompt video (format prompt, tag referensi,
-penempatan dialog & ambience) bukan urusan repo ini — dikerjakan di lane prompt oleh agent yang
+penempatan dialog & ambience) bukan urusan repo ini, dikerjakan di lane prompt oleh agent yang
 menyesuaikan. Kalau ceritanya sudah dipecah jadi script per-part, masuk ke
 **[prompt-script](https://paimonchan.github.io/prompt-script/)**.
 
@@ -44,15 +44,15 @@ python3 -m unittest discover -s tests -p "test_*.py"
 Push ke `main` → GitHub Actions regenerate + deploy Pages otomatis.
 
 **Aturan tampil di web (penting):** setiap `.md` di folder draft harus punya jalan tampil di
-halaman — `story.md` → tab **Cerita**, `notes.md` → tab **Catatan**, `storyboard.md` → tab
+halaman: `story.md` → tab **Cerita**, `notes.md` → tab **Catatan**, `storyboard.md` → tab
 **Storyboard**. File lain (nama bebas) **tidak akan muncul di web**; `build_index.py` cuma
 memberi peringatan. Jadi kalau menambah jenis file baru, **tambahkan dulu render/tab-nya di
-`assets/app.js`** — jangan cuma taruh file lalu kasih link ke GitHub, karena web ini adalah
+`assets/app.js`**: jangan cuma taruh file lalu kasih link ke GitHub, karena web ini adalah
 permukaan baca utama repo ini.
 
 `--check` (dipakai CI) gagal hanya untuk masalah yang bikin web rusak: frontmatter nggak
 kebaca, `title` kosong, `status` di luar daftar, slug duplikat. Draft yang belum diisi
-cuma jadi peringatan — CI tetap jalan, jadi nggak nyangkut gara-gara draft setengah jadi.
+cuma jadi peringatan, CI tetap jalan, jadi nggak nyangkut gara-gara draft setengah jadi.
 
 ## Struktur
 
@@ -90,13 +90,14 @@ tags: [urban, malam, hujan]
 
 Aturan penting:
 
-- **Kutip nilai yang mengandung `:`** (`title`, `logline`, `setting`) — YAML 1.1 bakal
+- **Kutip nilai yang mengandung `:`** (`title`, `logline`, `setting`), YAML 1.1 bakal
   error dan `build_index.py` mati untuk seluruh repo, bukan cuma entry itu.
-- Body = prosa apa adanya. Pecah scene/bab pakai heading `##` — satu scene kira-kira
+- Body = prosa apa adanya. Pecah scene/bab pakai heading `##`, satu scene kira-kira
   nanti jadi satu shot, jadi panjangnya sekalian dibikin masuk akal untuk 3–15 detik.
-- Dialog ditulis di barisnya sendiri, diawali em dash (`— Kalimat.`) atau tanda kutip.
+- Dialog ditulis di barisnya sendiri dan diapit tanda kutip (`"Kalimat."`).
+- Suara non-verbal (desahan, gumam, dengkur) ditulis sebagai **prosa**, bukan dialog.
   Di storyboard, tandai kapan mulutnya bergerak (buka/tutup, durasi) dan siapa yang bicara.
-- `index.json` dan `data/*.json` **generated** — jangan diedit tangan.
+- `index.json` dan `data/*.json` **generated**: jangan diedit tangan.
 
 ## Yang dihitung otomatis
 
@@ -116,14 +117,14 @@ karakter, dan 9 pemeriksaan kelengkapan/kesiapan draft:
 | dialogue | ≥ 1 baris dialog |
 | visual | ≥ 30% kalimat mengandung isyarat visual (cahaya, gerak, warna, shot) |
 
-Semua ini heuristik teks — bukan penilaian mutu cerita. Gunanya buat lihat mana draft
+Semua ini heuristik teks, bukan penilaian mutu cerita. Gunanya buat lihat mana draft
 yang metadatanya lengkap dan strukturnya sudah siap dipetakan jadi shot.
 
 ## Web
 
 Zero-build (HTML/CSS/JS vanilla, tanpa npm). Baca `index.json`, lalu `data/<slug>.json`
 saat draft dibuka. Tata letaknya "Script Desk": **papan** berisi baris draft berzona
-(lagi digarap / mateng / parked) + meter kesiapan — tiap baris punya **poster identitas CSS-only**
+(lagi digarap / mateng / parked) + meter kesiapan, tiap baris punya **poster identitas CSS-only**
 (warna, pola, dan monogram dibangkitkan dari slug; aspeknya ikut `format`), dan **desk** satu
 halaman scroll dengan rail segmen + tabel rujukan, timeline 40 dtk, filter segmen
 (semua / wajib / risiko tinggi / belum diuji), storyboard collapsible per segmen

@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-01T05:44:45Z",
+ "generated": "2026-11-01T05:58:02Z",
  "count": 2,
- "words": 769,
+ "words": 932,
  "statuses": {
   "adapted": 0,
   "developing": 0,
@@ -17,12 +17,11 @@
   "anime",
   "contoh",
   "deadpan",
+  "dialog",
   "hujan",
   "kanglim",
   "komedi",
   "malam",
-  "non-verbal",
-  "obvpm",
   "sirin",
   "taman",
   "urban"
@@ -34,12 +33,12 @@
   "Pak Sukron"
  ],
  "baseline": {
-  "words": 384.5,
-  "sentences": 37.0,
-  "dialogue": 1.0,
+  "words": 466.0,
+  "sentences": 45.0,
+  "dialogue": 7.5,
   "scenes": 5.5,
-  "longest_sentence": 24.0,
-  "visual_pct": 54.5
+  "longest_sentence": 25.5,
+  "visual_pct": 57.0
  },
  "entries": [
   {
@@ -54,8 +53,8 @@
     "Cha Sirin",
     "Kanglim"
    ],
-   "setting": "Taman kota, siang hangat — bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan",
-   "target": "MiniMax H3 — seri smol Cha Sirin",
+   "setting": "Taman kota, siang hangat, bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan",
+   "target": "MiniMax H3, seri smol Cha Sirin",
    "format": "9:16",
    "duration": 40,
    "beats": 8,
@@ -64,76 +63,76 @@
     "komedi",
     "taman",
     "deadpan",
-    "non-verbal",
-    "obvpm",
+    "dialog",
     "sirin",
     "kanglim"
    ],
-   "non_verbal": true,
+   "non_verbal": false,
+   "speech": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata)",
    "meta": {},
-   "words": 566,
-   "chars": 3973,
-   "paragraphs": 20,
-   "sentences": 53,
-   "dialogue": 0,
-   "longest_sentence": 27,
-   "avg_sentence": 10.7,
-   "read_min": 3,
-   "visual_sentences": 30,
-   "visual_pct": 57,
+   "words": 732,
+   "chars": 5189,
+   "paragraphs": 40,
+   "sentences": 71,
+   "dialogue": 13,
+   "longest_sentence": 30,
+   "avg_sentence": 10.3,
+   "read_min": 4,
+   "visual_sentences": 40,
+   "visual_pct": 56,
    "toc": [
     {
      "id": "h1",
      "level": 2,
      "text": "1. Bangku, siang hangat (0.0–5.0 dtk)",
-     "words": 109
+     "words": 128
     },
     {
      "id": "h2",
      "level": 2,
      "text": "2. Operasi dimulai (5.0–10.0 dtk)",
-     "words": 45
+     "words": 65
     },
     {
      "id": "h3",
      "level": 2,
      "text": "3. Tugas Sirin (10.0–15.0 dtk)",
-     "words": 75
+     "words": 111
     },
     {
      "id": "h4",
      "level": 2,
      "text": "4. Formasi makan siang (15.0–20.0 dtk)",
-     "words": 79
+     "words": 97
     },
     {
      "id": "h5",
      "level": 2,
      "text": "5. Semut (20.0–25.0 dtk)",
-     "words": 71
+     "words": 90
     },
     {
      "id": "h6",
      "level": 2,
      "text": "6. Satu gerakan malas (25.0–30.0 dtk)",
-     "words": 51
+     "words": 63
     },
     {
      "id": "h7",
      "level": 2,
      "text": "7. Kanglim mencoba meniru (30.0–35.0 dtk)",
-     "words": 51
+     "words": 72
     },
     {
      "id": "h8",
      "level": 2,
      "text": "8. Button (35.0–40.0 dtk)",
-     "words": 85
+     "words": 106
     }
    ],
    "mentions": {
     "Cha Sirin": 15,
-    "Kanglim": 11
+    "Kanglim": 12
    },
    "has_frontmatter": true,
    "has_storyboard": true,
@@ -144,7 +143,7 @@
      "label": "Logline",
      "value": "ada",
      "ok": true,
-     "note": "satu kalimat inti — dipakai buat ringkas cerita jadi summary prompt"
+     "note": "satu kalimat inti, dipakai buat ringkas cerita jadi summary prompt"
     },
     {
      "id": "characters",
@@ -156,9 +155,9 @@
     {
      "id": "setting",
      "label": "Setting / lokasi",
-     "value": "Taman kota, siang hangat — bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan",
+     "value": "Taman kota, siang hangat, bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan",
      "ok": true,
-     "note": "lokasi + waktu — dipakai buat lock background biar gak drift"
+     "note": "lokasi + waktu, dipakai buat lock background biar gak drift"
     },
     {
      "id": "genre",
@@ -170,7 +169,7 @@
     {
      "id": "tags",
      "label": "Tag",
-     "value": 8,
+     "value": 7,
      "ok": true,
      "note": "biar bisa difilter di web"
     },
@@ -179,28 +178,28 @@
      "label": "Scene / beat terpisah",
      "value": "8 heading",
      "ok": true,
-     "note": "pecah pakai heading (##) — satu scene kira-kira jadi satu shot"
+     "note": "pecah pakai heading (##), satu scene kira-kira jadi satu shot"
     },
     {
      "id": "sentence",
      "label": "Kalimat terpanjang",
-     "value": "27 kata",
+     "value": "30 kata",
      "ok": true,
      "note": "di atas ~45 kata susah dipetakan jadi satu shot"
     },
     {
      "id": "dialogue",
      "label": "Baris dialog",
-     "value": "non-verbal",
+     "value": 13,
      "ok": true,
-     "note": "lane non-verbal (non_verbal: true) — tanpa lip-sync, tanpa risiko mouth drift"
+     "note": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata) · suara non-verbal (desahan, gumam) tidak dihitung sebagai dialog"
     },
     {
      "id": "visual",
      "label": "Kalimat dengan isyarat visual",
-     "value": "30/53 (57%)",
+     "value": "40/71 (56%)",
      "ok": true,
-     "note": "cahaya, gerak, warna, shot — bahan caption H3"
+     "note": "cahaya, gerak, warna, shot, bahan caption H3"
     }
    ],
    "ready": 9,
@@ -231,23 +230,24 @@
     "hujan"
    ],
    "non_verbal": false,
+   "speech": "",
    "meta": {},
-   "words": 203,
+   "words": 200,
    "chars": 1312,
    "paragraphs": 10,
-   "sentences": 21,
+   "sentences": 19,
    "dialogue": 2,
    "longest_sentence": 21,
-   "avg_sentence": 9.7,
+   "avg_sentence": 10.5,
    "read_min": 1,
    "visual_sentences": 11,
-   "visual_pct": 52,
+   "visual_pct": 58,
    "toc": [
     {
      "id": "h1",
      "level": 2,
      "text": "1. Pasar loak, dua puluh menit sebelum tutup",
-     "words": 80
+     "words": 79
     },
     {
      "id": "h2",
@@ -259,7 +259,7 @@
      "id": "h3",
      "level": 2,
      "text": "3. Gembok terbuka",
-     "words": 63
+     "words": 61
     }
    ],
    "mentions": {
@@ -275,7 +275,7 @@
      "label": "Logline",
      "value": "ada",
      "ok": true,
-     "note": "satu kalimat inti — dipakai buat ringkas cerita jadi summary prompt"
+     "note": "satu kalimat inti, dipakai buat ringkas cerita jadi summary prompt"
     },
     {
      "id": "characters",
@@ -289,7 +289,7 @@
      "label": "Setting / lokasi",
      "value": "Pasar loak Bandung, malam setelah hujan",
      "ok": true,
-     "note": "lokasi + waktu — dipakai buat lock background biar gak drift"
+     "note": "lokasi + waktu, dipakai buat lock background biar gak drift"
     },
     {
      "id": "genre",
@@ -310,7 +310,7 @@
      "label": "Scene / beat terpisah",
      "value": "3 heading",
      "ok": true,
-     "note": "pecah pakai heading (##) — satu scene kira-kira jadi satu shot"
+     "note": "pecah pakai heading (##), satu scene kira-kira jadi satu shot"
     },
     {
      "id": "sentence",
@@ -324,14 +324,14 @@
      "label": "Baris dialog",
      "value": 2,
      "ok": true,
-     "note": "dialog nanti masuk sebagai <d>[Language] teks</d>"
+     "note": "dialog dari karakter yang bicara · suara non-verbal (desahan, gumam) tidak dihitung sebagai dialog"
     },
     {
      "id": "visual",
      "label": "Kalimat dengan isyarat visual",
-     "value": "11/21 (52%)",
+     "value": "11/19 (58%)",
      "ok": true,
-     "note": "cahaya, gerak, warna, shot — bahan caption H3"
+     "note": "cahaya, gerak, warna, shot, bahan caption H3"
     }
    ],
    "ready": 9,

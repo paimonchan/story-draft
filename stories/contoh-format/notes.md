@@ -1,4 +1,4 @@
-# Catatan — Contoh Format
+# Catatan · Contoh Format
 
 Draft ini contoh format. Hapus folder ini begitu draft aslimu sudah masuk
 (`rm -rf stories/contoh-format` lalu `python3 tools/build_index.py`).
@@ -8,11 +8,11 @@ Draft ini contoh format. Hapus folder ini begitu draft aslimu sudah masuk
 `notes.md` sebelah `story.md` buat hal-hal yang bukan cerita tapi penting buat
 produksi nanti:
 
-- **Potongan deskripsi visual** — caption adegan yang sudah kepikiran
-- **Referensi visual** — link gambar referensi, nama gaya, palet warna
-- **Karakter** — deskripsi tetap (usia, kostum, ciri) supaya konsisten antar shot
-- **Peta shot** — scene mana jadi shot berapa, perkiraan durasi
-- **Keputusan** — kenapa scene ini dipotong, apa yang sudah dicoba dan gagal
+- **Potongan deskripsi visual**: caption adegan yang sudah kepikiran
+- **Referensi visual**: link gambar referensi, nama gaya, palet warna
+- **Karakter**: deskripsi tetap (usia, kostum, ciri) supaya konsisten antar shot
+- **Peta shot**: scene mana jadi shot berapa, perkiraan durasi
+- **Keputusan**: kenapa scene ini dipotong, apa yang sudah dicoba dan gagal
 
 ## Contoh isi untuk draft ini
 

@@ -1,16 +1,16 @@
-# 02 — Batasan H3 yang mengikat bentuk storyboard
+# 02 · Batasan H3 yang mengikat bentuk storyboard
 
 Semua angka di sini **terukur dari lane yang sudah jalan**, bukan teori. Sumber: `docs/16`
 (playbook Qwen3-VL + anti-cut) dan `iteration_log` lane `cha_sirin_daily_01..04`,
 `cha_sirin_mirror_01`, `cha_sirin_cookie_01`, `abel_lantern_01`, `abel_sneeze_01`.
 
 Kenapa aturan produksi masuk dokumen cerita: **batasan model menentukan bentuk ceritanya.**
-Satu take kontinu = satu lokasi; non-verbal = komedi lewat gestur; maks 1 gerak kamera kecil
+Satu take kontinu = satu lokasi; komedi lewat gestur; maks 1 gerak kamera kecil
 per segmen = beat cerita harus sederhana dan bisa dibaca dalam ~5 detik.
 
 ## Batas dokumen ini
 
-Yang diurus di sini: **batasan model yang mengubah bentuk cerita & storyboard** — supaya
+Yang diurus di sini: **batasan model yang mengubah bentuk cerita & storyboard**: supaya
 storyboard-nya bisa dibaca model dan tidak meminta hal yang mustahil.
 
 Yang **tidak** diurus di sini: cara menyusun prompt video (format prompt, tag referensi,
@@ -26,7 +26,7 @@ selesai di jendela itu, dan state akhir tiap segmen harus dinyatakan supaya segm
 nyambung (lihat checklist di bawah).
 
 Cara teknis menyambung klipnya (extend, pin timeline, urutan blok prompt) dikerjakan di lane
-produksi — bukan di dokumen cerita ini.
+produksi: bukan di dokumen cerita ini.
 
 ## Kamera (terukur dengan phase-correlation per frame)
 
@@ -53,24 +53,24 @@ Aturan:
 ## Anti-cut: 7 kelas kegagalan yang sudah pernah kejadian
 
 1. **Gerak kamera besar** → model cut. Maks 1 gerak kecil/segmen.
-2. **View/subject switch** — `the camera holds: below…`, `we see…`, `meanwhile`, `cut to`,
+2. **View/subject switch**: `the camera holds: below…`, `we see…`, `meanwhile`, `cut to`,
    `the wide last shot` = shot kedua. Satu framing per segmen.
-3. **State mismatch di anchor** — anchor `The clip opens exactly where the last one ended` wajib
+3. **State mismatch di anchor**: anchor `The clip opens exactly where the last one ended` wajib
    menyebut **4+1 elemen** yang sama persis dengan frame terakhir: (a) posisi karakter,
    (b) apa di tangan / di sekitar, (c) arah gerak elemen bergerak (angin, musuh, air),
    (d) posisi + tinggi kamera, (e) apa yang **benar-benar terlihat** dari posisi kamera itu.
    Kalau objek mustahil terlihat dari situ, model pasti cut.
-4. **Lompatan skala framing** — buka extreme close-up lalu minta lokasi penuh dalam take yang sama
+4. **Lompatan skala framing**: buka extreme close-up lalu minta lokasi penuh dalam take yang sama
    = cut. **Framing ladder**: pelebaran maks **1 level per segmen**
    (extreme CU → CU → close medium → medium → medium-wide → wide).
-5. **Blok warisan era framing lama** — sisa frasa lama (`tight`, `on her face`, `close`) masih
+5. **Blok warisan era framing lama**: sisa frasa lama (`tight`, `on her face`, `close`) masih
    ada di blok CINEMA padahal framing lane sudah digeser → lompat di TENGAH klip (t ≈ 40–45%).
    Sisir SEMUA frasa, bukan cuma `summary`. Guard positif yang dipakai:
    *"The very first frame of the clip is already in the same framing the previous beat ended
-   with — the same distance, the same angle, the same shot."*
+   with: the same distance, the same angle, the same shot."*
 6. **State akhir tidak dinyatakan** → kontinuitas antar-segmen putus.
    Tutup tiap segmen: *"The clip ends on this exact state and holds it for a beat"*.
-7. **Beat telat 1 segmen** — blok extend langsung menyuruh aksi baru tanpa menjembatani state
+7. **Beat telat 1 segmen**: blok extend langsung menyuruh aksi baru tanpa menjembatani state
    akhir. Fix: anchor state pembuka + aksi pertama eksplisit.
 
 Tambahan penting:
@@ -78,13 +78,13 @@ Tambahan penting:
 - **Kontak ≠ cut.** Kalau aksi "tidak kena", biasanya storyboard tidak menyebut titik kontak + reaksi.
   Tulis: `her foot lands square on the nearest blob … it bursts into a puff at her foot`.
 - **Face-side guard** (lane face-first): walk tanpa arahan kamera → H3 pilih kamera di BELAKANG
-  = muka hilang. Kunci: *"the camera leading her the whole way — drifting backward in front of her
+  = muka hilang. Kunci: *"the camera leading her the whole way, drifting backward in front of her
   face"*, dan guard umum *"it always sits on the face side of her"*.
 - **Objek di ref bisa terduplikasi**: world ref berisi objek kunci + prompt meng-anchor objek itu →
   H3 mempertahankan objek parkir SAMBIL membuat salinan untuk dipakai. Deklarasikan *"ONE single …"*
   dan jangan jadikan objek itu patokan tetap di storyboard (patokan tetap hanya untuk environment).
 - **Kontradiksi fisik "apa yang kamera lihat"**: jangan sebut detail yang ada di sisi tak terlihat
-  (mis. tombol/isi layar sambil bilang punggungnya menghadap kamera) — model akan memutar objek
+  (mis. tombol/isi layar sambil bilang punggungnya menghadap kamera), model akan memutar objek
   supaya detail itu kelihatan. Selalu nyatakan **apa yang kamera lihat**, dan pindahkan detail sisi
   tersembunyi keluar dari deskripsi visual.
 - **Kata terlarang**: `flicker`/`flickering` → strobe (kecerahan berdenyut; |ΔLum| naik dari 0.42
@@ -93,16 +93,22 @@ Tambahan penting:
 - **Micro-motion anti-freeze** harus pakai detail sisi yang terlihat: napas, blink, rambut sway,
   tangan bergeser, cahaya bergerak pelan. Tombol/stick/isi layar TIDAK aman.
 - **Relokasi besar harus di-stage** langkah demi langkah (*"pushes herself off the sill and shuffles
-  back to the sofa, step by step"*) — satu klausa untuk 5 detik bikin model loncat ke wide shot.
+  back to the sofa, step by step"*), satu klausa untuk 5 detik bikin model loncat ke wide shot.
 
 ## Audio
 
-- Seri ini **non-verbal, NO-BGM**: ambience + SFX saja. Non-verbal = nol risiko lip-sync/mouth
-  drift (mode paling aman) — itu sebabnya pola seri Cha Sirin ditulis tanpa dialog.
-- Kalau ceritanya memang berdialog: tulis ucapannya di `story.md` sebagai baris sendiri, dan di
-  storyboard tandai **kapan mulut bergerak** (buka/tutup, durasi) + siapa yang bicara. Risk yang
-  diketahui = mouth drift, jadi jangan taruh aksi besar di beat yang sama dengan dialog panjang.
-- Musik: berhenti total di beat deadpan (itu punchline auditif) — dicatat di storyboard sebagai
+- Seri ini **NO-BGM** (musik di-mix di luar klip). Yang masuk klip: ambience + SFX + dialog.
+- **Dialog hanya milik karakter yang bicara.** Di seri ini Kanglim bicara; Sirin **tidak pernah
+  bicara** dan suaranya (desahan, gumam, dengkur) ditulis sebagai **prosa** di `story.md`, bukan
+  baris dialog. Karena mulut Sirin tidak pernah membentuk kata, tidak ada risiko lip-sync di sisinya.
+- **Kalau ada dialog:** ucapannya ditulis di `story.md` sebagai baris sendiri di dalam tanda kutip,
+  lalu di storyboard dicatat **kapan mulutnya bergerak** (jendela buka/tutup) + beat fisik yang
+  menempel padanya. Jendela mulut harus pendek (maks ~1.2 dtk); kalau kalimat lebih panjang dari
+  beat-nya, potong kalimatnya, jangan panjangkan beat. Jangan taruh aksi besar di beat yang sama
+  dengan dialog panjang (risiko mouth drift).
+- **Mulut yang tidak terlihat** (tertutup kain, di balik objek) dicatat eksplisit: di situ tidak ada
+  mulut yang perlu dianimasikan, cuma kain yang bergerak tipis.
+- Musik: berhenti total di beat deadpan (itu punchline auditif), dicatat di storyboard sebagai
   keadaan audio, bukan sebagai instruksi mixing.
 
 ## Checklist storyboard sebelum dinyatakan siap
@@ -113,7 +119,7 @@ Tambahan penting:
 - [ ] tidak ada `zoom` / `cut to` / `meanwhile` / `we see` / `flash` / `flicker`
 - [ ] tidak ada karakter ketiga, tidak ada teks terbaca
 - [ ] semua ref satu geometri kamera dengan take
-- [ ] daftar "detail yang kusebut" vs "sisi yang dilihat kamera" — tidak ada yang bertabrakan
+- [ ] daftar "detail yang kusebut" vs "sisi yang dilihat kamera", tidak ada yang bertabrakan
 
 ## Verifikasi storyboard (bukan verifikasi render)
 
@@ -123,5 +129,5 @@ Tambahan penting:
 - Tabel audit di `storyboard.md` ("detail yang kusebut" vs "sisi yang dilihat kamera") tidak boleh
   punya baris yang bertabrakan.
 - Tiap aksi harus punya hasil yang kelihatan: titik kontak + reaksi.
-- Kalau satu segmen tidak bisa dibayangkan sebagai satu take kontinu tanpa cut, pecah segmennya —
+- Kalau satu segmen tidak bisa dibayangkan sebagai satu take kontinu tanpa cut, pecah segmennya,
   jangan tambah gerak kamera.

@@ -1,4 +1,4 @@
-/* Story Draft — Script Desk.
+/* Story Draft, Script Desk.
    Sumber data tunggal: index.json (+ data/<slug>.json per draft, dimuat saat dibuka).
    Detail = satu halaman scroll (tanpa tab): rail segmen + bagian yang di-anchor. */
 'use strict';
@@ -131,7 +131,7 @@ function md(src, opts = {}) {
 
     if (!line.trim()) { flushList(); continue; }
     flushList();
-    if (/^\s*[—–]\s/.test(line)) out.push(`<p class="dialogue">${inline(line.trim())}</p>`);
+    if (/^\s*[\u2014\u2013]\s/.test(line) || /^\s*["\u201c][^"\u201d]*["\u201d]\s*$/.test(line)) out.push(`<p class="dialogue">${inline(line.trim())}</p>`);
     else out.push(`<p>${inline(line)}</p>`);
   }
   flushList(); flushTable();
@@ -158,8 +158,8 @@ function parseStoryboard(text) {
     const m = b.title.match(/^S(\d+)\b\s*(.*)$/);
     const body = b.body.join('\n').trim();
     if (m) {
-      const rest = m[2].replace(/^[—–-]\s*/, '');
-      const win = (rest.match(/\(\s*([\d.]+\s*[–—-]\s*[\d.]+)\s*\)/) || [, ''])[1];
+      const rest = m[2].replace(/^[\u2014\u2013\u00b7-]\s*/, '');
+      const win = (rest.match(/\(\s*([\d.]+\s*[\u2014\u2013-]\s*[\d.]+)\s*\)/) || [, ''])[1];
       const framing = (body.match(/^\s*-?\s*\*\*Framing & kamera:\*\*\s*(.+)$/m) || [, ''])[1];
       const hint = framing.replace(/[`*]/g, '').replace(/\s+/g, ' ').slice(0, 96);
       const meta = body.match(
@@ -457,8 +457,8 @@ function storyboardSect(e, sb, openSeg) {
   if (!sb.segs.length && !sb.extra.length && !sb.intro)
     return `<section class="card sect" id="sect-storyboard">${sectHead('storyboard', 'Storyboard')}
       <div class="muted">Belum ada <code class="mono">storyboard.md</code> di folder draft ini.
-      Isinya: pecahan tiap segmen jadi sub-beat — gerak, ekspresi, kamera fisik, kontak, audio, anchor
-      buka/tutup — ditulis ke grammar encoder Qwen3-VL.</div></section>`;
+      Isinya: pecahan tiap segmen jadi sub-beat, gerak, ekspresi, kamera fisik, kontak, audio, anchor
+      buka/tutup: ditulis ke grammar encoder Qwen3-VL.</div></section>`;
 
   const seg = sb.segs.map((s) => `
     <details class="seg" id="${s.id}" ${openSeg === s.id ? 'open' : ''}>
@@ -494,7 +494,7 @@ function storyboardSect(e, sb, openSeg) {
   const cnt = (fn) => sb.segs.filter(fn).length;
   const tested = cnt((s) => s.status && !/belum/.test(s.status));
   const secs = (s) => {
-    const [a, b] = (s.window || '').split(/[–—-]/).map((v) => parseFloat(v) || 0);
+    const [a, b] = (s.window || '').split(/[\u2013\u2014-]/).map((v) => parseFloat(v) || 0);
     const d = (isFinite(b) ? b : 0) - a;
     return d > 0 ? d : 5;
   };
@@ -502,7 +502,7 @@ function storyboardSect(e, sb, openSeg) {
   const tl = sb.segs.map((s) => `
     <a class="tlseg ${s.prioritas === 'harus' ? 'p-harus' : s.prioritas === 'penting' ? 'p-penting' : 'p-opsional'}${s.risiko === 'tinggi' ? ' r-tinggi' : ''}${s.status && !/belum/.test(s.status) ? ' done' : ''}"
        href="#${s.id}" data-seg="${s.id}" style="flex:${secs(s)} 1 0"
-       title="${esc(s.title)} — ${esc(s.fungsi || '')} · ${esc(s.prioritas || '')} · risiko ${esc(s.risiko || '')} · ${esc(s.status || '')}">
+       title="${esc(s.title)}, ${esc(s.fungsi || '')} · ${esc(s.prioritas || '')} · risiko ${esc(s.risiko || '')} · ${esc(s.status || '')}">
       <b>${s.n}</b><span>${esc(segLabel(s.window))}</span>
     </a>`).join('');
 
@@ -555,7 +555,7 @@ function readySect(e) {
   const cast = Object.entries(e.mentions || {});
   const sceneRows = (e.toc || []).map((t, i) => `
     <div class="ready-row"><div class="mark mono">${i + 1}</div>
-      <div class="lbl">${esc(t.text)}<small>kira-kira jadi satu shot — pecah lagi kalau terlalu panjang</small></div>
+      <div class="lbl">${esc(t.text)}<small>kira-kira jadi satu shot, pecah lagi kalau terlalu panjang</small></div>
       <div class="val">${t.words}w</div></div>`).join('');
 
   return `<section class="card sect" id="sect-ready">
@@ -574,10 +574,10 @@ function readySect(e) {
     ${sceneRows ? `<div class="sect-head" style="margin-top:18px"><h2>Scene → shot</h2></div><div class="ready-grid">${sceneRows}</div>` : ''}
     <div class="sect-head" style="margin-top:18px"><h2>Batas panel ini</h2></div>
     <div class="notes">
-      <p>Yang dijaga di sini cuma <b>cerita &amp; storyboard-nya bisa dibaca model</b> — struktur
+      <p>Yang dijaga di sini cuma <b>cerita &amp; storyboard-nya bisa dibaca model</b>, struktur
       segmen, durasi wajar, aksi yang kelihatan kamera, tidak ada yang bertabrakan.</p>
       <p>Adaptasi ke prompt video (format prompt, tag referensi, penempatan dialog &amp; ambience)
-      bukan urusan repo ini — itu dikerjakan di lane prompt oleh agent yang menyesuaikan.</p>
+      bukan urusan repo ini, itu dikerjakan di lane prompt oleh agent yang menyesuaikan.</p>
       <p>Batasan H3 yang mengikat bentuk storyboard: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/02-aturan-produksi-h3.md" target="_blank" rel="noopener">docs/02</a> ·
          teknik sinematik: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/04-teknik-sinematik.md" target="_blank" rel="noopener">docs/04</a> ·
          konteks seri: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/01-konteks-sirin-kanglim.md" target="_blank" rel="noopener">docs/01</a>.</p>
@@ -613,7 +613,7 @@ async function renderDesk(slug, section, seg) {
     ['storyboard', sb.segs.length
       ? `${(d.storyboard.match(/\*\*(v\d+)\*\*/) || [, 'v?'])[1]} · ${sb.segs.filter((s) => s.status && !/belum/.test(s.status)).length}/${sb.segs.length} diuji`
       : ''],
-    ['audio', e.non_verbal ? 'non-verbal' : ''],
+    ['suara', e.non_verbal ? 'non-verbal (tanpa dialog)' : (e.speech || 'berdialog')],
   ].filter(([, v]) => v !== undefined && v !== null && v !== '');
 
   app.innerHTML = `
@@ -785,8 +785,8 @@ function onScroll() {
 
 function updateFooter(e) {
   document.getElementById('foot-left').textContent = e
-    ? `${e.title} — ${e.words} kata · ${(e.toc || []).length} scene`
-    : 'Story Draft — draft story untuk prompt video AI';
+    ? `${e.title}, ${e.words} kata · ${(e.toc || []).length} scene`
+    : 'Story Draft, draft story untuk prompt video AI';
   document.getElementById('brand-sub').textContent = e ? e.title : 'draft story → prompt video AI';
   document.getElementById('foot-right').textContent = INDEX
     ? `index ${INDEX.generated} · ${INDEX.count} draft · ${fmt(INDEX.words)} kata`
@@ -866,5 +866,5 @@ fetch('index.json', { cache: 'no-cache' })
     route();
   })
   .catch((err) => {
-    app.innerHTML = `<div class="card empty">Gagal memuat index.json — ${esc(err.message)}</div>`;
+    app.innerHTML = `<div class="card empty">Gagal memuat index.json, ${esc(err.message)}</div>`;
   });

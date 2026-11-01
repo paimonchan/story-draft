@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-build_index.py — scan stories/**/story.md -> index.json (satu-satunya sumber data web).
+build_index.py: scan stories/**/story.md -> index.json (satu-satunya sumber data web).
 
 Satu draft = satu folder:
 
@@ -14,10 +14,10 @@ Frontmatter yang dibaca (key lain ikut diteruskan apa adanya ke `meta`):
   target, format, duration, beats, tags
 
 Yang dihitung dari isi (jangan ditulis manual):
-  stats      — kata, karakter, paragraf, kalimat, baris dialog, estimasi baca
-  toc        — heading (scene/bab) + jumlah kata per scene
-  mentions   — berapa kali tiap karakter muncul di prosa
-  checks     — kelengkapan metadata + sinyal kesiapan draft (heuristik teks)
+  stats: kata, karakter, paragraf, kalimat, baris dialog, estimasi baca
+  toc: heading (scene/bab) + jumlah kata per scene
+  mentions: berapa kali tiap karakter muncul di prosa
+  checks: kelengkapan metadata + sinyal kesiapan draft (heuristik teks)
 
 Pakai:
   python3 tools/build_index.py            # tulis index.json + data/*.json
@@ -43,11 +43,11 @@ OUT = ROOT / "index.json"
 DATA_DIR = ROOT / "data"
 
 HEADING_RE = re.compile(r"^(#{1,4})\s+(.+?)\s*$", re.M)
-DIALOG_RE = re.compile(r'^\s*(?:[—–]\s|["“»])', re.M)
+DIALOG_RE = re.compile(r'^\s*(?:[\u2014\u2013]\s|["\u201c\u00bb])', re.M)
 SENTENCE_RE = re.compile(r"(?<=[.!?…])\s+")
 WORDS_PER_MIN = 180
 
-# kata yang bikin sebuah kalimat "bisa difoto" — heuristik, bukan penilaian mutu
+# kata yang bikin sebuah kalimat "bisa difoto" · heuristik, bukan penilaian mutu
 VISUAL_WORDS = [
     "cahaya", "sinar", "lampu", "gelap", "bayang", "warna", "siluet", "kontras",
     "kabut", "asap", "hujan", "salju", "debu", "api", "kilat", "pantulan",
@@ -177,7 +177,7 @@ def build_entry(path: Path) -> dict:
 
     known = {
         "title", "status", "date", "genre", "lang", "logline", "characters",
-        "setting", "target", "format", "duration", "beats", "tags", "non_verbal",
+        "setting", "target", "format", "duration", "beats", "tags", "non_verbal", "speech",
     }
 
     entry = {
@@ -196,6 +196,7 @@ def build_entry(path: Path) -> dict:
         "beats": beats,
         "tags": as_list(fm.get("tags")),
         "non_verbal": non_verbal,
+        "speech": fm.get("speech") or "",
         "meta": {k: v for k, v in fm.items() if k not in known},
         "words": words,
         "chars": chars,
@@ -223,7 +224,7 @@ def build_entry(path: Path) -> dict:
             "label": "Logline",
             "value": "ada" if entry["logline"] else "kosong",
             "ok": bool(entry["logline"]),
-            "note": "satu kalimat inti — dipakai buat ringkas cerita jadi summary prompt",
+            "note": "satu kalimat inti, dipakai buat ringkas cerita jadi summary prompt",
         },
         {
             "id": "characters",
@@ -237,7 +238,7 @@ def build_entry(path: Path) -> dict:
             "label": "Setting / lokasi",
             "value": entry["setting"] or "kosong",
             "ok": bool(entry["setting"]),
-            "note": "lokasi + waktu — dipakai buat lock background biar gak drift",
+            "note": "lokasi + waktu, dipakai buat lock background biar gak drift",
         },
         {
             "id": "genre",
@@ -258,7 +259,7 @@ def build_entry(path: Path) -> dict:
             "label": "Scene / beat terpisah",
             "value": f"{len(toc)} heading",
             "ok": len(toc) >= 2,
-            "note": "pecah pakai heading (##) — satu scene kira-kira jadi satu shot",
+            "note": "pecah pakai heading (##), satu scene kira-kira jadi satu shot",
         },
         {
             "id": "sentence",
@@ -273,9 +274,12 @@ def build_entry(path: Path) -> dict:
             "value": "non-verbal" if non_verbal else dialogue,
             "ok": True if non_verbal else dialogue >= 1,
             "note": (
-                "lane non-verbal (non_verbal: true) — tanpa lip-sync, tanpa risiko mouth drift"
+                "lane non-verbal (non_verbal: true), tanpa lip-sync, tanpa risiko mouth drift"
                 if non_verbal
-                else "dialog nanti masuk sebagai <d>[Language] teks</d>"
+                else (
+                    (str(fm.get("speech")) if fm.get("speech") else "dialog dari karakter yang bicara")
+                    + " · suara non-verbal (desahan, gumam) tidak dihitung sebagai dialog"
+                )
             ),
         },
         {
@@ -283,7 +287,7 @@ def build_entry(path: Path) -> dict:
             "label": "Kalimat dengan isyarat visual",
             "value": f"{visual_hits}/{len(sents)} ({entry['visual_pct']}%)",
             "ok": entry["visual_pct"] >= 30,
-            "note": "cahaya, gerak, warna, shot — bahan caption H3",
+            "note": "cahaya, gerak, warna, shot, bahan caption H3",
         },
     ]
     entry["checks"] = checks
@@ -312,7 +316,7 @@ def main() -> int:
             errors.append(f"slug duplikat: {e['slug']}")
         seen.add(e["slug"])
         if not e["has_frontmatter"]:
-            errors.append(f"{e['slug']}: frontmatter (---) tidak terbaca — cek tanda kutip di nilai berisi ':'")
+            errors.append(f"{e['slug']}: frontmatter (---) tidak terbaca, cek tanda kutip di nilai berisi ':'")
         if not e["title"]:
             errors.append(f"{e['slug']}: title kosong")
         if e["status"] not in STATUSES:
@@ -320,11 +324,11 @@ def main() -> int:
         # ini peringatan saja: draft setengah jadi tetap boleh ke-publish,
         # CI jangan gagal cuma karena ceritanya belum ditulis
         if e["words"] < 20:
-            warnings.append(f"{e['slug']}: prosa baru {e['words']} kata — belum diisi")
+            warnings.append(f"{e['slug']}: prosa baru {e['words']} kata, belum diisi")
         if not e["logline"]:
             warnings.append(f"{e['slug']}: logline belum diisi")
         if not e["toc"]:
-            warnings.append(f"{e['slug']}: belum ada heading — belum dipecah per scene")
+            warnings.append(f"{e['slug']}: belum ada heading, belum dipecah per scene")
 
     # Setiap .md di folder draft harus punya jalan tampil di web. File di luar daftar ini
     # tidak akan pernah muncul di halaman (ini penyebab "kok web-nya nggak berubah").
@@ -334,7 +338,7 @@ def main() -> int:
             if extra.name not in SURFACED:
                 warnings.append(
                     f"{p.parent.relative_to(STORIES_DIR).as_posix()}/{extra.name}: belum disurface di web "
-                    "— bukan story.md/notes.md/storyboard.md, jadi tidak akan kelihatan di halaman"
+                    ", bukan story.md/notes.md/storyboard.md, jadi tidak akan kelihatan di halaman"
                 )
 
     entries.sort(key=lambda e: (e["date"] or "", e["title"]), reverse=True)
@@ -393,7 +397,7 @@ def main() -> int:
             f"{OUT.stat().st_size:,} bytes (+{len(light_entries)} file di data/)"
         )
         for e in entries:
-            print(f"  [{e['status']}] {e['title']} — {e['words']} kata, {len(e['toc'])} scene, siap {e['ready']}/{e['ready_total']}")
+            print(f"  [{e['status']}] {e['title']}, {e['words']} kata, {len(e['toc'])} scene, siap {e['ready']}/{e['ready_total']}")
 
     if warnings:
         print("\nPERINGATAN (tidak menggagalkan build):")

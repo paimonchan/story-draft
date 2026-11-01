@@ -1,6 +1,6 @@
-/* Story Draft — design tokens + layout (Script Desk).
+/* Story Draft, design tokens + layout (Script Desk).
    Prinsip keluarga: 1px border, elevasi lewat shadow halus, aksen amber (film) + teal sekunder.
-   Kontras teks panel dark: 14.3:1 (body), 7.4:1 (muted), 8.1:1 (accent) — lolos WCAG AAA/AA.
+   Kontras teks panel dark: 14.3:1 (body), 7.4:1 (muted), 8.1:1 (accent), lolos WCAG AAA/AA.
    Tanpa glow blob. */
 
 :root {

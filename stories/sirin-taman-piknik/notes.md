@@ -1,7 +1,7 @@
-# Catatan — Operasi Piknik Sempurna
+# Catatan · Operasi Piknik Sempurna
 
 Lane usulan di eikei-plan: **`cha_sirin_taman_piknik_01`** (seri smol Cha Sirin).
-Semua aturan di bawah bukan karangan — diambil dari lane yang sudah jalan
+Semua aturan di bawah bukan karangan, diambil dari lane yang sudah jalan
 (`cha_sirin_pigeon_01`, `cha_sirin_kanglim_01`, `cha_sirin_daily_01..04`) + `docs/16`.
 
 ## Kenapa cerita ini ditulis begini
@@ -10,9 +10,9 @@ Semua aturan di bawah bukan karangan — diambil dari lane yang sudah jalan
 |---|---|
 | Pipeline **OBVPM extend** = satu take kontinu, satu lokasi, tanpa cut | satu taman, satu bangku, 8 segmen ~5 dtk, tidak ada pindah tempat |
 | Kamera face-first: **muka Sirin = subjek** di setiap segmen | aksi Kanglim selalu terjadi **di frame yang sama** dengan muka Sirin; tidak ada segmen "milik Kanglim" |
-| **Non-verbal** (pola seri: NO-BGM, tanpa dialog) | komedi dibawa gestur + SFX; nol risiko lip-sync/mouth drift |
+| **Dialog Kanglim + vokal Sirin** (pola seri: NO-BGM) | komedi dibawa gestur + SFX; Kanglim 13 baris pendek (jendela mulut maks 1.2 dtk), Sirin 0 baris kata, jadi nol risiko lip-sync di sisi Sirin |
 | Maks **3–4 aksi** per segmen | tiap scene cuma satu beat + satu reaksi |
-| Maks **1 gerak kamera kecil** per segmen | tidak ada zoom/panjau/overhead — lihat §"Kamera" |
+| Maks **1 gerak kamera kecil** per segmen | tidak ada zoom/panjau/overhead, lihat §"Kamera" |
 | Anti-cut: satu framing per segmen | tidak ada "cut to", "we see", "meanwhile" |
 | Tidak ada karakter ketiga | hanya Sirin + Kanglim (+ 1 merpati sebagai prop hidup, bukan karakter) |
 | Tidak ada teks terbaca | kotak bekal, tikar, serbet: polos, tanpa label |
@@ -25,21 +25,21 @@ Eskalasi: tikar → bekal → serbet → semut → lengan hoodie → cardigan �
 
 | # | Aset | Status |
 |---|---|---|
-| 1 | Charsheet Cha Sirin (smol) — `Pastel Pink-Haired Anime Character Sheet.png` | ✅ ada |
-| 2 | Charsheet Kanglim — `Chibi Blue-Haired School Character Sheet.png` | ✅ ada |
-| 3 | World plate taman + kursi — **`cha_sirin_pigeon_world_01.png`** | ✅ **sudah ada** (lane pigeon) |
+| 1 | Charsheet Cha Sirin (smol), `Pastel Pink-Haired Anime Character Sheet.png` | ✅ ada |
+| 2 | Charsheet Kanglim, `Chibi Blue-Haired School Character Sheet.png` | ✅ ada |
+| 3 | World plate taman + kursi, **`cha_sirin_pigeon_world_01.png`** | ✅ **sudah ada** (lane pigeon) |
 
 World plate lane pigeon sudah persis lokasi cerita ini (bangku kayu, jalan setapak batu,
 rerumputan, kolam di kejauhan, 9:16, taman kosong). **Tidak perlu generate world baru.**
-Aturan §12.5/§13.5: semua ref wajib satu geometri kamera dengan take — tiga ref di atas
+Aturan §12.5/§13.5: semua ref wajib satu geometri kamera dengan take, tiga ref di atas
 aman (sheet = potret netral, world = eye-level sejajar take).
 
 Prop tambahan kalau perlu: `cha_sirin_pigeon_prop_merpati.png` (merpati, sudah ada) untuk S8.
 Kotak bekal + tikar + serbet: biarkan digenerate dari deskripsi (prop sederhana, polos).
-Look ref tambahan **tidak perlu** — pelajaran lane pigeon: ref "tiduran di kursi" dicabut,
+Look ref tambahan **tidak perlu**: pelajaran lane pigeon: ref "tiduran di kursi" dicabut,
 pose tidur cukup dari deskripsi.
 
-## Identitas (blok kanonik — pakai apa adanya, jangan ditulis ulang)
+## Identitas (blok kanonik · pakai apa adanya, jangan ditulis ulang)
 
 **Cha Sirin** (dari `cha_sirin_kanglim_01` s1):
 > a soft round-cute anime girl with big clear teal eyes that sit half-lidded and drowsy, two
@@ -53,7 +53,7 @@ pose tidur cukup dari deskripsi.
 > a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a smug, self-important
 > little face. He wears a beige cardigan over a navy sweater vest, a white shirt with a navy
 > necktie, navy trousers, black shoes, and a cream backpack on his back. A short wooden stick
-> hangs at his hip on a small strap — that stick is his whole personality, and it always returns
+> hangs at his hip on a small strap, that stick is his whole personality, and it always returns
 > to his hip after he uses it.
 
 **Two-shot rule:** Sirin di **KIRI** frame, Kanglim di **KANAN**, kepala Kanglim selalu lebih
@@ -66,7 +66,7 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 - Jangan kunci kamera total (`stays upright in the same spot`) → cam_px 0.02 = beku.
 - Target: **cam_px 0.1–0.4, cam_sd ≤ 0.8**. Frasa yang diterima user: `steady eye-level`.
 - Satu gerak kecil per segmen (drift/arc). **Jangan** pakai kosakata shot-type (`zoom`,
-  `cut to`, `close-up shot`) untuk gerak kontinu — tulis gerak fisik + objek yang keluar frame.
+  `cut to`, `close-up shot`) untuk gerak kontinu, tulis gerak fisik + objek yang keluar frame.
 - Face-side guard: kamera selalu di sisi muka Sirin, termasuk saat ada gerakan.
 - Framing ladder: pelebaran maks 1 level per segmen; jangan buka extreme CU lalu minta taman penuh.
 
@@ -75,8 +75,12 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 - Ambience taman siang: angin di daun, burung jauh, dengung kota tipis, gemerisik rumput.
 - SFX: kain tikar, angin meniup serbet, kotak bekal diangkat, **langkah kaki kecil banyak
   (semut = tidak terdengar, jadi bunyi dari Kanglim menari)**, kepakan merpati, kunyahan pelan.
+- **Dialog:** Kanglim 13 baris (register komandan operasi, kalimat pendek); dua di antaranya
+  diucapkan dengan **mulut tertutup kain** (S2 tikar, S7 cardigan) sehingga tidak butuh animasi mulut.
+- **Vokal Sirin (bukan kata):** desahan, *hmm*, *hmmm*, dengkur, *nng*, *haaah*, *mmm* (7 kali).
+  Semuanya SFX + mikro-ekspresi, tidak pernah jadi baris dialog.
 - Musik: pizzicato ringan dan lincah; **berhenti total** di S6 (gerakan malas) dan S7 (beku).
-- NO-BGM untuk render (BGM di-mix luar) — pola seri.
+- NO-BGM untuk render (BGM di-mix luar), pola seri.
 
 ## Checklist sebelum build
 
@@ -90,7 +94,7 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 
 ## Status
 
-- [x] story.md (8 segmen, non-verbal, satu lokasi)
-- [x] storyboard.md v2 — anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker
+- [x] story.md (8 segmen, satu lokasi; Kanglim 13 baris dialog, Sirin 7 vokal ekspresif)
+- [x] storyboard.md v3, anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker, **lapisan dialog & vokal**
 - [ ] perbarui kolom **Status** di `storyboard.md` tiap segmen selesai diuji (`belum diuji` → `diuji` → `final`)
-- [ ] serahkan ke lane prompt (`eikei-plan`) untuk plan + pack per segmen — bukan urusan repo ini
+- [ ] serahkan ke lane prompt (`eikei-plan`) untuk plan + pack per segmen, bukan urusan repo ini

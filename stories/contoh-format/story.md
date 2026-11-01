@@ -19,7 +19,7 @@ Hujan baru berhenti. Air masih menetes dari seng, jatuh satu per satu ke genanga
 
 Di belakangnya, Pak Sukron menggeser satu kotak kayu dengan lutut. Suaranya berat, seperti orang yang sudah tiga kali mengulang kalimat yang sama.
 
-— Kunci itu bukan barang jualan, Nara.
+"Kunci itu bukan barang jualan, Nara."
 
 Nara tidak menoleh. Tangan kanannya tetap di dalam saku jaket, menahan sesuatu yang bentuknya persegi dan dingin.
 
@@ -35,6 +35,6 @@ Kunci masuk. Gembok jatuh ke lantai dan berputar sekali sebelum berhenti. Pak Su
 
 Di dalam kotak, hanya ada satu foto: seorang lelaki berdiri di depan kios yang sama, memegang papan nama yang masih utuh.
 
-— Lima belas tahun, kata Nara pelan. — Kamu bilang semuanya sudah dibakar.
+"Lima belas tahun," kata Nara pelan. "Kamu bilang semuanya sudah dibakar."
 
 Pak Sukron mundur satu langkah. Senter di tangannya bergetar, dan cahayanya melompat-lompat di dinding.

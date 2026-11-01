@@ -1,12 +1,12 @@
-# 04 — Teknik sinematik (rujukan + pemetaan ke H3)
+# 04 · Teknik sinematik (rujukan + pemetaan ke H3)
 
 Ringkasan dari **"Cinematic Techniques: Cinematography, Lighting, and Prompts"**
-(<https://melies.co/cinematic-techniques>) — 424 teknik dalam 13 kategori, masing-masing berisi:
+(<https://melies.co/cinematic-techniques>), 424 teknik dalam 13 kategori, masing-masing berisi:
 definisi → fungsi naratif → cara kerja → kapan dipakai → **pembanding/tetangga yang mirip** →
 contoh film → `prompt it` → **what usually goes wrong (tetangga yang ketukar)**.
 
 Dokumen ini bukan salinan: isinya yang **relevan buat pipeline kita** + hasil rekonsiliasi dengan
-aturan terukur di `docs/02`. Kalau bentrok, **temuan terukur kita yang menang** — dan itu
+aturan terukur di `docs/02`. Kalau bentrok, **temuan terukur kita yang menang**: dan itu
 ditulis eksplisit di tabel di bawah.
 
 ## Taksonomi (13 kategori, 424 teknik)
@@ -43,7 +43,7 @@ Belum diambil: `framing`/`camera-angles`/`composition` sisanya, 32 teknik lighti
 | Slow motion | 120–240fps feel, **fabric delayed, particles hanging, gravity continuous**; tetangga salah = bullet time / freeze | slow-mo accent ~30% kecepatan <1 dtk | **sepakat** + upgrade frasa |
 | Dappled light | butuh matahari keras + penghalang nyata; patch **tidak teratur**; tetangga salah = gobo batang paralel / key bersih | world plate taman: cahaya hangat menembus daun | **sepakat** + lihat peringatan di bawah |
 | Golden hour | matahari rendah nyata, warm amber raking, **bayangan panjang**; tetangga salah = LUT oranye di matahari tinggi | plate taman = cahaya sore hangat | **sepakat** + upgrade: nyatakan "sun just above the horizon" + long shadows |
-| Static locked-off | "actors and air may move; the camera may not" — komedi hidup di sini | kamera dikunci total → subjek beku (cam_px 0.02) | **BENTROK, terselesaikan** ↓ |
+| Static locked-off | "actors and air may move; the camera may not", komedi hidup di sini | kamera dikunci total → subjek beku (cam_px 0.02) | **BENTROK, terselesaikan** ↓ |
 
 ### Rekonsiliasi: static vs beku
 
@@ -51,17 +51,17 @@ Sumber bilang static locked-off itu bahasa komedi (penonton tidak bisa diselamat
 Pengukuran kita bilang kunci total = beku. **Dua-duanya benar** karena yang dikunci beda:
 
 - Yang dikunci: **frame** (tidak ada parallax, tidak ada micro-pan, tidak ada drift).
-- Yang tidak dikunci: **subjek** — napas, blink, rambut, kain, cahaya bergerak pelan.
+- Yang tidak dikunci: **subjek**: napas, blink, rambut, kain, cahaya bergerak pelan.
 
 Jadi frasa yang benar bukan *"the camera stays upright in the same spot"* (itu mematikan subjek),
-tapi: **"the frame itself never moves — she breathes, she blinks, her hair sways"**.
+tapi: **"the frame itself never moves, she breathes, she blinks, her hair sways"**.
 Ini juga resep 1 (uji identitas) di `docs/02`.
 
 ### Peringatan: dappled "crawling" mendekati flicker
 
 Sumber menyarankan angin/air bikin patch bergerak ("crawl"). Aturan kita melarang
 `flicker`/`flash` (terukur: strobe, |ΔLum| naik sampai 12.6/frame). Jangan tulis
-"patches flicker". Tulis **"the leaf-shaped patches drift slowly across her"** — gerak, bukan
+"patches flicker". Tulis **"the leaf-shaped patches drift slowly across her"**: gerak, bukan
 kedip.
 
 ## Palet sinematik untuk seri ini (face-first comedy, taman siang)
@@ -70,19 +70,19 @@ Satu beat = satu teknik kamera + satu kondisi cahaya + satu look. **Jangan tumpu
 
 | Beat | Teknik | Frasa siap pakai |
 |---|---|---|
-| Buka lane / uji identitas | framing `medium close-up` + angle `eye-level` + `static locked-off` | `the frame itself never moves — she breathes, she blinks, her hair sways` |
+| Buka lane / uji identitas | framing `medium close-up` + angle `eye-level` + `static locked-off` | `the frame itself never moves, she breathes, she blinks, her hair sways` |
 | Kanglim bikin kekacauan | `push in` pelan **atau** `arc` kecil | `very slow push in toward her, the camera closing from medium to medium close-up so gradually it is noticed after the fact` |
-| Deadpan Sirin (inti seri) | **`reaction shot`** | `reaction close-up of her receiving it, the face as the cut, eyeline off to the side, one small physical change — a slow blink` |
+| Deadpan Sirin (inti seri) | **`reaction shot`** | `reaction close-up of her receiving it, the face as the cut, eyeline off to the side, one small physical change, a slow blink` |
 | Puncak (mis. S6 gerakan malas) | `push in` + `slow motion` accent | `slow-motion feel, her sleeve fabric delayed, dust hanging in the light, gravity continuous, easing back to full speed` |
 | Beku / anticlimax (mis. S7) | `static locked-off` + musik berhenti | `the frame holds completely still; only her breathing moves` |
 | Button / tutup | `arc` balik ke `two-shot` | `the camera arcs gently back until both of them are in frame again, same distance, same height` |
 | Cahaya | `dappled light` + `golden hour` | `sun through the leaves just above the horizon, irregular leaf-shaped patches drifting slowly across her hoodie, long shadows on the grass, warm rim on her pink hair` |
-| Look | `animation` (cel) | `cel-shaded 2D animation, graphic volume, designed light, motion as drawing rather than photography — no photoreal bokeh, no lens blur` |
-| Warna | `warm amber` + natural grade | hindari `teal-orange` — bukan bahasa gaya seri ini |
+| Look | `animation` (cel) | `cel-shaded 2D animation, graphic volume, designed light, motion as drawing rather than photography, no photoreal bokeh, no lens blur` |
+| Warna | `warm amber` + natural grade | hindari `teal-orange`, bukan bahasa gaya seri ini |
 
 **Catatan penting:** kata-kata shot-type (`push in`, `medium close-up`, `arc`) dipakai untuk
 **memilih teknik di dokumen ini**, tapi di blok prompt tetap ditulis sebagai **gerak fisik +
-objek yang keluar frame + jarak antaranya** — bukan sebagai label. Label = undangan buat model
+objek yang keluar frame + jarak antaranya**: bukan sebagai label. Label = undangan buat model
 memotong (lihat `docs/02` §Kamera).
 
 ## Tabel "tetangga yang ketukar" → audit prompt
@@ -100,13 +100,13 @@ Pakai sebagai checklist audit blok prompt.
 | slow motion | `bullet time`, `freeze` | `fabric delayed, particles hanging, gravity continuous` |
 | animation look | `photoreal`, `bokeh`, `lens blur` | `cel-shaded, graphic volume, motion as drawing` |
 | dirty frame | clutter yang nutup muka | sebut sisi + objeknya, `keep a clear hole for her face` |
-| reaction shot | `a tour of expressions` | `one small physical change — a slow blink` |
+| reaction shot | `a tour of expressions` | `one small physical change, a slow blink` |
 
 ## Cara pakai dokumen ini
 
 1. Sebelum menulis blok segmen: pilih teknik dari palet di atas (1 kamera + 1 cahaya + 1 look).
-2. Setelah menulis: audit pakai tabel tetangga — pastikan frasa salahnya tidak ada.
+2. Setelah menulis: audit pakai tabel tetangga, pastikan frasa salahnya tidak ada.
 3. Kalau ada frasa baru yang terbukti work di render, **pindahkan ke `docs/02`** (aturan yang
    mengikat), bukan dibiarkan di sini.
 4. Kalau butuh teknik di luar 9 yang sudah dipelajari, ambil halaman detailnya dulu
-   (`https://melies.co/cinematic-techniques/<kategori>/<slug>`) — jangan menebak isinya.
+   (`https://melies.co/cinematic-techniques/<kategori>/<slug>`), jangan menebak isinya.
