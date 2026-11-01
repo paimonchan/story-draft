@@ -142,6 +142,8 @@ def build_entry(path: Path) -> dict:
     slug = rel.as_posix()
     notes_path = path.with_name("notes.md")
     notes = notes_path.read_text(encoding="utf-8") if notes_path.exists() else ""
+    sb_path = path.with_name("storyboard.md")
+    storyboard = sb_path.read_text(encoding="utf-8") if sb_path.exists() else ""
 
     paras = paragraphs(body)
     sents = sentences(body)
@@ -208,10 +210,11 @@ def build_entry(path: Path) -> dict:
         "toc": toc,
         "mentions": mentions,
         "has_frontmatter": has_fm,
-        "has_storyboard": path.with_name("storyboard.md").exists(),
+        "has_storyboard": bool(storyboard),
         "path": f"stories/{slug}/story.md",
         "content": body,
         "notes": notes,
+        "storyboard": storyboard,
     }
 
     checks = [
@@ -335,18 +338,14 @@ def main() -> int:
                     "slug": e["slug"],
                     "content": e["content"],
                     "notes": e["notes"],
-                    "storyboard": (
-                        path.with_name("storyboard.md").read_text(encoding="utf-8")
-                        if path.with_name("storyboard.md").exists()
-                        else ""
-                    ),
+                    "storyboard": e["storyboard"],
                 },
                 ensure_ascii=False,
                 indent=1,
             ),
             encoding="utf-8",
         )
-        light = {k: v for k, v in e.items() if k not in ("content", "notes")}
+        light = {k: v for k, v in e.items() if k not in ("sections", "shots", "content", "notes", "storyboard")}
         light["data"] = data_file
         light_entries.append(light)
 
