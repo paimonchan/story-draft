@@ -208,6 +208,7 @@ def build_entry(path: Path) -> dict:
         "toc": toc,
         "mentions": mentions,
         "has_frontmatter": has_fm,
+        "has_storyboard": path.with_name("storyboard.md").exists(),
         "path": f"stories/{slug}/story.md",
         "content": body,
         "notes": notes,

@@ -468,6 +468,7 @@ async function renderDetail(slug, tab) {
         <div class="spacer"></div>
         <a class="btn" href="https://github.com/paimonchan/story-draft/blob/main/${esc(e.path)}" target="_blank" rel="noopener">Lihat di GitHub</a>
         <a class="btn" href="https://github.com/paimonchan/story-draft/blob/main/stories/${esc(e.slug)}/notes.md" target="_blank" rel="noopener">notes.md</a>
+        ${e.has_storyboard ? `<a class="btn" href="https://github.com/paimonchan/story-draft/blob/main/stories/${esc(e.slug)}/storyboard.md" target="_blank" rel="noopener">storyboard.md</a>` : ''}
       </div>
     </header>
 

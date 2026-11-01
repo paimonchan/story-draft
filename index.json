@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T03:42:57Z",
+ "generated": "2026-11-01T03:47:42Z",
  "count": 2,
  "words": 769,
  "statuses": {
@@ -136,6 +136,7 @@
     "Kanglim": 11
    },
    "has_frontmatter": true,
+   "has_storyboard": true,
    "path": "stories/sirin-taman-piknik/story.md",
    "checks": [
     {
@@ -266,6 +267,7 @@
     "Pak Sukron": 4
    },
    "has_frontmatter": true,
+   "has_storyboard": false,
    "path": "stories/contoh-format/story.md",
    "checks": [
     {
