@@ -245,6 +245,40 @@ const ZONES = [
   ['Parked', ['parked'], false],
 ];
 
+/* ---- identitas visual draft: poster CSS-only, deterministik dari slug ---- */
+const PALETTES = [
+  { a: '#e0a33e', b: '#3a2a12' }, // amber (aksen keluarga)
+  { a: '#4fb3a5', b: '#123430' }, // teal
+  { a: '#8b7bd8', b: '#251f42' }, // violet
+  { a: '#e0705f', b: '#3d1a15' }, // coral
+  { a: '#5b9bd5', b: '#152c42' }, // biru
+  { a: '#8fbf4f', b: '#233418' }, // hijau
+  { a: '#d76fa8', b: '#3c1529' }, // pink
+  { a: '#c9a227', b: '#3a2f0e' }, // emas
+];
+const PATTERNS = ['stripes', 'dots', 'grid', 'rays', 'chevron', 'waves'];
+
+function hash32(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i += 1) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+
+function posterFor(e, h = 76) {
+  const k = hash32(String(e.slug || e.title || 'x'));
+  const pal = PALETTES[k % PALETTES.length];
+  const pat = PATTERNS[(k >>> 3) % PATTERNS.length];
+  const [w0, h0] = String(e.format || '16:9').split(':').map(Number);
+  const ratio = w0 && h0 ? w0 / h0 : 16 / 9;
+  const mono = String(e.title || '?').trim().split(/\s+/).slice(0, 2).map((x) => x[0]).join('').toUpperCase();
+  return { pal, pat, width: Math.max(38, Math.round(h * ratio)), mono, fmt: e.format || '' };
+}
+
+function posterHTML(e, h = 76, extra = '') {
+  const p = posterFor(e, h);
+  return `<div class="poster ${extra} p-${p.pat}" style="width:${p.width}px;height:${h}px;--pa:${p.pal.a};--pb:${p.pal.b}" aria-hidden="true"><span class="mono">${esc(p.mono)}</span><i class="fmt">${esc(p.fmt)}</i></div>`;
+}
+
 function rowHTML(e) {
   const r = e.ready ?? 0;
   const t = e.ready_total || 9;
@@ -257,6 +291,7 @@ function rowHTML(e) {
   };
   return `
   <a class="row ${e.has_storyboard ? 'hot' : ''}" href="#/s/${e.slug}">
+    ${posterHTML(e, 76)}
     <div class="t">
       <h3>${hl(e.title)}${e.has_storyboard ? '<span class="tag">storyboard</span>' : ''}</h3>
       ${e.logline ? `<p class="logline">${hl(e.logline)}</p>` : '<p class="logline muted">logline belum diisi</p>'}
@@ -588,6 +623,9 @@ async function renderDesk(slug, section, seg) {
     </div>
 
     <header class="card desk-head">
+      <div class="dh-grid">
+      ${posterHTML(e, 132, 'poster-lg')}
+      <div class="dh-body">
       <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
         <span class="pill ${esc(e.status)}"><i class="dot"></i>${esc(e.status)}</span>
         ${(e.tags || []).slice(0, 8).map((t) => `<span class="pill">${esc(t)}</span>`).join('')}
@@ -606,6 +644,8 @@ async function renderDesk(slug, section, seg) {
         <a class="btn" href="https://github.com/paimonchan/story-draft/blob/main/${esc(e.path)}" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://github.com/paimonchan/story-draft/blob/main/stories/${esc(e.slug)}/notes.md" target="_blank" rel="noopener">notes.md</a>
         ${e.has_storyboard ? `<a class="btn" href="https://github.com/paimonchan/story-draft/blob/main/stories/${esc(e.slug)}/storyboard.md" target="_blank" rel="noopener">storyboard.md</a>` : ''}
+      </div>
+      </div>
       </div>
     </header>
 

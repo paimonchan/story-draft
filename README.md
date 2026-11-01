@@ -123,9 +123,12 @@ yang metadatanya lengkap dan strukturnya sudah siap dipetakan jadi shot.
 
 Zero-build (HTML/CSS/JS vanilla, tanpa npm). Baca `index.json`, lalu `data/<slug>.json`
 saat draft dibuka. Tata letaknya "Script Desk": **papan** berisi baris draft berzona
-(lagi digarap / mateng / parked) + meter kesiapan, dan **desk** satu halaman scroll dengan
-rail segmen, storyboard collapsible per segmen (bisa di-deep-link), catatan, dan panel
-**Kesiapan draft**. Ada pencarian, filter status/genre/tag, tombol density, dan tema terang/gelap.
+(lagi digarap / mateng / parked) + meter kesiapan — tiap baris punya **poster identitas CSS-only**
+(warna, pola, dan monogram dibangkitkan dari slug; aspeknya ikut `format`), dan **desk** satu
+halaman scroll dengan rail segmen + tabel rujukan, timeline 40 dtk, filter segmen
+(semua / wajib / risiko tinggi / belum diuji), storyboard collapsible per segmen
+(bisa di-deep-link), catatan, dan panel **Kesiapan draft**. Ada pencarian (dengan sorotan hasil),
+filter status/genre/tag, tombol density, dan tema terang/gelap.
 
 Yang dijaga panel Kesiapan draft: cerita & storyboard bisa dibaca model. Adaptasi jadi prompt
 video bukan bagian dari web ini.
