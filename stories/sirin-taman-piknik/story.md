@@ -1,10 +1,10 @@
 ---
-title: "Semua Aku yang Urus"
+title: "Bekal Buat Sirin"
 status: draft
 date: 2026-11-01
 genre: komedi
 lang: id
-logline: "Kanglim bawa bekal ke taman dan mau ngurus semuanya sendiri; Sirin tidur di bangku, dan satu gerakan malasnya beresin semua yang gagal Kanglim beresin."
+logline: "Kanglim bawa bekal ke taman dan mengerjakan semuanya sendiri dengan tenang; Sirin tidur di bangku, dan satu gerakan malasnya menyelesaikan semua yang tidak selesai."
 characters: [Cha Sirin, Kanglim]
 setting: "Taman kota, siang hangat, bangku kayu, jalan setapak batu, rerumputan, kolam kecil di kejauhan"
 target: "MiniMax H3, seri smol Cha Sirin"
@@ -20,61 +20,57 @@ tags: [anime, komedi, taman, deadpan, dialog, sirin, kanglim]
 
 Taman kota yang bersih dan terang. Matahari sore menembus daun, dan bercak cahayanya bergerak pelan di atas rumput. Cha Sirin sudah ada di bangku kayu, setengah duduk, setengah miring, hoodie hitamnya yang kebesaran menumpuk kusut di pangkuannya. Mata tealnya setengah tertutup, dan dua bulatan pink di pipinya ikut naik-turun pelan mengikuti napasnya. Dia menguap satu kali, panjang sekali, dan ahoge di kepalanya melengkung turun seperti kalah.
 
-Dari jalan setapak, Kanglim datang cepat: ransel krem di punggung, cardigan beige, tongkat kayu tergantung di pinggang. Dia berhenti di depan bangku, menegakkan badan sekecil mungkin, dan mengangkat tongkatnya tinggi-tinggi.
+Dari jalan setapak, Kanglim datang dengan langkah pelan: ransel krem di punggung, cardigan beige, tongkat kayu di pinggang. Dia berhenti di samping bangku, melihat Sirin yang setengah tidur, lalu berdiri diam di samping bangku tanpa suara.
 
-"Duduk aja. Semua aku yang urus."
+"Aku bawa bekal."
 
-Nadanya seperti orang yang sudah menyiapkan semuanya dari rumah.
-
-Sirin menoleh sepersekian derajat ke arahnya. Lalu berhenti menoleh. Satu desahan panjang keluar dari hidungnya, bukan kata.
+Dia mengatakannya pelan, seperti orang yang tidak mau membangunkan siapa pun. Sirin menoleh sepersekian derajat ke arahnya. Lalu berhenti menoleh. Satu desahan panjang keluar dari hidungnya, bukan kata.
 
 ## 2. Bentang tikar (5.0–10.0 dtk)
 
-Kanglim membentangkan tikar kotak-kotak dengan satu gerakan bangga, dagu terangkat, tongkat diangkat tinggi.
+Kanglim mengeluarkan tikar dari ransel dan membentangkannya pelan-pelan: satu sisi dulu, lalu sisi yang lain.
 
-"Nih, rapi kan?"
+"Kamu diem aja ya."
 
-Angin meniup ujung tikar, tikar terbalik di udara, dan mendarat rapi di atas kepalanya. Dia berdiri diam dengan tikar menutupi wajahnya.
+Angin meniup ujung tikar, tikar terbalik di udara, dan mendarat rapi di atas kepalanya. Dia berdiri diam dengan tikar menutupi wajahnya. Dia tidak melepasnya.
 
-"...nggak apa-apa, masih bisa lihat."
+"Nanti kebuka sendiri."
 
 Suaranya tertahan kain. Sirin mengedip satu kali, sangat lambat. Ekspresinya tidak berubah sedikit pun. Suara kecil keluar dari tenggorokannya satu kali, *hmm*, lalu hilang.
 
-## 3. Tugas Sirin (10.0–15.0 dtk)
+## 3. Bekal (10.0–15.0 dtk)
 
-Kanglim mengangkat kotak bekal tinggi-tinggi dengan dua tangan, lalu menaruhnya dengan hati-hati di perut Sirin. Dia menunjuk-nunjuk kotak itu dengan tongkatnya, tiga kali, jelas sesuatu yang menurut dia penting sekali.
+Kanglim mengangkat kotak bekal dengan dua tangan, lalu menaruhnya pelan-pelan di perut Sirin. Dia menggesernya sedikit supaya pas, dan menepuknya satu kali.
 
-"Ini jangan diutak-atik ya."
+"Ini buat kamu."
 
-Dia melangkah mundur satu langkah, lalu menambahkan dengan dagu terangkat:
-
-"Aku titip ya."
+Dia melangkah mundur setengah langkah dan berdiri diam, kepalanya sedikit miring, memperhatikan kotak itu naik-turun mengikuti napas Sirin.
 
 Sirin mengangguk, sangat pelan, dan matanya sudah menutup sebelum anggukannya selesai. Sebuah suara pelan keluar dari mulutnya, bukan kata, lebih seperti *hmmm* yang tidak pernah selesai. Dia melorot lurus ke belakang di bangku, tengkuknya di sandaran, wajahnya mendongak ke langit: mata teal setengah terbuka, mulut kecil terbuka, dua bulatan pink hangat di pipi. Kotak bekal di perutnya naik-turun mengikuti napas.
 
 ## 4. Susun makan siang (15.0–20.0 dtk)
 
-Kanglim menyusun makanan di tikar dengan rapi: sandwich sejajar, gelas berbaris, serbet terlipat tiga. Dia mengukur jarak dengan tongkatnya, menggeser satu sandwich dua senti.
+Kanglim menyusun makanan di tikar dengan rapi: sandwich sejajar, gelas berbaris, serbet terlipat tiga. Dia mengukur jaraknya dengan ujung jari, lalu menggeser satu sandwich sedikit.
 
-"Belum pas. Geser dikit."
+"Yang ini belum pas."
 
-Dia mengangguk puas. Angin datang lagi, dan serbetnya lepas satu per satu seperti layar kecil, terbang rendah di atas rumput.
+Angin datang lagi, dan serbetnya lepas satu per satu seperti layar kecil, terbang rendah di atas rumput. Kanglim berdiri, melangkah satu kali ke arah serbet itu, lalu berhenti.
 
-"Eh! Balik sini!"
+"Sebentar."
 
-Kanglim mengejar sambil menunjuk-nunjuk, tongkatnya terlepas dari tangannya, dan tongkat itu kembali ke pinggangnya sendiri tanpa dia sadari. Di bangku, Sirin tidur. Dengkur kecil keluar dari hidungnya, pelan dan rata. Satu helai daun mendarat tepat di hidungnya. Dia tidak bergerak sama sekali.
+Serbet itu terbang lebih jauh. Dia berdiri di sana sebentar, lalu kembali ke tikar dan melanjutkan menyusun. Di bangku, Sirin tidur. Dengkur kecil keluar dari hidungnya, pelan dan rata. Satu helai daun mendarat tepat di hidungnya. Dia tidak bergerak sama sekali.
 
 ## 5. Semut (20.0–25.0 dtk)
 
-Garis hitam kecil muncul dari celah rumput dan berjalan lurus menuju kotak bekal di perut Sirin. Kanglim melompat berdiri, mengangkat tongkat.
+Garis hitam kecil muncul dari celah rumput dan berjalan lurus menuju kotak bekal di perut Sirin. Kanglim berdiri, mengambil tongkatnya, dan menggaris tanah di depan garis semut itu.
 
-"Nggak boleh lewat situ."
+"Lewat sini aja."
 
-Dia menyusun pagar dari ranting-ranting di sekeliling tikar. Semut menembus pagar tanpa melambat, naik ke sepatunya, lalu ke celananya.
+Semut tidak belok. Dia menggaris lagi, lebih dalam. Semut naik lewat celah lain, ke sepatunya, lalu ke celananya. Kanglim berhenti menggaris. Dia mengangkat satu kaki, pelan, dan berdiri dengan satu kaki di tengah rumput.
 
-"Nggak usah naik. Nggak usah naik!"
+"Bukan aku."
 
-Kanglim menari kecil di tempat, kaki kiri, kaki kanan, tongkat diangkat tinggi di atas kepala, wajah chibi-nya makin serius dan makin konyol. Sirin masih tidur. Napasnya tetap pelan dan rata, dan satu suara pendek *nng* keluar di tengah tidurnya, bukan kata.
+Sirin masih tidur. Napasnya tetap pelan dan rata, dan satu suara pendek *nng* keluar di tengah tidurnya, bukan kata.
 
 ## 6. Satu gerakan malas (25.0–30.0 dtk)
 
@@ -86,27 +82,27 @@ Sirin menarik napas panjang, *haaah*, lalu diam lagi. Mata tealnya tetap setenga
 
 ## 7. Kanglim mencoba meniru (30.0–35.0 dtk)
 
-Kanglim menatap lengan hoodie itu lama sekali.
+Kanglim menatap lengan hoodie itu lama sekali, masih dengan satu kaki terangkat.
 
-"Gampang. Tinggal gitu doang."
+"Gimana caranya..."
 
-Dia melepas cardigan-nya, melipatnya dengan sangat hati-hati, dan meletakkannya di atas kotak makannya sendiri. Angin menyambut cardigan itu dan membawanya ke arah kolam. Cardigan mendarat di kepala Kanglim. Dia membeku dengan cardigan menutupi matanya.
+Dia menurunkan kakinya, melepas cardigan-nya, melipatnya dua kali dengan hati-hati, dan meletakkannya di atas kotak makannya sendiri. Angin menyambut cardigan itu dan membawanya ke arah kolam. Cardigan mendarat di kepalanya. Dia berdiri diam dengan cardigan menutupi matanya.
 
-"Sengaja kok."
+"Oh, iya."
 
 Sirin tidak melihat. Sirin tidak pernah melihat apa pun. Dia juga tidak bersuara sama sekali.
 
 ## 8. Button (35.0–40.0 dtk)
 
-Kanglim mengangkat dagunya, menoleh ke kamera, dan mengangkat tongkatnya.
+Kanglim melihat Sirin sebentar, lalu menoleh ke kamera satu kali, datar, tanpa ekspresi.
 
-"Nah kan. Aku bilang apa."
+Seekor merpati gemuk mendarat di sandaran bangku di atas bahu Sirin. Tanpa membuka mata, Sirin mengangkat satu tangan dengan malas; merpati itu naik ke telapak tangannya, duduk, dan ikut diam.
 
-Dia duduk di tikar, di samping bangku, dan mengangkat sandwichnya. Seekor merpati gemuk mendarat di sandaran bangku. Tanpa membuka mata, Sirin mengangkat satu tangan dengan malas; merpati itu naik ke telapak tangannya, duduk, dan ikut diam.
+"Kamu tenang ya."
 
-Kanglim menurunkan sandwichnya ke mulut Sirin.
+Kanglim duduk di tikar, di samping bangku, dan mengangkat sandwichnya.
 
-"Terakhir ya. Habisin."
+"Nih, habisin ya."
 
 Sirin menggigit kecil, mata tetap setengah tertutup, dan mengunyah sangat pelan. Satu suara pendek keluar dari tenggorokannya, *mmm*, dan itu satu-satunya suara sepanjang hari yang terdengar seperti setuju.
 

@@ -8,24 +8,28 @@ Ringkasan kanon yang dipakai untuk semua draft story di seri ini. Sumber: lane p
 Komedi **deadpan**, anime cel-shaded, satu lokasi per klip, satu take kontinu. **Suara:** Kanglim
 bicara; Sirin tidak pernah bicara.
 MC: **Cha Sirin**: karakter *smol*, malas, muka bodoh/dopey, tapi imut. Supporting:
-**Kanglim**: chibi, ambisius, selalu gagal.
+**Kanglim**: chibi, kalem, selalu gagal.
 
 **Mesin komedi (kanonik):**
 
-- **Kanglim** = usaha maksimal, hasil nol (dan sering merusak hasilnya sendiri).
+- **Kanglim** = usaha maksimal, hasil nol (dan sering merusak hasilnya sendiri). Usahanya
+  dikerjakan **dengan tenang**, bukan dengan heboh: dia tidak mengeluh, tidak membual, tidak panik.
 - **Sirin** = usaha nol, hasil maksimal (satu gerakan malas menyelesaikan masalah).
 - Tidak ada juri/hakim cerita, pembalikan terjadi karena Kanglim menyadari hasilnya kalah.
-- Struktur: eskalasi → anticlimax → **button** (Kanglim mengklaim "itu rencanaku dari awal").
+- Struktur: eskalasi → anticlimax → **button** (Kanglim tidak protes dan tidak mengklaim apa
+  pun; dia cuma melanjutkan. Punchline-nya tetap muka datar Sirin).
 - Muka Sirin yang datar adalah punchline-nya, bukan aksi Kanglim.
 
 ## Suara & dialog (kanon)
 
-- **Kanglim bicara.** Register-nya: **anak kecil yang sok bisa mengurus semuanya**, bukan komandan
-  atau narator. Kalimatnya pendek dan santai (`kan`, `aja`, `nih`, `kok`, `ya`), dan tiap kali
-  gagal dia membela diri dengan santai ("sengaja kok"), bukan mengumumkan sesuatu. Hindari kalimat
-  bergaya pengumuman/briefing ("operasi dimulai", "strategi dua lapis", "ini standar") · itu
-  terbaca kaku dan bikin penonton kesal. Barisnya ditulis di `story.md` sebagai kalimat berkutip di
-  baris sendiri.
+- **Kanglim bicara.** Register-nya: **kalem** · tenang, datar, tidak songong dan tidak kekanak-kanakan
+  berlebihan. Kalimatnya pendek, pelan, dan sering cuma melaporkan apa yang dia kerjakan ("Aku bawa
+  bekal", "Yang ini belum pas", "Bukan aku"). Kalau gagal, dia **tidak protes, tidak membual, tidak
+  mengklaim** · dia diam sebentar lalu lanjut. Yang berisik justru dunia di sekitarnya (angin, semut,
+  merpati), dan itu sumber leluconnya.
+  Hindari: kalimat membual/mengklaim ("aku bilang apa", "gampang", "sengaja kok"), seruan panik
+  ("eh! balik sini!"), dan gaya pengumuman/briefing ("operasi dimulai", "strategi dua lapis", "ini
+  standar"). Barisnya ditulis di `story.md` sebagai kalimat berkutip di baris sendiri.
 - **Sirin tidak pernah bicara.** Dia hanya mengeluarkan suara ekspresif: desahan panjang, *hmm*
   pendek, dengkur, *nng*, *mmm*. Semuanya ditulis sebagai **prosa** (bukan dialog) dan di storyboard
   dicatat sebagai SFX + mikro-ekspresi.
@@ -45,8 +49,8 @@ MC: **Cha Sirin**: karakter *smol*, malas, muka bodoh/dopey, tapi imut. Supporti
 
 **Kanglim**:
 
-> a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a smug, self-important
-> little face. He wears a beige cardigan over a navy sweater vest, a white shirt with a navy
+> a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a calm, unbothered little
+> face. He wears a beige cardigan over a navy sweater vest, a white shirt with a navy
 > necktie, navy trousers, black shoes, and a cream backpack on his back. A short wooden stick
 > hangs at his hip on a small strap, that stick is his whole personality, and it always returns
 > to his hip after he uses it.
@@ -86,8 +90,12 @@ bangku") sebaiknya **tidak** dipakai: pose digenerate dari deskripsi, ref pose m
 | `cha_sirin_pigeon_01` | taman, POV single-take | sumber world plate taman; ref pose dicabut |
 | `cha_sirin_daily_01..04` | rumah | aturan kamera terukur, anchor state, face-side guard |
 
-Draft story yang lahir dari konteks ini: `stories/sirin-taman-piknik/` (taman, 8 segmen; Kanglim
-bicara 13 baris, Sirin hanya bersuara 7 kali).
+Draft story yang lahir dari konteks ini: `stories/sirin-taman-piknik/` ("Bekal Buat Sirin", taman,
+8 segmen; Kanglim bicara 12 baris, Sirin hanya bersuara 7 kali).
+
+**Catatan deviasi:** blok identitas Kanglim di atas diubah dari charsheet lane `eikei-plan`
+("smug, self-important") jadi **calm, unbothered** untuk draft ini. Kalau charsheet barunya dibuat,
+wajib satu geometri kamera dengan take.
 
 ## Cara mengambil konteks terbaru dari lane (private)
 

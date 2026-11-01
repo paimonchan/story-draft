@@ -1,4 +1,4 @@
-# Catatan · Semua Aku yang Urus
+# Catatan · Bekal Buat Sirin
 
 Lane usulan di eikei-plan: **`cha_sirin_taman_piknik_01`** (seri smol Cha Sirin).
 Semua aturan di bawah bukan karangan, diambil dari lane yang sudah jalan
@@ -10,14 +10,15 @@ Semua aturan di bawah bukan karangan, diambil dari lane yang sudah jalan
 |---|---|
 | Pipeline **OBVPM extend** = satu take kontinu, satu lokasi, tanpa cut | satu taman, satu bangku, 8 segmen ~5 dtk, tidak ada pindah tempat |
 | Kamera face-first: **muka Sirin = subjek** di setiap segmen | aksi Kanglim selalu terjadi **di frame yang sama** dengan muka Sirin; tidak ada segmen "milik Kanglim" |
-| **Dialog Kanglim + vokal Sirin** (pola seri: NO-BGM) | komedi dibawa gestur + SFX; Kanglim 13 baris pendek (tempo 2.5–4 kata/detik, total 17.3 dtk), Sirin 0 baris kata, jadi nol risiko lip-sync di sisi Sirin |
+| **Dialog Kanglim + vokal Sirin** (pola seri: NO-BGM) | komedi dibawa gestur + SFX; Kanglim 12 baris pendek (tempo 2.5–4 kata/detik, total 11.4 dtk), Sirin 0 baris kata, jadi nol risiko lip-sync di sisi Sirin |
 | Maks **3–4 aksi** per segmen | tiap scene cuma satu beat + satu reaksi |
 | Maks **1 gerak kamera kecil** per segmen | tidak ada zoom/panjau/overhead, lihat §"Kamera" |
 | Anti-cut: satu framing per segmen | tidak ada "cut to", "we see", "meanwhile" |
 | Tidak ada karakter ketiga | hanya Sirin + Kanglim (+ 1 merpati sebagai prop hidup, bukan karakter) |
 | Tidak ada teks terbaca | kotak bekal, tikar, serbet: polos, tanpa label |
 
-**Mesin komedi (kanonik, sama dengan lane kanglim):** Kanglim = usaha maksimal, hasil nol.
+**Mesin komedi (kanonik, sama dengan lane kanglim):** Kanglim = usaha maksimal, hasil nol ·
+usahanya dikerjakan **dengan tenang** (kalem, tidak membual, tidak panik, lihat `docs/01`).
 Sirin = usaha nol, hasil maksimal. Pembalikan di S6, anticlimax di S7, button di S8.
 Eskalasi: tikar → bekal → serbet → semut → lengan hoodie → cardigan → merpati.
 
@@ -50,7 +51,7 @@ pose tidur cukup dari deskripsi.
 > endlessly low on energy, and her deadpan face does the comedy.
 
 **Kanglim**:
-> a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a smug, self-important
+> a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a calm, unbothered
 > little face. He wears a beige cardigan over a navy sweater vest, a white shirt with a navy
 > necktie, navy trousers, black shoes, and a cream backpack on his back. A short wooden stick
 > hangs at his hip on a small strap, that stick is his whole personality, and it always returns
@@ -74,8 +75,8 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 
 - Ambience taman siang: angin di daun, burung jauh, dengung kota tipis, gemerisik rumput.
 - SFX: kain tikar, angin meniup serbet, kotak bekal diangkat, **langkah kaki kecil banyak
-  (semut = tidak terdengar, jadi bunyi dari Kanglim menari)**, kepakan merpati, kunyahan pelan.
-- **Dialog:** Kanglim 13 baris (52 kata, register anak kecil yang sok bisa, kalimat pendek); dua di antaranya
+  (semut = tidak terdengar, jadi bunyi dari Kanglim menggaris tanah dan berdiri satu kaki)**, kepakan merpati, kunyahan pelan.
+- **Dialog:** Kanglim 12 baris (33 kata, register kalem: pendek, datar, tanpa klaim dan tanpa panik); dua di antaranya
   diucapkan dengan **mulut tertutup kain** (S2 tikar, S7 cardigan) sehingga tidak butuh animasi mulut.
 - **Vokal Sirin (bukan kata):** desahan, *hmm*, *hmmm*, dengkur, *nng*, *haaah*, *mmm* (7 kali).
   Semuanya SFX + mikro-ekspresi, tidak pernah jadi baris dialog.
@@ -94,7 +95,7 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 
 ## Status
 
-- [x] story.md (8 segmen, satu lokasi; Kanglim 13 baris dialog, Sirin 7 vokal ekspresif)
-- [x] storyboard.md v3, anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker, **lapisan dialog & vokal**
+- [x] story.md (8 segmen, satu lokasi; Kanglim 12 baris dialog, Sirin 7 vokal ekspresif)
+- [x] storyboard.md v6, anchor 4+1 di semua segmen, sumbu/eyeline, color script, prioritas + risiko, urutan uji, status tracker, **lapisan dialog & vokal**
 - [ ] perbarui kolom **Status** di `storyboard.md` tiap segmen selesai diuji (`belum diuji` → `diuji` → `final`)
 - [ ] serahkan ke lane prompt (`eikei-plan`) untuk plan + pack per segmen, bukan urusan repo ini
