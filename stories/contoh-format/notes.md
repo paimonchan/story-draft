@@ -5,10 +5,10 @@ Draft ini contoh format. Hapus folder ini begitu draft aslimu sudah masuk
 
 ## Fungsi file ini
 
-`notes.md` sebelah `story.md` buat hal-hal yang bukan cerita tapi penting saat
-draft ini nanti diubah jadi prompt video:
+`notes.md` sebelah `story.md` buat hal-hal yang bukan cerita tapi penting buat
+produksi nanti:
 
-- **Ide prompt** — potongan caption/section yang sudah kepikiran
+- **Potongan deskripsi visual** — caption adegan yang sudah kepikiran
 - **Referensi visual** — link gambar referensi, nama gaya, palet warna
 - **Karakter** — deskripsi tetap (usia, kostum, ciri) supaya konsisten antar shot
 - **Peta shot** — scene mana jadi shot berapa, perkiraan durasi

@@ -19,7 +19,7 @@ MC: **Cha Sirin** — karakter *smol*, malas, muka bodoh/dopey, tapi imut. Suppo
 
 ## Identitas kanonik (blok siap tempel, jangan ditulis ulang)
 
-**Cha Sirin** — `<Subject 1>`:
+**Cha Sirin** —
 
 > a soft round-cute anime girl with big clear teal eyes that sit half-lidded and drowsy, two
 > round pink 2D blush circles floating on her cheeks, and very long pastel-pink hair with a
@@ -28,7 +28,7 @@ MC: **Cha Sirin** — karakter *smol*, malas, muka bodoh/dopey, tapi imut. Suppo
 > long cream slouch socks bunched at her ankles and chunky black shoes. She is soft, sleepy,
 > endlessly low on energy, and her deadpan face does the comedy.
 
-**Kanglim** — `<Subject 2>`:
+**Kanglim** —
 
 > a small chibi schoolboy with messy dark navy hair, sharp blue eyes and a smug, self-important
 > little face. He wears a beige cardigan over a navy sweater vest, a white shirt with a navy
@@ -51,17 +51,17 @@ hoodie hitam zip kebesaran + dasi kecil · rok plisket + slouch socks krem + sep
 
 ## Aset
 
-| Aset | Peran | Catatan |
+| Aset | Isi | Catatan |
 |---|---|---|
-| Charsheet Cha Sirin (smol) | `<Picture 1>` | potret netral, satu geometri kamera dengan take |
-| Charsheet Kanglim | `<Picture 2>` | idem |
-| World plate taman + bangku taman | `<Picture 3>` | sudah ada dari lane taman sebelumnya — taman kosong, 9:16, eye-level |
+| Charsheet Cha Sirin (smol) | potret netral | satu geometri kamera dengan take |
+| Charsheet Kanglim | potret netral | idem |
+| World plate taman + bangku taman | taman kosong, 9:16, eye-level | sudah ada dari lane taman sebelumnya |
 | Prop merpati (2–3 burung) | prop | opsional; burung = prop hidup, bukan karakter ketiga |
 
-Aturan ref: **semua ref wajib satu geometri kamera dengan take** — ref dengan sudut berlawanan
+Aturan aset: **semua ref wajib satu geometri kamera dengan take** — ref dengan sudut berlawanan
 (mis. look "from behind" di lane face-first) bikin H3 gonta-ganti view dan terasa cut. Kalau butuh
-variasi angle, jangan taruh sebagai ref — biarkan prompt yang menuntun. Ref pose (mis. "tidur di
-bangku") sebaiknya **tidak** dipakai: pose digenerate H3 dari prompt, ref pose mengunci gerakan.
+variasi angle, jangan taruh sebagai ref — biarkan adegan yang menuntun. Ref pose (mis. "tidur di
+bangku") sebaiknya **tidak** dipakai: pose digenerate dari deskripsi, ref pose mengunci gerakan.
 
 ## Lane yang sudah jadi (rujukan gaya, bukan untuk ditiru mentah)
 

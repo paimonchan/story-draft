@@ -8,12 +8,12 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 - **Framing resmi lane:** `medium close-up` (chest-up), kamera ~1–1.5 m, **eye-level**, sedikit di
   sisi muka Sirin. Satu framing per segmen, ladder maks 1 level.
 - **Sub-beat** ditulis urut dengan timing relatif (`as / while / immediately after`) — **angka ms
-  dan frame tidak masuk prompt**; kolom waktu di sini cuma buat perencanaan.
+  dan frame tidak dipakai di deskripsi**; kolom waktu di sini cuma buat perencanaan.
 - **Kiri/kanan = dari sudut kamera**, selalu disebut eksplisit.
 - **Micro-motion anti-freeze** (boleh dipakai bebas): `her slow breathing`, `her blinks`,
   `the sway of her hair and ahoge`, `the small movements of her hands`,
   `the soft light moving slowly across her face`.
-- **Terlarang di prompt:** `zoom`, `cut to`, `meanwhile`, `we see`, `flicker`, `flash`, kata
+- **Terlarang di deskripsi:** `zoom`, `cut to`, `meanwhile`, `we see`, `flicker`, `flash`, kata
   shot-type untuk gerak kontinu, angka ms/frame, negasi menumpuk.
 - **Aturan mikro-ekspresi:** satu perubahan fisik kecil per beat — bukan tur ekspresi. Kelopak
   Sirin default **half-lidded**; makin sedikit gerak, makin kuat deadpan-nya.
@@ -196,7 +196,7 @@ menghadap Sirin, jarak tidak berubah.
 
 ---
 
-## Tabel mikro-ekspresi Sirin (dipakai buat audit, bukan buat ditulis semua di prompt)
+## Tabel mikro-ekspresi Sirin (dipakai buat audit, bukan buat ditulis semua di tiap segmen)
 
 | Seg | Kelopak | Mulut | Pipi / ahoge | Tangan | Napas |
 |---|---|---|---|---|---|
@@ -209,11 +209,11 @@ menghadap Sirin, jarak tidak berubah.
 | S7 | tidak berubah | kecil terbuka | tidak berubah | tetap di kotak | stabil |
 | S8 | tetap half-lidded | menggigit kecil | tidak berubah | tangan kiri terangkat untuk merpati | stabil |
 
-## Audit sebelum jadi prompt
+## Audit storyboard sebelum dipakai
 
 | Cek | Patokan | Cara |
 |---|---|---|
-| Negasi | 1–2 per prompt total | hitung `never/no/not/nothing/nobody/neither/without/none` |
+| Negasi | 1–2 total di deskripsi | hitung `never/no/not/nothing/nobody/neither/without/none` |
 | Angka ms/frame | 0 di koreografi | hitung `\d+ ?(ms|frame)` |
 | Kata shot-type | 0 (`zoom`, `cut to`, `close-up shot`) | hitung manual |
 | Kata strobe | 0 (`flicker`, `flash`) | hitung manual |

@@ -5,17 +5,20 @@ Cerita dulu — prompt video belakangan.
 
 Web: **https://paimonchan.github.io/story-draft/**
 
-Repo ini jalur cerita. Kalau ceritanya sudah dipecah jadi script per-part yang siap
-ditempel ke node H3, masuk ke **[prompt-script](https://paimonchan.github.io/prompt-script/)**.
+Repo ini jalur **cerita & storyboard**. Batasnya jelas: yang dijaga di sini cerita dan
+storyboard-nya bisa dibaca model. Adaptasi jadi prompt video (format prompt, tag referensi,
+penempatan dialog & ambience) bukan urusan repo ini — dikerjakan di lane prompt oleh agent yang
+menyesuaikan. Kalau ceritanya sudah dipecah jadi script per-part, masuk ke
+**[prompt-script](https://paimonchan.github.io/prompt-script/)**.
 
 ## Dokumen konteks (baca sebelum menulis)
 
 | Dokumen | Isi |
 |---|---|
 | [`docs/01-konteks-sirin-kanglim.md`](docs/01-konteks-sirin-kanglim.md) | kanon seri: identitas Sirin & Kanglim (blok siap tempel), staging, mesin komedi, aset, lane rujukan |
-| [`docs/02-aturan-produksi-h3.md`](docs/02-aturan-produksi-h3.md) | batasan produksi yang mengikat bentuk cerita: format prompt, pipeline OBVPM extend, aturan kamera terukur, 7 kelas anti-cut, audio, checklist, cara verifikasi |
+| [`docs/02-aturan-produksi-h3.md`](docs/02-aturan-produksi-h3.md) | batasan H3 yang mengikat bentuk storyboard: pipeline OBVPM extend, aturan kamera terukur, 7 kelas anti-cut, audio, checklist storyboard |
 | [`docs/03-rujukan-riset.md`](docs/03-rujukan-riset.md) | dari mana aturan itu datang, sinyal komunitas, dan yang belum diteliti |
-| [`docs/04-teknik-sinematik.md`](docs/04-teknik-sinematik.md) | teknik sinematik (kamera, cahaya, look) + palet yang aman buat H3, tabel "tetangga yang ketukar" untuk audit prompt |
+| [`docs/04-teknik-sinematik.md`](docs/04-teknik-sinematik.md) | teknik sinematik (kamera, cahaya, look) + palet yang aman buat H3, tabel "tetangga yang ketukar" untuk audit storyboard |
 
 ## Nambah draft
 
@@ -75,7 +78,7 @@ date: 2026-11-01
 genre: thriller        # bebas: action, horor, drama, ...
 lang: id
 logline: "Satu kalimat: siapa, mau apa, apa yang menghalangi."
-characters: [Nara, Pak Sukron]   # tiap nama nanti jadi <Subject N> di prompt
+characters: [Nara, Pak Sukron]   # tiap nama harus punya identitas visual yang konsisten
 setting: "Pasar loak Bandung, malam setelah hujan"
 target: "MiniMax H3"
 format: "9:16"
@@ -92,14 +95,14 @@ Aturan penting:
 - Body = prosa apa adanya. Pecah scene/bab pakai heading `##` — satu scene kira-kira
   nanti jadi satu shot, jadi panjangnya sekalian dibikin masuk akal untuk 3–15 detik.
 - Dialog ditulis di barisnya sendiri, diawali em dash (`— Kalimat.`) atau tanda kutip.
-  Nanti di prompt H3 jadi `<d>[Bahasa] teks</d>`, bukan bagian `overall_soundscape`.
+  Di storyboard, tandai kapan mulutnya bergerak (buka/tutup, durasi) dan siapa yang bicara.
 - `index.json` dan `data/*.json` **generated** — jangan diedit tangan.
 
 ## Yang dihitung otomatis
 
 `build_index.py` ngitung statistik prosa (kata, paragraf, kalimat, baris dialog,
 estimasi baca), daftar scene dari heading + jumlah kata per scene, kemunculan tiap
-karakter, dan 9 pemeriksaan kelengkapan/kesiapan jadi prompt:
+karakter, dan 9 pemeriksaan kelengkapan/kesiapan draft:
 
 | Check | Patokan |
 |---|---|
@@ -119,6 +122,10 @@ yang metadatanya lengkap dan strukturnya sudah siap dipetakan jadi shot.
 ## Web
 
 Zero-build (HTML/CSS/JS vanilla, tanpa npm). Baca `index.json`, lalu `data/<slug>.json`
-saat draft dibuka. Fitur: kartu draft + filter status/genre/tag, pencarian
-(judul/logline/karakter/setting/scene), reader prosa dengan daftar scene,
-tab Catatan, dan tab **Siap → prompt**.
+saat draft dibuka. Tata letaknya "Script Desk": **papan** berisi baris draft berzona
+(lagi digarap / mateng / parked) + meter kesiapan, dan **desk** satu halaman scroll dengan
+rail segmen, storyboard collapsible per segmen (bisa di-deep-link), catatan, dan panel
+**Kesiapan draft**. Ada pencarian, filter status/genre/tag, tombol density, dan tema terang/gelap.
+
+Yang dijaga panel Kesiapan draft: cerita & storyboard bisa dibaca model. Adaptasi jadi prompt
+video bukan bagian dari web ini.

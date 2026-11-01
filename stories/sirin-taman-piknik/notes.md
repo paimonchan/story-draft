@@ -25,9 +25,9 @@ Eskalasi: tikar → bekal → serbet → semut → lengan hoodie → cardigan �
 
 | # | Aset | Status |
 |---|---|---|
-| `<Picture 1>` | Charsheet Cha Sirin (smol) — `Pastel Pink-Haired Anime Character Sheet.png` | ✅ ada |
-| `<Picture 2>` | Charsheet Kanglim — `Chibi Blue-Haired School Character Sheet.png` | ✅ ada |
-| `<Picture 3>` | World plate taman + kursi — **`cha_sirin_pigeon_world_01.png`** | ✅ **sudah ada** (lane pigeon) |
+| 1 | Charsheet Cha Sirin (smol) — `Pastel Pink-Haired Anime Character Sheet.png` | ✅ ada |
+| 2 | Charsheet Kanglim — `Chibi Blue-Haired School Character Sheet.png` | ✅ ada |
+| 3 | World plate taman + kursi — **`cha_sirin_pigeon_world_01.png`** | ✅ **sudah ada** (lane pigeon) |
 
 World plate lane pigeon sudah persis lokasi cerita ini (bangku kayu, jalan setapak batu,
 rerumputan, kolam di kejauhan, 9:16, taman kosong). **Tidak perlu generate world baru.**
@@ -35,9 +35,9 @@ Aturan §12.5/§13.5: semua ref wajib satu geometri kamera dengan take — tiga 
 aman (sheet = potret netral, world = eye-level sejajar take).
 
 Prop tambahan kalau perlu: `cha_sirin_pigeon_prop_merpati.png` (merpati, sudah ada) untuk S8.
-Kotak bekal + tikar + serbet: biarkan H3 generate dari teks (prop sederhana, polos).
+Kotak bekal + tikar + serbet: biarkan digenerate dari deskripsi (prop sederhana, polos).
 Look ref tambahan **tidak perlu** — pelajaran lane pigeon: ref "tiduran di kursi" dicabut,
-pose tidur cukup dari prompt.
+pose tidur cukup dari deskripsi.
 
 ## Identitas (blok kanonik — pakai apa adanya, jangan ditulis ulang)
 
@@ -87,8 +87,6 @@ rendah (chibi). Sirin tetap di kiri di setiap segmen.
 - [ ] tidak ada kata `zoom` / `cut to` / `meanwhile` / `we see` / `flash` / `flicker`
 - [ ] tidak ada karakter ketiga, tidak ada teks terbaca di frame
 - [ ] max 3–4 aksi per segmen, tiap aksi punya titik kontak + reaksi
-- [ ] jalan verifikasi: `custom/scripts/check_obvpm_prompt_cut.py` → `motion_audit.py`
-      (cam_px / cam_sd) → verdict seam `seamless` / `soft bump` di Result Preview
 
 ## Status
 

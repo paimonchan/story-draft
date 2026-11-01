@@ -25,7 +25,7 @@ di `prompt-script` → kalau settle, masuk `prompt-eiken-h3`.**
 
 ```
 stories/<slug>/story.md   ← frontmatter + prosa (heading ## = scene/beat)
-stories/<slug>/notes.md   ← ide prompt, ref visual, peta shot, keputusan
+stories/<slug>/notes.md   ← potongan deskripsi visual, ref visual, peta shot, keputusan
 templates/story-template.md
 tools/build_index.py      ← stories/**/story.md → index.json + data/<slug>.json
 tools/new_story.py        ← scaffold folder draft baru
@@ -56,13 +56,15 @@ index.json, data/*.json   ← GENERATED, jangan diedit tangan
    ```
 6. Push ke `main` → GitHub Actions regenerate + deploy Pages. Jangan push kalau `--check` atau
    tests merah.
-7. Sebelum mengubah draft jadi prompt/lane H3, baca `docs/02-aturan-produksi-h3.md`. Ringkasnya:
-   satu lane = satu take kontinu satu lokasi, segmen ~5 dtk, kamera steady eye-level, satu framing
-   per segmen, maks 1 gerak kamera kecil, non-verbal = nol risiko lip-sync, tidak ada karakter
-   ketiga & tidak ada teks terbaca di frame.
-8. **Setiap `.md` di folder draft wajib punya jalan tampil di web** — `story.md` (tab Cerita),
-   `notes.md` (tab Catatan), `storyboard.md` (tab Storyboard). Kalau menambah jenis file baru,
-   tambahkan render/tab-nya di `assets/app.js` **di commit yang sama**. File yang tidak disurface
+7. **Batas repo ini: cerita + storyboard yang bisa dibaca model.** Adaptasi jadi prompt video
+   (format prompt, tag referensi, penempatan dialog & ambience) **bukan** kerjaan repo ini — itu
+   dikerjakan di lane prompt oleh agent yang menyesuaikan. Sebelum menulis storyboard, baca
+   `docs/02-aturan-produksi-h3.md`. Ringkasnya: satu lane = satu take kontinu satu lokasi, segmen
+   ~5 dtk, kamera steady eye-level, satu framing per segmen, maks 1 gerak kamera kecil, non-verbal
+   = nol risiko lip-sync, tidak ada karakter ketiga & tidak ada teks terbaca di frame.
+8. **Setiap `.md` di folder draft wajib punya jalan tampil di web** — `story.md` (bagian Cerita),
+   `notes.md` (bagian Catatan), `storyboard.md` (bagian Storyboard). Kalau menambah jenis file baru,
+   tambahkan render-nya di `assets/app.js` **di commit yang sama**. File yang tidak disurface
    tidak akan pernah kelihatan di halaman, dan `build_index.py` hanya memberi peringatan.
    Web adalah permukaan baca utama repo ini — bukan pelengkap.
 
@@ -83,7 +85,7 @@ python3 tools/new_story.py "Judul" --genre komedi --characters "A,B" \
 python3 tools/build_index.py
 ```
 
-Target mutu yang dicek otomatis di panel **Siap → prompt**: logline, karakter, setting, genre,
+Target mutu yang dicek otomatis di panel **Kesiapan draft**: logline, karakter, setting, genre,
 tags, ≥2 scene, kalimat ≤45 kata, dialog (atau `non_verbal`), ≥30% kalimat berisyarat visual.
 Semua itu heuristik teks, bukan penilaian mutu cerita.
 
@@ -92,4 +94,5 @@ Semua itu heuristik teks, bukan penilaian mutu cerita.
 - `python3 tools/build_index.py --check` → exit 0
 - `python3 -m unittest discover -s tests -p "test_*.py"` → OK
 - `gh run watch <id> -R paimonchan/story-draft --exit-status` → build + deploy sukses
-- Buka `https://paimonchan.github.io/story-draft/` → kartu baru muncul, tab & TOC jalan
+- Buka `https://paimonchan.github.io/story-draft/` → baris baru muncul di papan, rail segmen,
+  storyboard collapsible & panel Kesiapan draft jalan

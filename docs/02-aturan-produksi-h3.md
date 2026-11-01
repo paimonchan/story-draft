@@ -1,4 +1,4 @@
-# 02 — Aturan produksi H3 (yang mengikat bentuk cerita)
+# 02 — Batasan H3 yang mengikat bentuk storyboard
 
 Semua angka di sini **terukur dari lane yang sudah jalan**, bukan teori. Sumber: `docs/16`
 (playbook Qwen3-VL + anti-cut) dan `iteration_log` lane `cha_sirin_daily_01..04`,
@@ -8,47 +8,25 @@ Kenapa aturan produksi masuk dokumen cerita: **batasan model menentukan bentuk c
 Satu take kontinu = satu lokasi; non-verbal = komedi lewat gestur; maks 1 gerak kamera kecil
 per segmen = beat cerita harus sederhana dan bisa dibaca dalam ~5 detik.
 
-## Format prompt
+## Batas dokumen ini
 
-| Mode | Input | Format |
-|---|---|---|
-| T2VA | teks | BASE (3 field) |
-| I2VA / FL2VA / L2VA | 1–2 gambar | BASE + kalimat alignment |
-| Ref2VA | sampai 9 gambar, 3 video, 3 audio | REF2VA 6 section (urutan ketat) |
+Yang diurus di sini: **batasan model yang mengubah bentuk cerita & storyboard** — supaya
+storyboard-nya bisa dibaca model dan tidak meminta hal yang mustahil.
 
-REF2VA: `subject_definitions` → `summary` → `retention_analysis` → `detailed_description` →
-`overall_soundscape` → `non_diegetic_music`.
+Yang **tidak** diurus di sini: cara menyusun prompt video (format prompt, tag referensi,
+penempatan dialog & ambience, urutan section). Itu kerjaan lane prompt di `eikei-plan`,
+dikerjakan agent yang menyesuaikan sendiri. Repo ini berhenti di storyboard yang terbaca.
 
-- Tag `<Picture N>` / `<Subject N>` = urutan **koneksi** di workflow, bukan nama file.
-- `summary` dibuka tag tugas: `[reference generation]`, `[video motion transfer]`, dst.
-- `retention_analysis`: satu klausa per hal yang direferensikan + marker `fully_preserved` /
-  `fully_copy` / `fully_generated` / `not carried over`, masing-masing menyebut `<Picture N>`-nya.
-- Ref image biasanya berlatar studio netral → scene nyata harus dideklarasikan `fully_generated`,
-  kalau tidak latar abu-abu itu bocor ke video.
-- `overall_soundscape` = ambience & suara fisik SAJA. Dialog di `detailed_description` sebagai
-  `<d>[Bahasa] teks</d>`, speaker ID `(S1)/(S2)` stabil. `non_diegetic_music` = instrumentasi,
-  tempo, dinamika — bukan kata suasana.
-
-## Pipeline seri ini: OBVPM extend
+## Bentuk klip: OBVPM extend
 
 Klip panjang disusun dari segmen ~5 detik yang disambung, bukan satu render panjang.
 
-1. Segmen sebelumnya sudah `+ add to timeline`.
-2. Hover tepi kanan klip → pill → menu seam → **`+ extend new`** (bar "next run" harus terbaca
-   `extends <clip>`).
-3. `duration_seconds` node Timeline ≈ 5.
-4. **Ctrl+A di kotak prompt → paste blok segmen berikutnya utuh** (jangan parse manual).
-5. Run → cek verdict: `seamless` → add; `soft bump` → boleh add; `hard cut` → Run ulang
-   (seed increment otomatis).
-6. Ulangi. **Ctrl+S** setelah menyusun timeline.
+Konsekuensinya untuk storyboard: **satu segmen = satu take kontinu ~5 detik**, beat cerita harus
+selesai di jendela itu, dan state akhir tiap segmen harus dinyatakan supaya segmen berikutnya bisa
+nyambung (lihat checklist di bawah).
 
-**Wajib lewat pin/mctx, bukan prompt saja** (pelajaran `cha_sirin_daily_02`): kalau tidak di-pin,
-klip baru jadi *root take* — `parent_id`/`relation` kosong, `overlap_frames 0` — dan H3 membangun
-ulang staging dari teks (muncul establishing shot + dia masuk lagi dari pintu). Prompt anchor cuma
-hint; kontinuitas frame-exact datang dari pin Timeline.
-
-**Semua blok segmen pakai `subject_definitions` / `retention_analysis` / soundscape yang SAMA** —
-hanya `summary` + `detailed_description` yang beda per segmen.
+Cara teknis menyambung klipnya (extend, pin timeline, urutan blok prompt) dikerjakan di lane
+produksi — bukan di dokumen cerita ini.
 
 ## Kamera (terukur dengan phase-correlation per frame)
 
@@ -67,8 +45,8 @@ Aturan:
 - Target: cam_px 0.1–0.4, cam_sd ≤ 0.8.
 - **Maks 1 gerak kecil per segmen** (drift/arc beberapa langkah), dan kamera **mengikuti** karakter.
 - **Jangan pakai kosakata shot-type untuk gerak kontinu**: `zoom`, `cut to`, `close-up shot`.
-  Kata "zoom" di prompt = shot baru (terbukti: cut keras wide → close-up di 5.2s). Tulis gerak
-  fisik + objek yang keluar frame + jarak antaranya.
+  Kata "zoom" = shot baru (terbukti: cut keras wide → close-up di 5.2s). Tulis gerak kamera sebagai
+  gerakan fisik + objek yang keluar frame + jarak antaranya.
 - Gerak besar (`top-down`, `overhead`, `bird's-eye`, tarikan jauh dalam satu take) → model
   **memotong**. Kalau butuh memperlihatkan banyak hal, suruh hal itu **masuk ke frame yang sama**.
 
@@ -97,14 +75,14 @@ Aturan:
 
 Tambahan penting:
 
-- **Kontak ≠ cut.** Kalau aksi "tidak kena", biasanya prompt tidak menyebut titik kontak + reaksi.
+- **Kontak ≠ cut.** Kalau aksi "tidak kena", biasanya storyboard tidak menyebut titik kontak + reaksi.
   Tulis: `her foot lands square on the nearest blob … it bursts into a puff at her foot`.
 - **Face-side guard** (lane face-first): walk tanpa arahan kamera → H3 pilih kamera di BELAKANG
   = muka hilang. Kunci: *"the camera leading her the whole way — drifting backward in front of her
   face"*, dan guard umum *"it always sits on the face side of her"*.
 - **Objek di ref bisa terduplikasi**: world ref berisi objek kunci + prompt meng-anchor objek itu →
   H3 mempertahankan objek parkir SAMBIL membuat salinan untuk dipakai. Deklarasikan *"ONE single …"*
-  dan jangan anchor objek di `retention_analysis` (anchoring hanya untuk environment).
+  dan jangan jadikan objek itu patokan tetap di storyboard (patokan tetap hanya untuk environment).
 - **Kontradiksi fisik "apa yang kamera lihat"**: jangan sebut detail yang ada di sisi tak terlihat
   (mis. tombol/isi layar sambil bilang punggungnya menghadap kamera) — model akan memutar objek
   supaya detail itu kelihatan. Selalu nyatakan **apa yang kamera lihat**, dan pindahkan detail sisi
@@ -119,13 +97,15 @@ Tambahan penting:
 
 ## Audio
 
-- Seri ini **non-verbal, NO-BGM**: ambience + SFX saja; BGM di-mix di luar. Non-verbal = nol
-  risiko lip-sync/mouth drift (mode paling aman).
-- Kalau ada dialog: `<d>[Japanese] …</d>` + delivery di LUAR tag + speaker ID stabil. Failure mode
-  yang diketahui = mouth drift.
-- Musik: instrumentasi + tempo + dinamika. Berhenti total di beat deadpan (itu punchline auditif).
+- Seri ini **non-verbal, NO-BGM**: ambience + SFX saja. Non-verbal = nol risiko lip-sync/mouth
+  drift (mode paling aman) — itu sebabnya pola seri Cha Sirin ditulis tanpa dialog.
+- Kalau ceritanya memang berdialog: tulis ucapannya di `story.md` sebagai baris sendiri, dan di
+  storyboard tandai **kapan mulut bergerak** (buka/tutup, durasi) + siapa yang bicara. Risk yang
+  diketahui = mouth drift, jadi jangan taruh aksi besar di beat yang sama dengan dialog panjang.
+- Musik: berhenti total di beat deadpan (itu punchline auditif) — dicatat di storyboard sebagai
+  keadaan audio, bukan sebagai instruksi mixing.
 
-## Checklist sebelum kirim prompt
+## Checklist storyboard sebelum dinyatakan siap
 
 - [ ] satu framing per segmen, framing ladder ≤ 1 level
 - [ ] anchor state 4+1 elemen di pembuka tiap segmen, state akhir eksplisit di penutup
@@ -135,17 +115,13 @@ Tambahan penting:
 - [ ] semua ref satu geometri kamera dengan take
 - [ ] daftar "detail yang kusebut" vs "sisi yang dilihat kamera" — tidak ada yang bertabrakan
 
-## Verifikasi (yang benar-benar membuktikan)
+## Verifikasi storyboard (bukan verifikasi render)
 
-1. `custom/scripts/check_obvpm_prompt_cut.py [pack.md]` — scan per segmen: cut-move, cut-switch,
-   anchor hilang, aksi tanpa hasil/kontak, angka frame, backslash, negasi berlebih, lompatan
-   framing. Exit 1 kalau ada temuan. (Catatan alat: `framing_marks()` wajib longest-match, kalau
-   tidak `medium-wide` terbaca `medium` + `wide` dan menghasilkan lompatan palsu.)
-2. `motion_audit.py` (phase correlation antar frame) → cam_px / cam_sd.
-3. Verdict seam di Result Preview: `seamless` / `soft bump` / `hard cut`.
-4. Deteksi lompatan di tengah klip:
-   `ffmpeg -i clip.mp4 -vf "tblend=all_mode=difference,signalstats,metadata=print:key=lavfi.signalstats.YAVG:file=-" -an -f null -`
-   Spike ≥ 2.5× rata-rata = kandidat lompatan; konfirmasi dengan ekstrak frame sebelum/sesudah.
-5. Uji identitas dulu dengan kamera statis (resep "comes to life": napas, satu blink, rambut sway,
-   tilt kepala 2°) — kamera statis mengeluarkan gerak kamera dari analisis kegagalan. Baru tambah
-   kamera, aksi, dan suara satu variabel per tes. Catat seed.
+- Baca satu segmen sebagai caption visual. Kalau ada kalimat yang **menyuruh** ("buat dia…",
+  "zoom ke…") atau merujuk hal yang tidak kelihatan kamera, tulis ulang jadi kalimat yang bisa
+  dilihat.
+- Tabel audit di `storyboard.md` ("detail yang kusebut" vs "sisi yang dilihat kamera") tidak boleh
+  punya baris yang bertabrakan.
+- Tiap aksi harus punya hasil yang kelihatan: titik kontak + reaksi.
+- Kalau satu segmen tidak bisa dibayangkan sebagai satu take kontinu tanpa cut, pecah segmennya —
+  jangan tambah gerak kamera.

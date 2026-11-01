@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T04:34:30Z",
+ "generated": "2026-11-01T04:47:51Z",
  "count": 2,
  "words": 769,
  "statuses": {
@@ -151,7 +151,7 @@
      "label": "Karakter terdaftar",
      "value": 2,
      "ok": true,
-     "note": "tiap karakter di sini nanti jadi <Subject N> di prompt"
+     "note": "tiap karakter di sini harus punya identitas visual yang konsisten & terbaca di frame"
     },
     {
      "id": "setting",
@@ -282,7 +282,7 @@
      "label": "Karakter terdaftar",
      "value": 2,
      "ok": true,
-     "note": "tiap karakter di sini nanti jadi <Subject N> di prompt"
+     "note": "tiap karakter di sini harus punya identitas visual yang konsisten & terbaca di frame"
     },
     {
      "id": "setting",

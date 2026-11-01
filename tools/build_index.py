@@ -17,7 +17,7 @@ Yang dihitung dari isi (jangan ditulis manual):
   stats      — kata, karakter, paragraf, kalimat, baris dialog, estimasi baca
   toc        — heading (scene/bab) + jumlah kata per scene
   mentions   — berapa kali tiap karakter muncul di prosa
-  checks     — kelengkapan metadata + sinyal kesiapan jadi prompt video
+  checks     — kelengkapan metadata + sinyal kesiapan draft (heuristik teks)
 
 Pakai:
   python3 tools/build_index.py            # tulis index.json + data/*.json
@@ -230,7 +230,7 @@ def build_entry(path: Path) -> dict:
             "label": "Karakter terdaftar",
             "value": len(characters),
             "ok": bool(characters),
-            "note": "tiap karakter di sini nanti jadi <Subject N> di prompt",
+            "note": "tiap karakter di sini harus punya identitas visual yang konsisten & terbaca di frame",
         },
         {
             "id": "setting",

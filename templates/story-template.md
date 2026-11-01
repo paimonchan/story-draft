@@ -5,7 +5,7 @@ date: 2026-11-01
 genre: ""              # action | thriller | drama | horor | komedi | romance | ...
 lang: id
 logline: "Satu kalimat: siapa, mau apa, apa yang menghalangi."
-characters: []         # [Nara, Pak Sukron] — tiap nama nanti jadi <Subject N>
+characters: []         # [Nara, Pak Sukron] — tiap nama harus punya identitas visual yang konsisten
 setting: ""            # "Pasar loak Bandung, malam setelah hujan"
 target: "MiniMax H3"   # model video tujuan
 format: "9:16"         # rasio/format klip target
@@ -30,9 +30,9 @@ Sisanya bebas: deskripsi, aksi, apa pun. Yang penting kalimatnya gak kepanjangan
 ## 2. Scene kedua
 
 Sebut isyarat visual kalau mau — cahaya, gerak, warna, jenis shot. Panel
-"Siap → prompt" di web bakal ngitung berapa persen kalimatmu yang sudah
+"Kesiapan draft" di web bakal ngitung berapa persen kalimatmu yang sudah
 mengandung isyarat visual.
 
 ## 3. Scene ketiga
 
-Catatan riset, ide prompt, urutan referensi: taruh di `notes.md` sebelah, bukan di sini.
+Catatan riset, referensi visual, peta shot: taruh di `notes.md` sebelah, bukan di sini.

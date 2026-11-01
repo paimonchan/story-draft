@@ -18,7 +18,7 @@ const SECTIONS = [
   ['cerita', 'Cerita'],
   ['storyboard', 'Storyboard'],
   ['notes', 'Catatan'],
-  ['ready', 'Siap → prompt'],
+  ['ready', 'Kesiapan draft'],
 ];
 
 /* ---------------------------------- util --------------------------------- */
@@ -301,7 +301,7 @@ function renderHome() {
       <div>
         <h1>Papan produksi draft story</h1>
         <p>Cerita dulu, prompt belakangan. Baris = draft; meter <b>siap</b> = kelengkapan metadata &
-           struktur sebelum diubah jadi prompt H3. Klik baris untuk buka desk-nya.</p>
+           struktur cerita/storyboard. Klik baris untuk buka desk-nya.</p>
       </div>
       <div class="stats">
         <div class="stat"><b>${totals.drafts}</b><span>draft</span></div>
@@ -448,11 +448,11 @@ function readySect(e) {
   const cast = Object.entries(e.mentions || {});
   const sceneRows = (e.toc || []).map((t, i) => `
     <div class="ready-row"><div class="mark mono">${i + 1}</div>
-      <div class="lbl">${esc(t.text)}<small>kira-kira jadi 1 shot — pecah lagi kalau &gt; 15 detik</small></div>
+      <div class="lbl">${esc(t.text)}<small>kira-kira jadi satu shot — pecah lagi kalau terlalu panjang</small></div>
       <div class="val">${t.words}w</div></div>`).join('');
 
   return `<section class="card sect" id="sect-ready">
-    ${sectHead('siap', 'Siap → prompt', `${e.ready ?? 0}/${e.ready_total || 9} terpenuhi`)}
+    ${sectHead('siap', 'Kesiapan draft', `${e.ready ?? 0}/${e.ready_total || 9} terpenuhi`)}
     <div class="statline">
       <div>kata <b>${fmt(e.words)}</b> <span class="muted">/ rata-rata ${fmt(base.words ?? 0)}</span></div>
       <div>paragraf <b>${e.paragraphs}</b></div>
@@ -465,16 +465,15 @@ function readySect(e) {
     ${cast.length ? `<div class="sect-head" style="margin-top:18px"><h2>Karakter &amp; kemunculan</h2></div>
       <div class="statline">${cast.map(([n, c]) => `<div>${esc(n)} <b>${c}×</b> <span class="muted">di prosa</span></div>`).join('')}</div>` : ''}
     ${sceneRows ? `<div class="sect-head" style="margin-top:18px"><h2>Scene → shot</h2></div><div class="ready-grid">${sceneRows}</div>` : ''}
-    <div class="sect-head" style="margin-top:18px"><h2>Langkah jadi prompt H3</h2></div>
+    <div class="sect-head" style="margin-top:18px"><h2>Batas panel ini</h2></div>
     <div class="notes">
-      <ol>
-        <li>Ambil satu segmen, jadikan satu klip 3–15 detik (<code>Ref2VA</code> kalau pakai gambar referensi, <code>T2VA</code> kalau teks saja).</li>
-        <li>Tiap nama di <code>characters</code> jadi blok <code>&lt;Subject N&gt;</code>; tiap gambar referensi jadi <code>&lt;Picture N&gt;</code>.</li>
-        <li>Dialog pindah ke timeline prompt sebagai <code>&lt;d&gt;[Bahasa] teks&lt;/d&gt;</code> — bukan ke <code>overall_soundscape</code>.</li>
-        <li>Aturan produksi lengkap: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/02-aturan-produksi-h3.md" target="_blank" rel="noopener">docs/02</a> ·
-            teknik sinematik: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/04-teknik-sinematik.md" target="_blank" rel="noopener">docs/04</a> ·
-            konteks seri: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/01-konteks-sirin-kanglim.md" target="_blank" rel="noopener">docs/01</a>.</li>
-      </ol>
+      <p>Yang dijaga di sini cuma <b>cerita &amp; storyboard-nya bisa dibaca model</b> — struktur
+      segmen, durasi wajar, aksi yang kelihatan kamera, tidak ada yang bertabrakan.</p>
+      <p>Adaptasi ke prompt video (format prompt, tag referensi, penempatan dialog &amp; ambience)
+      bukan urusan repo ini — itu dikerjakan di lane prompt oleh agent yang menyesuaikan.</p>
+      <p>Batasan H3 yang mengikat bentuk storyboard: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/02-aturan-produksi-h3.md" target="_blank" rel="noopener">docs/02</a> ·
+         teknik sinematik: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/04-teknik-sinematik.md" target="_blank" rel="noopener">docs/04</a> ·
+         konteks seri: <a href="https://github.com/paimonchan/story-draft/blob/main/docs/01-konteks-sirin-kanglim.md" target="_blank" rel="noopener">docs/01</a>.</p>
     </div>
   </section>`;
 }
