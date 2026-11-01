@@ -162,12 +162,21 @@ function parseStoryboard(text) {
       const win = (rest.match(/\(([^)]*)\)\s*$/) || [, ''])[1];
       const framing = (body.match(/^\s*-?\s*\*\*Framing & kamera:\*\*\s*(.+)$/m) || [, ''])[1];
       const hint = framing.replace(/[`*]/g, '').replace(/\s+/g, ' ').slice(0, 96);
+      const meta = body.match(
+        /\*\*Fungsi:\*\*\s*([^·\n]+?)·\s*\*\*Prioritas:\*\*\s*([^·\n]+?)·\s*\*\*Status:\*\*\s*([^·\n]+?)·\s*\*\*Risiko:\*\*\s*([^\n·]+)/m
+      );
+      const [, fungsi, prioritas, status, risiko] = meta || [];
+      const clean = (s) => (s || '').replace(/[`*]/g, '').trim().toLowerCase();
       segs.push({
         id: 's' + m[1],
         n: Number(m[1]),
         title: rest.replace(/\s*\([^)]*\)\s*$/, '').trim() || ('Segmen ' + m[1]),
         window: win,
         hint,
+        fungsi: clean(fungsi),
+        prioritas: clean(prioritas),
+        status: clean(status),
+        risiko: clean(risiko),
         body,
       });
     } else if (body) {
@@ -406,7 +415,16 @@ function storyboardSect(e, sb, openSeg) {
     <details class="seg" id="${s.id}" ${openSeg === s.id ? 'open' : ''}>
       <summary>
         <span class="sn">${s.n}</span>
-        <span class="st"><b>${esc(s.title)}</b><small>${esc(s.hint || '')}</small></span>
+        <span class="st">
+          <b>${esc(s.title)}</b>
+          <span class="tags">
+            ${s.fungsi ? `<span class="tpill fn">${esc(s.fungsi)}</span>` : ''}
+            ${s.prioritas ? `<span class="tpill pr ${esc(s.prioritas)}">${esc(s.prioritas)}</span>` : ''}
+            ${s.risiko ? `<span class="tpill rk ${esc(s.risiko)}">risiko ${esc(s.risiko)}</span>` : ''}
+            ${s.status ? `<span class="tpill">${esc(s.status)}</span>` : ''}
+          </span>
+          <small>${esc(s.hint || '')}</small>
+        </span>
         <span class="sc">${esc(segLabel(s.window))}</span>
         <span class="chev">▸</span>
       </summary>
