@@ -1,54 +1,62 @@
-<!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<!doctype html>
+<html lang="id" data-theme="dark" data-density="normal">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Story Draft — draft story untuk prompt video AI</title>
-<meta name="description" content="Kumpulan draft story mentah untuk prompt generate video AI (MiniMax H3): logline, karakter, scene, dialog, dan panel kesiapan jadi prompt. Cerita dulu, prompt belakangan.">
-<meta name="color-scheme" content="dark light">
+<title>Story Draft — draft story untuk prompt video AI (MiniMax H3)</title>
+<meta name="description" content="Kumpulan draft cerita mentah untuk produksi video AI (MiniMax H3). Cerita dulu, prompt belakangan: tiap draft punya catatan produksi, storyboard per segmen, dan status kesiapan jadi prompt.">
 <meta name="theme-color" content="#0a0c0f">
+<meta name="color-scheme" content="dark light">
 <link rel="canonical" href="https://paimonchan.github.io/story-draft/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Story Draft">
-<meta property="og:description" content="Draft story mentah untuk prompt video AI — cerita dulu, prompt belakangan.">
+<meta property="og:description" content="Draft cerita mentah untuk prompt video AI (MiniMax H3) — cerita dulu, prompt belakangan.">
 <meta property="og:url" content="https://paimonchan.github.io/story-draft/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0c0f'/%3E%3Cpath d='M8 9h12a4 4 0 0 1 4 4v10H12a4 4 0 0 1-4-4z' fill='none' stroke='%23e0a33e' stroke-width='2'/%3E%3Cpath d='M8 9v14' stroke='%23e0a33e' stroke-width='2'/%3E%3Cpath d='M12 14h8M12 18h6' stroke='%2362c6b0' stroke-width='1.6'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css?v=2">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23e0a33e'/><text x='16' y='23' font-size='19' font-family='system-ui' font-weight='bold' text-anchor='middle' fill='%231a1206'>S</text></svg>">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
+<div class="prog" id="prog" aria-hidden="true"></div>
 
 <header class="topbar">
   <div class="wrap topbar-inner">
     <a class="brand" href="#/">
-      <span class="mark" aria-hidden="true">✎</span>
-      <span>Story Draft
-        <small id="brand-sub">draft story → prompt video AI</small>
-      </span>
+      <span class="mark" aria-hidden="true">S</span>
+      <span>Story Draft<small id="brand-sub">draft story → prompt video AI</small></span>
     </a>
     <div class="spacer"></div>
     <div class="search">
       <span class="ico" aria-hidden="true">⌕</span>
-      <input id="q" type="search" placeholder="Cari draft, karakter, setting, tag…" autocomplete="off" spellcheck="false" aria-label="Cari draft story">
+      <input id="q" type="search" placeholder="cari judul, logline, karakter, scene…" aria-label="Cari draft" autocomplete="off" spellcheck="false">
       <kbd>/</kbd>
     </div>
-    <button class="iconbtn" id="theme" type="button" title="Ganti tema (t)">◐<span class="sr">Ganti tema</span></button>
-    <a class="iconbtn" href="https://github.com/paimonchan/story-draft" target="_blank" rel="noopener" title="Repo GitHub">GitHub</a>
+    <button class="iconbtn js-density" id="density-btn" type="button" title="Rapatkan / longgarkan tata letak (d)" aria-label="Kepadatan tata letak" aria-pressed="false">◲ normal</button>
+    <button class="iconbtn" id="theme" type="button" title="Ganti terang/gelap (t)" aria-label="Ganti tema">◐</button>
+    <a class="iconbtn" href="https://github.com/paimonchan/story-draft" target="_blank" rel="noopener" title="Repo GitHub" aria-label="Repo GitHub">GH</a>
   </div>
 </header>
 
-<main>
-  <div class="wrap" id="app">
-    <div class="loading">Memuat index.json…</div>
-  </div>
+<main class="wrap" id="app">
+  <div class="loading">Memuat…</div>
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <span id="foot-left">Story Draft</span>
-    <span id="foot-right" class="mono"></span>
+    <span id="foot-left">Story Draft — draft story untuk prompt video AI</span>
+    <span class="mono" id="foot-right"></span>
   </div>
 </footer>
 
-<script src="assets/app.js?v=2" defer></script>
+<noscript>
+  <div class="wrap" style="padding:24px 0 60px">
+    <h1>Story Draft</h1>
+    <p>Web ini butuh JavaScript. Draft-nya bisa dibaca langsung di repo:
+      <a href="https://github.com/paimonchan/story-draft">github.com/paimonchan/story-draft</a>.</p>
+    <p>Struktur: <code>stories/&lt;slug&gt;/story.md</code> (+ <code>notes.md</code>, <code>storyboard.md</code>).</p>
+  </div>
+</noscript>
+
+<script src="assets/app.js?v=4" defer></script>
 </body>
 </html>
