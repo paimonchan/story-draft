@@ -160,13 +160,14 @@ function parseStoryboard(text) {
     if (m) {
       const rest = m[2].replace(/^[—–-]\s*/, '');
       const win = (rest.match(/\(([^)]*)\)\s*$/) || [, ''])[1];
-      const framing = (body.match(/^-\s*\*\*Framing & kamera:\*\*\s*(.+)$/m) || [, ''])[1];
+      const framing = (body.match(/^\s*-?\s*\*\*Framing & kamera:\*\*\s*(.+)$/m) || [, ''])[1];
+      const hint = framing.replace(/[`*]/g, '').replace(/\s+/g, ' ').slice(0, 96);
       segs.push({
         id: 's' + m[1],
         n: Number(m[1]),
         title: rest.replace(/\s*\([^)]*\)\s*$/, '').trim() || ('Segmen ' + m[1]),
         window: win,
-        hint: framing.replace(/\s+/g, ' ').slice(0, 96),
+        hint,
         body,
       });
     } else if (body) {
