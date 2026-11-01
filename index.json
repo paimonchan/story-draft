@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-01T05:58:02Z",
+ "generated": "2026-11-01T06:07:22Z",
  "count": 2,
- "words": 932,
+ "words": 928,
  "statuses": {
   "adapted": 0,
   "developing": 0,
@@ -33,7 +33,7 @@
   "Pak Sukron"
  ],
  "baseline": {
-  "words": 466.0,
+  "words": 464.0,
   "sentences": 45.0,
   "dialogue": 7.5,
   "scenes": 5.5,
@@ -70,8 +70,8 @@
    "non_verbal": false,
    "speech": "Kanglim bicara; Sirin hanya vokal ekspresif (tanpa kata)",
    "meta": {},
-   "words": 732,
-   "chars": 5189,
+   "words": 728,
+   "chars": 5166,
    "paragraphs": 40,
    "sentences": 71,
    "dialogue": 13,
@@ -121,13 +121,13 @@
      "id": "h7",
      "level": 2,
      "text": "7. Kanglim mencoba meniru (30.0–35.0 dtk)",
-     "words": 72
+     "words": 69
     },
     {
      "id": "h8",
      "level": 2,
      "text": "8. Button (35.0–40.0 dtk)",
-     "words": 106
+     "words": 105
     }
    ],
    "mentions": {

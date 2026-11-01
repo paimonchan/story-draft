@@ -92,7 +92,7 @@ Kanglim menatap lengan hoodie itu lama sekali.
 
 Dia melepas cardigan-nya, melipatnya dengan sangat hati-hati, dan meletakkannya di atas kotak makannya sendiri. Angin menyambut cardigan itu dan membawanya ke arah kolam. Cardigan mendarat di kepala Kanglim. Dia membeku dengan cardigan menutupi matanya.
 
-"Aku tidak melihat apa pun. Ini juga bagian dari rencananya."
+"Aku tidak melihat apa pun. Ini rencanaku."
 
 Sirin tidak melihat. Sirin tidak pernah melihat apa pun. Dia juga tidak bersuara sama sekali.
 
@@ -106,7 +106,7 @@ Dia duduk di tikar, di samping bangku, dan mengangkat sandwichnya. Seekor merpat
 
 Kanglim menurunkan sandwichnya ke mulut Sirin.
 
-"Satu suapan terakhir. Piknik ini resmi sempurna."
+"Suapan terakhir. Piknik ini resmi sempurna."
 
 Sirin menggigit kecil, mata tetap setengah tertutup, dan mengunyah sangat pelan. Satu suara pendek keluar dari tenggorokannya, *mmm*, dan itu satu-satunya suara sepanjang hari yang terdengar seperti setuju.
 

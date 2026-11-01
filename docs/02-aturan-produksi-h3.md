@@ -103,8 +103,8 @@ Tambahan penting:
   baris dialog. Karena mulut Sirin tidak pernah membentuk kata, tidak ada risiko lip-sync di sisinya.
 - **Kalau ada dialog:** ucapannya ditulis di `story.md` sebagai baris sendiri di dalam tanda kutip,
   lalu di storyboard dicatat **kapan mulutnya bergerak** (jendela buka/tutup) + beat fisik yang
-  menempel padanya. Jendela mulut harus pendek (maks ~1.2 dtk); kalau kalimat lebih panjang dari
-  beat-nya, potong kalimatnya, jangan panjangkan beat. Jangan taruh aksi besar di beat yang sama
+  menempel padanya. Jendela mulut = panjang kalimatnya pada tempo wajar (**2.5–4 kata/detik**);
+  kalau kalimatnya tidak muat di dalam segmen, **potong kalimatnya**, jangan panjangkan jendelanya. Jangan taruh aksi besar di beat yang sama
   dengan dialog panjang (risiko mouth drift).
 - **Mulut yang tidak terlihat** (tertutup kain, di balik objek) dicatat eksplisit: di situ tidak ada
   mulut yang perlu dianimasikan, cuma kain yang bergerak tipis.

@@ -5,7 +5,7 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 
 | Field | Nilai |
 |---|---|
-| Versi | **v3**: 2026-11-01 (changelog di bawah) |
+| Versi | **v4**: 2026-11-01 (changelog di bawah) |
 | Format | 9:16 vertikal · 24 fps · total ~40 dtk (8 × 5 dtk) |
 | Safe area | 9:16: ±5% teratas & terbawah kepotong di feed → kepala, tongkat, dan tangan jangan masuk zona itu |
 | Lokasi | **satu taman, satu bangku, satu siang**: tidak ada perpindahan sepanjang 40 dtk |
@@ -32,9 +32,9 @@ Storyboard produksi, ditulis ke grammar encoder **Qwen3-VL-32B layer 50** (lihat
 - **Sirin tidak pernah bicara.** Suaranya (desahan, gumam, dengkur, *nng*) dicatat sebagai vokal
   ekspresif: SFX + mikro-ekspresi, **bukan** baris dialog. Mulutnya tidak pernah membentuk kata,
   jadi tidak ada risiko lip-sync di sisi Sirin.
-- **Jendela mulut Kanglim selalu pendek (maks 1.2 dtk) dan menempel pada beat fisik** (menegakkan
-  badan, mengangkat tongkat, menoleh). Kalau kalimatnya lebih panjang dari beat-nya, potong
-  kalimatnya, jangan panjangkan beat.
+- **Jendela mulut Kanglim = panjang kalimatnya pada tempo wajar (2.5–4 kata/detik)**, dan
+  selalu menempel pada beat fisik (menegakkan badan, mengangkat tongkat, menoleh). Kalau kalimatnya
+  tidak muat di dalam segmen, **potong kalimatnya**, jangan panjangkan jendelanya.
 - **Kiri/kanan = dari sudut kamera**, selalu disebut eksplisit.
 - **Micro-motion anti-freeze** (boleh dipakai bebas): `her slow breathing`, `her blinks`,
   `the sway of her hair and ahoge`, `the small movements of her hands`,
@@ -84,7 +84,7 @@ lengan hoodie-nya. *(Ini kondisi dasar untuk seluruh 40 dtk.)*
 
 **Aset:** world plate taman (`cha_sirin_pigeon_world_01.png`) · charsheet Sirin · charsheet Kanglim.
 
-**Dialog & vokal:** Kanglim (sub-beat C, 3.0–4.2): "Operasi Piknik Sempurna dimulai sekarang."
+**Dialog & vokal:** Kanglim (sub-beat C, 3.2–4.9): "Operasi Piknik Sempurna dimulai sekarang."
 Mulut terbuka lebar saat badan ditegakkan, dagu naik, **menutup sebelum tongkat turun**. Sirin: satu
 desahan panjang lewat **hidung** saat menoleh, mulut tetap kecil terbuka (tidak membentuk kata).
 
@@ -127,9 +127,8 @@ cahaya sedikit lebih terang (tidak mengubah kondisi).
 
 **Aset:** world plate · charsheet Sirin · charsheet Kanglim · tikar (polos, dari deskripsi).
 
-**Dialog & vokal:** Kanglim (sub-beat A, 5.0–6.3): "Tikar terbentang. Sempurna." Mulut
-membuka di dagu yang terangkat, menutup saat tikar terbentang. Kanglim (sub-beat C, setelah tikar
-mendarat): "...ini bagian dari rencananya." **Mulut tidak terlihat** (tertutup tikar) → yang bergerak
+**Dialog & vokal:** Kanglim (sub-beat A, 5.3–6.3): "Tikar terbentang. Sempurna." Mulut
+membuka di dagu yang terangkat, menutup saat tikar terbentang. Kanglim (sub-beat C, 8.2–9.9, suara tertahan di balik kain): "...ini bagian dari rencananya." **Mulut tidak terlihat** (tertutup tikar) → yang bergerak
 hanya kain di area mulut, tipis. Sirin: satu *hmm* pendek, mulut tidak berubah bentuk.
 
 - **A.** Kanglim mencabut tikar dari ransel dan membentangkannya dengan dua tangan, lengan
@@ -169,9 +168,9 @@ bergerak pelan, jangan tambah sumber cahaya baru.
 
 **Aset:** world plate · charsheet Sirin · charsheet Kanglim · kotak bekal (polos) · tongkat.
 
-**Dialog & vokal:** Kanglim (sub-beat A, 10.0–11.2): "Kotak ini penting. Jangan biarkan
+**Dialog & vokal:** Kanglim (sub-beat A, 10.3–13.3): "Kotak ini penting. Jangan biarkan
 apa pun menyentuhnya." Mulut membuka-menutup dua kali, berhenti saat kotak menyentuh perut Sirin.
-Kanglim (sub-beat B, 12.5–13.5): "Aku percayakan ini padamu." Dagu terangkat, mulut menutup di akhir
+Kanglim (sub-beat B, 13.4–15.0): "Aku percayakan ini padamu." Dagu terangkat, mulut menutup di akhir
 kalimat. Sirin: satu *hmmm* yang tidak selesai saat mengangguk, mulut kecil terbuka tanpa gerak bicara.
 
 - **A.** Kanglim mengangkat kotak bekal dengan dua tangan di kanan bawah frame, lalu
@@ -210,9 +209,9 @@ tetap).
 
 **Aset:** world plate · charsheet Sirin · charsheet Kanglim · tikar (di lantai) · serbet + sandwich
 
-**Dialog & vokal:** Kanglim (sub-beat A, 15.5–17.0): "Jarak antar-sandwich harus sama.
+**Dialog & vokal:** Kanglim (sub-beat A, 15.3–17.6): "Jarak antar-sandwich harus sama.
 Ini standar." Mulut bergerak pendek dan ritmis, sinkron dengan tongkat yang mengukur. Kanglim
-(sub-beat C, 18.0–19.2): "Serbet! Serbet, kembali!" Mulut terbuka lebar dua kali, kepala menoleh ke
+(sub-beat C, 18.0–19.0): "Serbet! Serbet, kembali!" Mulut terbuka lebar dua kali, kepala menoleh ke
 kiri-bawah. Sirin: dengkur kecil lewat hidung, mulut **tertutup**.
 + gelas (polos, dari deskripsi) · daun.
 
@@ -251,8 +250,8 @@ naik** ke tepi bangku lalu ke **kanan** menuju kotak di perut Sirin; Kanglim tet
 
 **Aset:** world plate · charsheet Sirin · charsheet Kanglim · kotak bekal · daun di hidung ·
 
-**Dialog & vokal:** Kanglim (sub-beat A, 20.3–21.3): "Pagar dulu. Ini strategi dua
-lapis." Mulut terbuka saat dia melompat berdiri. Kanglim (sub-beat C, 23.0–24.2): "Kaki. Kenapa
+**Dialog & vokal:** Kanglim (sub-beat A, 20.3–22.3): "Pagar dulu. Ini strategi dua
+lapis." Mulut terbuka saat dia melompat berdiri. Kanglim (sub-beat C, 23.0–24.0): "Kaki. Kenapa
 kakiku?" Mulut terbuka dua kali di tengah tarian, napas cepat di sela kata. Sirin: satu *nng* pendek
 di tengah tidur, mulut tertutup, napas tetap rata.
 ranting (polos) · garis semut (elemen kecil, dari deskripsi).
@@ -337,9 +336,9 @@ kanan ke kiri** arah kolam, lalu kembali **dari kiri ke atas** dan jatuh ke kepa
 
 **Aset:** world plate · charsheet Sirin · charsheet Kanglim · kotak bekal · kotak makan Kanglim ·
 
-**Dialog & vokal:** Kanglim (sub-beat A, 30.5–31.5): "Kalau dia bisa, aku juga bisa."
-Mulut bergerak pelan, eyeline ke lengan Sirin. Kanglim (sub-beat C, 33.5–34.8): "Aku tidak melihat apa
-pun. Ini juga bagian dari rencananya." **Mulut tertutup kain** → hanya kain yang bergerak tipis di area
+**Dialog & vokal:** Kanglim (sub-beat A, 30.3–32.3): "Kalau dia bisa, aku juga bisa."
+Mulut bergerak pelan, eyeline ke lengan Sirin. Kanglim (sub-beat C, 32.7–35.0): "Aku tidak melihat apa
+pun. Ini rencanaku." **Mulut tertutup kain** → hanya kain yang bergerak tipis di area
 mulut. Sirin: **tanpa suara sama sekali** (hening).
 tikar (di lantai) · cardigan (harus identik dengan S1–S3: krem, di badan Kanglim) · daun di hidung.
 
@@ -382,9 +381,9 @@ supaya loop-nya mulus. Merpati menambah bayangan kecil di bahu Sirin.
 
 **Aset:** world plate · charsheet Sirin · charsheet Kanglim · kotak bekal · daun di hidung ·
 
-**Dialog & vokal:** Kanglim (sub-beat A, 35.5–36.8): "Semua ini rencanaku sejak awal."
-Dagu terangkat, mulut terbuka lebar, kepala menoleh ke kamera. Kanglim (sub-beat C, 38.5–39.5): "Satu
-suapan terakhir. Piknik ini resmi sempurna." Mulut menutup saat sandwich diturunkan ke mulut Sirin.
+**Dialog & vokal:** Kanglim (sub-beat A, 35.2–36.9): "Semua ini rencanaku sejak awal."
+Dagu terangkat, mulut terbuka lebar, kepala menoleh ke kamera. Kanglim (sub-beat C, 37.1–39.1): "Suapan
+terakhir. Piknik ini resmi sempurna." Mulut menutup saat sandwich diturunkan ke mulut Sirin.
 Sirin: satu *mmm* pelan setelah menggigit, mulut tertutup, tanpa kata.
 prop merpati (`cha_sirin_pigeon_prop_merpati.png`) · sandwich.
 
@@ -455,18 +454,18 @@ S8 wajib kembali ke kondisi pembuka supaya loop-nya nyambung.
 
 | Seg | Kanglim (baris) | Jendela mulut | Sirin (vokal, bukan kata) | Mulut Sirin |
 |---|---|---|---|---|
-| S1 | "Operasi Piknik Sempurna dimulai sekarang." | 3.0–4.2, menutup sebelum tongkat turun | desahan panjang lewat hidung | tetap kecil terbuka |
-| S2 | "Tikar terbentang. Sempurna." · "...ini bagian dari rencananya." | 5.0–6.3 · suara tertahan di balik kain | satu *hmm* pendek | tidak berubah |
-| S3 | "Kotak ini penting. Jangan biarkan apa pun menyentuhnya." · "Aku percayakan ini padamu." | 10.0–11.2 · 12.5–13.5 | *hmmm* yang tidak selesai | kecil terbuka, tanpa gerak bicara |
-| S4 | "Jarak antar-sandwich harus sama. Ini standar." · "Serbet! Serbet, kembali!" | 15.5–17.0 · 18.0–19.2 (dua bukaan) | dengkur kecil lewat hidung | tertutup |
-| S5 | "Pagar dulu. Ini strategi dua lapis." · "Kaki. Kenapa kakiku?" | 20.3–21.3 · 23.0–24.2 (dua bukaan) | satu *nng* pendek | tertutup |
+| S1 | "Operasi Piknik Sempurna dimulai sekarang." | 3.2–4.9, menutup sebelum tongkat turun | desahan panjang lewat hidung | tetap kecil terbuka |
+| S2 | "Tikar terbentang. Sempurna." · "...ini bagian dari rencananya." | 5.3–6.3 · 8.2–9.9 (tertahan kain) | satu *hmm* pendek | tidak berubah |
+| S3 | "Kotak ini penting. Jangan biarkan apa pun menyentuhnya." · "Aku percayakan ini padamu." | 10.3–13.3 · 13.4–15.0 | *hmmm* yang tidak selesai | kecil terbuka, tanpa gerak bicara |
+| S4 | "Jarak antar-sandwich harus sama. Ini standar." · "Serbet! Serbet, kembali!" | 15.3–17.6 · 18.0–19.0 (dua bukaan) | dengkur kecil lewat hidung | tertutup |
+| S5 | "Pagar dulu. Ini strategi dua lapis." · "Kaki. Kenapa kakiku?" | 20.3–22.3 · 23.0–24.0 (dua bukaan) | satu *nng* pendek | tertutup |
 | S6 | **tanpa kata** (mulut terbuka, beku) | - | tarikan napas *haaah* | tidak membentuk kata |
-| S7 | "Kalau dia bisa, aku juga bisa." · "Aku tidak melihat apa pun. Ini juga bagian dari rencananya." | 30.5–31.5 · 33.5–34.8 (tertutup kain) | **tanpa suara** | tidak berubah |
-| S8 | "Semua ini rencanaku sejak awal." · "Satu suapan terakhir. Piknik ini resmi sempurna." | 35.5–36.8 · 38.5–39.5 | satu *mmm* pelan | tertutup saat mengunyah |
+| S7 | "Kalau dia bisa, aku juga bisa." · "Aku tidak melihat apa pun. Ini rencanaku." | 30.3–32.3 · 32.7–35.0 (tertutup kain) | **tanpa suara** | tidak berubah |
+| S8 | "Semua ini rencanaku sejak awal." · "Suapan terakhir. Piknik ini resmi sempurna." | 35.2–36.9 · 37.1–39.1 | satu *mmm* pelan | tertutup saat mengunyah |
 
-Total: **13 baris Kanglim**, **7 vokal Sirin**, **0 baris kata untuk Sirin**. Semua jendela mulut
-Kanglim maks 1.2 dtk dan menempel pada beat fisik; dua di antaranya **tidak terlihat** (S2 dan S7,
-mulut tertutup kain) sehingga tidak ada mulut yang perlu dianimasikan di sana.
+Total: **13 baris Kanglim**, **7 vokal Sirin**, **0 baris kata untuk Sirin**. Semua jendela mulut dihitung pada tempo **2.5–4 kata/detik** (total bicara 23.3 dtk dari 40 dtk) dan
+muat di dalam segmennya; dua di antaranya **tidak terlihat** (S2 dan S7, mulut tertutup kain)
+sehingga tidak ada mulut yang perlu dianimasikan di sana.
 
 ## Peta audio (ambience bed + musik)
 
@@ -514,7 +513,8 @@ sebuah segmen lolos uji, dan catat perubahan board di changelog di bawah.
 | Versi | Tanggal | Perubahan |
 |---|---|---|
 | v1 | 2026-11-01 | Board awal: 8 segmen, sub-beat A/B/C, framing & kamera, audio, anchor tutup, tabel mikro-ekspresi, tabel audit |
-| **v3** | 2026-11-01 | **Lapisan dialog**: Kanglim bicara (13 baris), Sirin hanya vokal ekspresif (7 kali, bukan kata) · field `Dialog & vokal` di 8 segmen · kolom Dialog di peta cepat · tabel peta dialog & vokal · kolom dialog di peta audio · 4 baris audit baru · ganti tanda pisah panjang dengan koma / titik dua / `·` di seluruh repo |
+| **v4** | 2026-11-01 | Koreksi tempo dialog: jendela mulut dihitung ulang pada **2.5–4 kata/detik** (v3 memakai 4.6–8.0 kata/detik, mustahil diucapkan) · 2 baris dipendekkan agar muat di segmennya (S7, S8) · aturan jendela mulut diganti dari "maks 1.2 dtk" jadi tempo wajar · baris audit negasi diperjelas (berlaku untuk teks prompt, bukan board) |
+| v3 | 2026-11-01 | **Lapisan dialog**: Kanglim bicara (13 baris), Sirin hanya vokal ekspresif (7 kali, bukan kata) · field `Dialog & vokal` di 8 segmen · kolom Dialog di peta cepat · tabel peta dialog & vokal · kolom dialog di peta audio · 4 baris audit baru · ganti tanda pisah panjang dengan koma / titik dua / `·` di seluruh repo |
 | v2 | 2026-11-01 | Tambah: header format/safe area/versi · **anchor buka 4+1 di SEMUA segmen** (v1 hanya S1) · sumbu & arah + tabel peta eyeline · fungsi shot + rantai eskalasi · prioritas + risiko · color script · peta audio + ambience bed · aset per segmen · urutan uji + rencana pelepasan · status tracker · changelog |
 
 ## Audit storyboard sebelum dipakai
@@ -529,7 +529,7 @@ sebuah segmen lolos uji, dan catat perubahan board di changelog di bawah.
 | Prioritas | tiap segmen punya prioritas + alasan kalau opsional | kolom Prioritas terisi semua |
 | Cahaya | kondisi dasar sama di 8 segmen; S8 identik S1 | bandingkan dengan color script |
 | Ambience | bed konstan, tidak ada segmen yang mematikan bed | bandingkan dengan peta audio |
-| Negasi | 1–2 total di deskripsi | hitung `never/no/not/nothing/nobody/neither/without/none` |
+| Negasi | di teks yang masuk prompt: 1–2 total | hitung `never/no/not/nothing/nobody/neither/without/none` di blok prompt, bukan di board berbahasa Indonesia ini |
 | Angka ms/frame | 0 di koreografi | hitung `\d+ ms` atau `\d+ frame` |
 | Kata shot-type | 0 (`zoom`, `cut to`, `close-up shot`) | hitung manual |
 | Kata strobe | 0 (`flicker`, `flash`) | hitung manual |
@@ -537,7 +537,7 @@ sebuah segmen lolos uji, dan catat perubahan board di changelog di bawah.
 | Anchor isi | 4+1 elemen sama dengan frame terakhir | posisi · apa di tangan/sekeliling · arah gerak (angin/semut) · posisi+tinggi kamera · apa yang terlihat dari situ |
 | Dialog | hanya Kanglim yang punya baris kata | hitung baris berkutip di `story.md` → 13 |
 | Vokal Sirin | 0 baris kata; vokal dicatat sebagai SFX | bandingkan dengan peta dialog & vokal → 7 |
-| Jendela mulut | tiap baris Kanglim punya jendela buka/tutup maks 1.2 dtk | baca kolom `Dialog & vokal` tiap segmen |
+| Jendela mulut | tempo 2.5–4 kata/detik dan jendelanya muat di dalam segmen | hitung kata · durasi jendela tiap baris |
 | Mulut tertutup kain | S2 dan S7 tidak menuntut animasi mulut | cek dua segmen itu: hanya kain yang bergerak |
 | Karakter ketiga | 0 | - |
 | Teks terbaca | 0 | - |
