@@ -15,6 +15,7 @@ ditempel ke node H3, masuk ke **[prompt-script](https://paimonchan.github.io/pro
 | [`docs/01-konteks-sirin-kanglim.md`](docs/01-konteks-sirin-kanglim.md) | kanon seri: identitas Sirin & Kanglim (blok siap tempel), staging, mesin komedi, aset, lane rujukan |
 | [`docs/02-aturan-produksi-h3.md`](docs/02-aturan-produksi-h3.md) | batasan produksi yang mengikat bentuk cerita: format prompt, pipeline OBVPM extend, aturan kamera terukur, 7 kelas anti-cut, audio, checklist, cara verifikasi |
 | [`docs/03-rujukan-riset.md`](docs/03-rujukan-riset.md) | dari mana aturan itu datang, sinyal komunitas, dan yang belum diteliti |
+| [`docs/04-teknik-sinematik.md`](docs/04-teknik-sinematik.md) | teknik sinematik (kamera, cahaya, look) + palet yang aman buat H3, tabel "tetangga yang ketukar" untuk audit prompt |
 
 ## Nambah draft
 

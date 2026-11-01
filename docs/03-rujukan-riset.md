@@ -28,9 +28,16 @@ menyimpulkan state lane dari repo publik (yang publik cuma mirror prompt yang su
   - `MiniMax H3 Day-0 Support in ComfyUI: Open Weights, Native Audio, and 2K` — 334 poin, 94 komentar
   - ada eksperimen **sitkom panjang** dengan H3 + turbo LoRA, dan short film H3 di PC rumah
   - Artinya: use-case komedi/episodik memang sudah dijelajahi komunitas, bukan cuma aksi/cinematic.
+- **Sumber sinematik eksternal** — **"Cinematic Techniques: Cinematography, Lighting, and Prompts"**
+  (<https://melies.co/cinematic-techniques>): 424 teknik / 13 kategori, tiap teknik ada definisi,
+  fungsi naratif, cara kerja, contoh film, prompt siap pakai, dan **"tetangga yang ketukar"**.
+  Sudah dipelajari 9 halaman inti + seluruh indeksnya → hasil pemetaannya ke H3 ada di
+  `docs/04-teknik-sinematik.md`. Sisa yang belum dibaca: `framing`/`camera-angles`/`composition`
+  sisanya, 32 teknik `lighting` lain, dan 44 `viral-looks`.
 - **Belum dilakukan** (jujur, ini utang riset): sweep **Reddit** (butuh OAuth app / proxy),
   **CivitAI** (LoRA + workflow per use-case), **DEV.to**, dan forum anime-AI. Backend `web_search`
-  (Exa keyless) sedang error — `hn.algolia.com/api/v1` jalan sebagai gantinya.
+  (Exa keyless) sempat error dan sempat kena **rate limit 429** saat mengambil halaman teknik —
+  `hn.algolia.com/api/v1` jalan sebagai gantinya.
 - Yang paling perlu dicari saat sweep itu: resep **konsistensi karakter di klip panjang** dan
   **komedi non-verbal** (timing punchline, hold) — dua hal yang paling menentukan seri ini.
 
